@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useRef, useState, useCallback } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
@@ -36,33 +37,90 @@ const steps = [
   { number: "04", text: "Final assets ready for marketing and sales" },
 ];
 
-const teamGroups = [
-  {
-    title: "Leadership",
-    members: [
-      { name: "Ignacio Abellán", role: "Founder & Director", image: imgIgnacio },
-      { name: "Natacha", role: "Operations Manager", image: imgNatacha },
-      { name: "Gabriel", role: "Accounting & Finance Manager", image: imgGabriel },
-    ],
-  },
-  {
-    title: "Management",
-    members: [
-      { name: "Mike", role: "Development Manager", image: imgMike },
-      { name: "Matias", role: "Interior Division Manager", image: imgMatias },
-      { name: "Fabian", role: "Animation Division Manager", image: imgFabian },
-    ],
-  },
-  {
-    title: "Production",
-    members: [
-      { name: "Milena", role: "Project Manager", image: imgMilena },
-      { name: "Agustina", role: "Project Manager", image: imgAgustina },
-      { name: "Anita", role: "Home Renderings Manager", image: imgNati },
-      { name: "Abril", role: "3D Modeling Manager", image: imgAbril },
-    ],
-  },
+const teamMembers = [
+  { name: "Ignacio Abellán", role: "Founder & Director", image: imgIgnacio },
+  { name: "Natacha", role: "Operations Manager", image: imgNatacha },
+  { name: "Gabriel", role: "Accounting & Finance Manager", image: imgGabriel },
+  { name: "Mike", role: "Development Manager", image: imgMike },
+  { name: "Matias", role: "Interior Division Manager", image: imgMatias },
+  { name: "Fabian", role: "Animation Division Manager", image: imgFabian },
+  { name: "Milena", role: "Project Manager", image: imgMilena },
+  { name: "Agustina", role: "Project Manager", image: imgAgustina },
+  { name: "Anita", role: "Home Renderings Manager", image: imgNati },
+  { name: "Abril", role: "3D Modeling Manager", image: imgAbril },
 ];
+
+const TeamCarousel = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const animationRef = useRef<number>();
+  const scrollPositionRef = useRef(0);
+
+  const items = [...teamMembers, ...teamMembers, ...teamMembers];
+
+  const animate = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el || isPaused) {
+      animationRef.current = requestAnimationFrame(animate);
+      return;
+    }
+
+    scrollPositionRef.current += 0.5;
+    const singleSetWidth = el.scrollWidth / 3;
+
+    if (scrollPositionRef.current >= singleSetWidth) {
+      scrollPositionRef.current -= singleSetWidth;
+    }
+
+    el.scrollLeft = scrollPositionRef.current;
+    animationRef.current = requestAnimationFrame(animate);
+  }, [isPaused]);
+
+  useEffect(() => {
+    animationRef.current = requestAnimationFrame(animate);
+    return () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    };
+  }, [animate]);
+
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (el && isPaused) {
+      scrollPositionRef.current = el.scrollLeft;
+    }
+  };
+
+  return (
+    <div
+      ref={scrollRef}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onScroll={handleScroll}
+      className="flex gap-6 overflow-x-auto cursor-grab active:cursor-grabbing"
+      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+    >
+      {items.map((member, i) => (
+        <div
+          key={`${member.name}-${i}`}
+          className="group flex flex-col items-center text-center shrink-0 w-[130px] py-4 transition-all duration-300"
+        >
+          <div className="w-[90px] h-[90px] rounded-full overflow-hidden bg-secondary mb-3 ring-1 ring-border/20">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-full object-cover object-top grayscale-[40%] opacity-85 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.03] group-hover:brightness-110 transition-all duration-400"
+              draggable={false}
+            />
+          </div>
+          <h4 className="font-display text-[12px] font-medium text-white tracking-[-0.01em] leading-tight">
+            {member.name}
+          </h4>
+          <p className="text-[10px] text-white/40 mt-0.5">{member.role}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const About = () => {
   return (
@@ -196,59 +254,24 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-14 md:py-20">
+      <section className="py-12 md:py-16 bg-[hsl(0,0%,4%)]">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-10 max-w-2xl"
+            className="mb-8 max-w-2xl"
           >
-            <div className="label-mono text-primary mb-4">Our Team</div>
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground tracking-[-0.035em] mb-3">
+            <div className="label-mono text-primary mb-3">Our Team</div>
+            <h2 className="font-display text-xl md:text-2xl font-semibold text-white tracking-[-0.035em] mb-2">
               The People Behind Every Delivery
             </h2>
-            <p className="text-[13px] text-muted-foreground leading-[1.7]">
+            <p className="text-[13px] text-white/50 leading-[1.7]">
               A structured team built to deliver consistency, speed and quality at scale.
             </p>
           </motion.div>
 
-          {teamGroups.map((group, gi) => (
-            <div key={group.title} className={gi > 0 ? "mt-8" : ""}>
-              <motion.h3
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="label-mono text-muted-foreground/60 text-[10px] mb-4"
-              >
-                {group.title}
-              </motion.h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                {group.members.map((member, i) => (
-                  <motion.div
-                    key={member.name}
-                    initial={{ opacity: 0, y: 6 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.04 }}
-                    className="group flex flex-col items-center text-center py-5 px-3 rounded-md transition-all duration-300 hover:bg-secondary/50"
-                  >
-                    <div className="w-20 h-20 rounded-full overflow-hidden bg-[hsl(220,15%,92%)] mb-3 ring-1 ring-border/20">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover object-top grayscale-[40%] opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-400"
-                      />
-                    </div>
-                    <h4 className="font-display text-[13px] font-medium text-foreground tracking-[-0.01em]">
-                      {member.name}
-                    </h4>
-                    <p className="text-[11px] text-muted-foreground/70 mt-0.5">{member.role}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          ))}
+          <TeamCarousel />
         </div>
       </section>
 

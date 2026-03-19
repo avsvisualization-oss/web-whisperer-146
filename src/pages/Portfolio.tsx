@@ -5,41 +5,75 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import portfolioExterior from "@/assets/portfolio-exterior.jpg";
-import portfolioInterior from "@/assets/portfolio-interior.jpg";
-import portfolioAerial from "@/assets/portfolio-aerial.jpg";
-import portfolioVr from "@/assets/portfolio-vr.jpg";
+import portfolioExterior1 from "@/assets/portfolio-exterior-1.jpg";
+import portfolioExterior2 from "@/assets/portfolio-exterior-2.jpg";
+import portfolioExterior3 from "@/assets/portfolio-exterior-3.jpg";
+import portfolioExterior4 from "@/assets/portfolio-exterior-4.jpg";
 import portfolioTownhouse from "@/assets/portfolio-townhouse.jpg";
+import portfolioVilla from "@/assets/portfolio-villa.jpg";
+import portfolioCommercial from "@/assets/portfolio-commercial.jpg";
+import portfolioInterior from "@/assets/portfolio-interior.jpg";
+import portfolioInterior1 from "@/assets/portfolio-interior-1.jpg";
+import portfolioInterior2 from "@/assets/portfolio-interior-2.jpg";
+import portfolioInterior3 from "@/assets/portfolio-interior-3.jpg";
+import portfolioInterior4 from "@/assets/portfolio-interior-4.jpg";
 import portfolioKitchen from "@/assets/portfolio-kitchen.jpg";
 import portfolioBedroom from "@/assets/portfolio-bedroom.jpg";
+import portfolioStreet1 from "@/assets/portfolio-street-1.jpg";
+import portfolioAerial from "@/assets/portfolio-aerial.jpg";
+import portfolioAerial1 from "@/assets/portfolio-aerial-1.jpg";
+import portfolioAerial2 from "@/assets/portfolio-aerial-2.jpg";
+import portfolioAerial3 from "@/assets/portfolio-aerial-3.jpg";
+import portfolioAerial4 from "@/assets/portfolio-aerial-4.jpg";
 import portfolioMasterplan from "@/assets/portfolio-masterplan.jpg";
-import portfolioCommercial from "@/assets/portfolio-commercial.jpg";
-import portfolioInteractiveTour from "@/assets/portfolio-interactive-tour.jpg";
-import portfolioSiteplan from "@/assets/portfolio-siteplan.jpg";
-import portfolioVilla from "@/assets/portfolio-villa.jpg";
+import portfolioClubhouse1 from "@/assets/portfolio-clubhouse-1.jpg";
+import portfolioAmenities1 from "@/assets/portfolio-amenities-1.jpg";
 
-const categories = ["All", "Exterior", "Interior", "Aerial", "Interactive"] as const;
+const categories = ["All", "Exteriors", "Interiors", "Street Scenes", "Aerials", "Clubhouse", "Amenities"] as const;
 type Category = (typeof categories)[number];
 
 interface Project {
   image: string;
   title: string;
   category: Exclude<Category, "All">;
-  tag: string;
 }
 
 const projects: Project[] = [
-  { image: portfolioExterior, title: "Craftsman Series Residence", category: "Exterior", tag: "Single-Family" },
-  { image: portfolioTownhouse, title: "Modern Townhouse Collection", category: "Exterior", tag: "Multi-Family" },
-  { image: portfolioVilla, title: "Mediterranean Villa Estate", category: "Exterior", tag: "Luxury" },
-  { image: portfolioCommercial, title: "Urban Glass Office Tower", category: "Exterior", tag: "Commercial" },
-  { image: portfolioInterior, title: "Open Concept Living", category: "Interior", tag: "Living Room" },
-  { image: portfolioKitchen, title: "Luxury Kitchen Design", category: "Interior", tag: "Kitchen" },
-  { image: portfolioBedroom, title: "Penthouse Master Suite", category: "Interior", tag: "Bedroom" },
-  { image: portfolioAerial, title: "Community Overview", category: "Aerial", tag: "Streetscape" },
-  { image: portfolioMasterplan, title: "Residential Master Plan", category: "Aerial", tag: "Master Plan" },
-  { image: portfolioVr, title: "360° Virtual Experience", category: "Interactive", tag: "VR Tour" },
-  { image: portfolioInteractiveTour, title: "Interactive Home Tour", category: "Interactive", tag: "Walkthrough" },
-  { image: portfolioSiteplan, title: "Interactive Site Plan", category: "Interactive", tag: "Sales Tool" },
+  // Exteriors
+  { image: portfolioExterior, title: "Craftsman Series Residence", category: "Exteriors" },
+  { image: portfolioExterior1, title: "Modern Elevation", category: "Exteriors" },
+  { image: portfolioExterior2, title: "Contemporary Home", category: "Exteriors" },
+  { image: portfolioExterior3, title: "Traditional Estate", category: "Exteriors" },
+  { image: portfolioExterior4, title: "Luxury Façade", category: "Exteriors" },
+  { image: portfolioTownhouse, title: "Modern Townhouse Collection", category: "Exteriors" },
+  { image: portfolioVilla, title: "Mediterranean Villa Estate", category: "Exteriors" },
+  { image: portfolioCommercial, title: "Urban Glass Office Tower", category: "Exteriors" },
+
+  // Interiors
+  { image: portfolioInterior, title: "Open Concept Living", category: "Interiors" },
+  { image: portfolioInterior1, title: "Modern Living Room", category: "Interiors" },
+  { image: portfolioInterior2, title: "Dining Experience", category: "Interiors" },
+  { image: portfolioInterior3, title: "Family Room", category: "Interiors" },
+  { image: portfolioInterior4, title: "Master Bathroom", category: "Interiors" },
+  { image: portfolioKitchen, title: "Luxury Kitchen Design", category: "Interiors" },
+  { image: portfolioBedroom, title: "Penthouse Master Suite", category: "Interiors" },
+
+  // Street Scenes
+  { image: portfolioStreet1, title: "Community Streetscape", category: "Street Scenes" },
+
+  // Aerials
+  { image: portfolioAerial, title: "Community Overview", category: "Aerials" },
+  { image: portfolioAerial1, title: "Development Aerial View", category: "Aerials" },
+  { image: portfolioAerial2, title: "Neighborhood Plan", category: "Aerials" },
+  { image: portfolioAerial3, title: "Residential Community", category: "Aerials" },
+  { image: portfolioAerial4, title: "Master-Planned Overview", category: "Aerials" },
+  { image: portfolioMasterplan, title: "Residential Master Plan", category: "Aerials" },
+
+  // Clubhouse
+  { image: portfolioClubhouse1, title: "Community Clubhouse", category: "Clubhouse" },
+
+  // Amenities
+  { image: portfolioAmenities1, title: "Community Amenities", category: "Amenities" },
 ];
 
 const Portfolio = () => {
@@ -76,7 +110,7 @@ const Portfolio = () => {
             transition={{ delay: 0.1 }}
             className="mt-4 text-[15px] text-muted-foreground max-w-xl"
           >
-            A curated selection of our work for builders, developers and marketing teams.
+            Selected work designed to support marketing, approvals, and sales for home builders and developers.
           </motion.p>
         </div>
       </section>
@@ -107,7 +141,7 @@ const Portfolio = () => {
 
       {/* Grid */}
       <div className="container-wide pb-24">
-        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <AnimatePresence mode="popLayout">
             {filtered.map((project, i) => (
               <motion.div
@@ -118,7 +152,7 @@ const Portfolio = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => setLightbox(i)}
-                className="group relative overflow-hidden rounded-md aspect-[4/3] cursor-pointer"
+                className="group relative overflow-hidden rounded-lg aspect-[4/3] cursor-pointer"
               >
                 <img
                   src={project.image}
@@ -128,12 +162,8 @@ const Portfolio = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="font-mono-data text-[11px] text-primary">{project.category}</span>
-                    <span className="text-muted-foreground/30">·</span>
-                    <span className="font-mono-data text-[11px] text-muted-foreground">{project.tag}</span>
-                  </div>
-                  <h3 className="text-base font-semibold text-foreground">{project.title}</h3>
+                  <span className="font-mono-data text-[11px] text-primary">{project.category}</span>
+                  <h3 className="text-base font-semibold text-foreground mt-1">{project.title}</h3>
                 </div>
               </motion.div>
             ))}

@@ -6,10 +6,6 @@ import Footer from "@/components/Footer";
 
 import exteriorImg from "@/assets/portfolio-exterior-1.jpg";
 import interiorImg from "@/assets/portfolio-interior-1.jpg";
-import aerialImg from "@/assets/portfolio-aerial-1.jpg";
-import interactiveImg from "@/assets/portfolio-interactive-tour.jpg";
-import siteplanImg from "@/assets/portfolio-siteplan.jpg";
-import vrImg from "@/assets/portfolio-vr.jpg";
 
 const fade = {
   hidden: { opacity: 0, y: 30 },

@@ -1,89 +1,59 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-rendering.jpg";
+import { Link } from "react-router-dom";
+import heroImg from "@/assets/portfolio-exterior-1.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative h-[90vh] min-h-[600px] overflow-hidden">
-      {/* Background image */}
+    <section className="relative min-h-screen flex items-end overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Luxury housing development architectural rendering"
+          alt="Premium architectural rendering of a modern residential community"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-foreground/10" />
       </div>
 
       {/* Content */}
-      <div className="relative container h-full flex flex-col justify-end pb-20 md:pb-28">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-mono-data text-sm text-primary mb-4 tracking-wider uppercase"
-        >
-          Architectural Visualization Studio
-        </motion.p>
-
+      <div className="relative container-wide pb-20 md:pb-28 pt-40">
         <motion.h1
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground max-w-3xl leading-[1.05] text-balance"
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.1, 0, 1] }}
+          className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground max-w-4xl leading-[1.05] text-balance"
         >
-          High-quality renderings built to support{" "}
-          <span className="gradient-text-accent">marketing & sales</span>
+          Visual tools that help you sell homes before they exist.
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.35 }}
-          className="mt-6 text-lg text-muted-foreground max-w-xl"
+          transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.1, 0, 1] }}
+          className="mt-6 text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed"
         >
-          We create virtual tours, interactive tools and 3D renderings for home builders, home plan designers and marketing agencies.
+          We partner with builders and developers to create high-impact visuals
+          that drive sales and marketing performance.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-8 flex gap-4"
+          transition={{ duration: 0.7, delay: 0.6, ease: [0.25, 0.1, 0, 1] }}
+          className="mt-10 flex flex-wrap gap-4"
         >
-          <a
-            href="#services"
-            className="px-6 py-3 rounded-sm bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors"
+          <Link
+            to="/portfolio"
+            className="px-7 py-3.5 text-sm font-medium bg-primary-foreground text-foreground rounded-full hover:bg-primary-foreground/90 transition-colors"
           >
-            Services
-          </a>
-          <a
-            href="#contact"
-            className="px-6 py-3 rounded-sm border border-border text-foreground font-medium text-sm hover:bg-secondary transition-colors"
+            View Work
+          </Link>
+          <Link
+            to="/contact"
+            className="px-7 py-3.5 text-sm font-medium border border-primary-foreground/40 text-primary-foreground rounded-full hover:bg-primary-foreground/10 transition-colors"
           >
-            Contact Us
-          </a>
-        </motion.div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-          className="mt-12 flex gap-10 md:gap-16"
-        >
-          {[
-            { value: "500+", label: "Projects Delivered" },
-            { value: "50+", label: "Builder Partners" },
-            { value: "8+", label: "Years Experience" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <div className="font-mono-data text-2xl md:text-3xl font-semibold text-foreground">
-                {stat.value}
-              </div>
-              <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
-            </div>
-          ))}
+            Start a Project
+          </Link>
         </motion.div>
       </div>
     </section>

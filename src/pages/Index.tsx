@@ -1,10 +1,11 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import InteractiveSection from "@/components/InteractiveSection";
-import PortfolioSection from "@/components/PortfolioSection";
-import AboutSection from "@/components/AboutSection";
-import ContactSection from "@/components/ContactSection";
+import TrustSection from "@/components/TrustSection";
+import SolutionsSection from "@/components/SolutionsSection";
+import ValueSection from "@/components/ValueSection";
+import FeaturedWork from "@/components/FeaturedWork";
+import ProcessSection from "@/components/ProcessSection";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -12,11 +13,12 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <ServicesSection />
-      <InteractiveSection />
-      <PortfolioSection />
-      <AboutSection />
-      <ContactSection />
+      <TrustSection />
+      <SolutionsSection />
+      <ValueSection />
+      <FeaturedWork />
+      <ProcessSection />
+      <FinalCTA />
       <Footer />
     </div>
   );

@@ -59,13 +59,11 @@ const InteractiveSection = () => {
           >
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             <div className="aspect-[16/9] w-full">
-              <iframe
-                src="https://avs-interactive.com/avs/Interactive-Apps/siteplan/baypointe/20"
-                className="w-full h-full"
-                style={{ border: 0 }}
-                title="Interactive Site Plan — Bay Pointe"
+              <img
+                src={siteplanImg}
+                alt="Interactive Site Plan — Bay Pointe"
                 loading="lazy"
-                allow="fullscreen"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="p-6 md:p-8 flex items-center justify-between border-t border-border">

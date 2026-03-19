@@ -31,44 +31,44 @@ const SolutionsSection = () => {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-24"
         >
-          <div className="label-mono text-primary mb-5">What We Do</div>
-          <h2 className="font-display text-[clamp(2rem,4vw,3.5rem)] font-semibold text-foreground max-w-3xl leading-[1.1] tracking-[-0.035em]">
+          <div className="label-mono text-primary mb-6">What We Do</div>
+          <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold text-foreground max-w-3xl leading-[1.05] tracking-[-0.04em]">
             Visual solutions designed for how homes are sold today.
           </h2>
-          <p className="mt-5 text-[15px] text-muted-foreground max-w-xl leading-[1.7] font-light">
+          <p className="mt-6 text-[14px] text-muted-foreground max-w-xl leading-[1.8] font-light">
             Every visual we create is built to support sales teams, marketing campaigns, and buyer engagement — not just to look good.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {solutions.map((sol, i) => (
             <motion.div
               key={sol.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-md aspect-[3/4] cursor-pointer"
+              transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="group relative overflow-hidden rounded-lg aspect-[3/4] cursor-pointer"
             >
               <img
                 src={sol.image}
                 alt={sol.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-7 md:p-9">
+              <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
                 <div className="flex items-end justify-between gap-4">
                   <div>
-                    <h3 className="font-display text-xl md:text-2xl font-semibold text-foreground tracking-[-0.02em]">
+                    <h3 className="font-display text-2xl md:text-[1.75rem] font-semibold text-foreground tracking-[-0.025em]">
                       {sol.title}
                     </h3>
-                    <p className="mt-2 text-[13px] text-muted-foreground max-w-sm leading-relaxed font-light">
+                    <p className="mt-3 text-[13px] text-muted-foreground max-w-sm leading-relaxed font-light">
                       {sol.description}
                     </p>
                   </div>
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                  <div className="flex-shrink-0 w-11 h-11 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                     <ArrowUpRight className="w-4 h-4 text-primary" />
                   </div>
                 </div>
@@ -81,7 +81,7 @@ const SolutionsSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-14 text-center"
+          className="mt-16 text-center"
         >
           <Link
             to="/portfolio"

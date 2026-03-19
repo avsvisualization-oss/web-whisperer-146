@@ -17,23 +17,23 @@ const FinalCTA = () => {
   return (
     <section id="contact" className="section-padding bg-card">
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-28">
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="label-mono text-primary mb-5">Get in Touch</div>
-            <h2 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] font-semibold text-foreground leading-[1.1] tracking-[-0.04em]">
+            <div className="label-mono text-primary mb-6">Get in Touch</div>
+            <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold text-foreground leading-[1.05] tracking-[-0.04em]">
               Start your next project.
             </h2>
-            <p className="mt-6 text-[15px] text-muted-foreground leading-[1.7] max-w-md font-light">
+            <p className="mt-7 text-[14px] text-muted-foreground leading-[1.8] max-w-md font-light">
               Tell us about your project and we'll get back to you within
               24 hours with a tailored plan.
             </p>
 
-            <div className="mt-14 flex flex-col gap-5">
+            <div className="mt-16 flex flex-col gap-6">
               <a
                 href="mailto:info@avs-renderings.com"
                 className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors duration-300"
@@ -62,56 +62,56 @@ const FinalCTA = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             onSubmit={handleSubmit}
-            className="flex flex-col gap-5"
+            className="flex flex-col gap-6"
           >
             <div>
-              <label className="label-mono text-muted-foreground mb-2 block">Name</label>
+              <label className="label-mono text-muted-foreground mb-2.5 block">Name</label>
               <input
                 type="text"
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors duration-300"
+                className="w-full px-0 py-3.5 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors duration-300"
                 placeholder="Your name"
               />
             </div>
             <div>
-              <label className="label-mono text-muted-foreground mb-2 block">Email</label>
+              <label className="label-mono text-muted-foreground mb-2.5 block">Email</label>
               <input
                 type="email"
                 required
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors duration-300"
+                className="w-full px-0 py-3.5 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors duration-300"
                 placeholder="your@email.com"
               />
             </div>
             <div>
-              <label className="label-mono text-muted-foreground mb-2 block">
+              <label className="label-mono text-muted-foreground mb-2.5 block">
                 Company <span className="normal-case tracking-normal">(optional)</span>
               </label>
               <input
                 type="text"
                 value={form.company}
                 onChange={(e) => setForm({ ...form, company: e.target.value })}
-                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors duration-300"
+                className="w-full px-0 py-3.5 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors duration-300"
                 placeholder="Company name"
               />
             </div>
             <div>
-              <label className="label-mono text-muted-foreground mb-2 block">Message</label>
+              <label className="label-mono text-muted-foreground mb-2.5 block">Message</label>
               <textarea
                 required
                 rows={4}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
+                className="w-full px-0 py-3.5 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
                 placeholder="Tell us about your project..."
               />
             </div>
             <button
               type="submit"
-              className="mt-4 w-full py-4 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_24px_hsl(210_100%_52%/0.3)] transition-all duration-300 tracking-wide"
+              className="mt-6 w-full py-4.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] transition-all duration-300 tracking-wide"
             >
               Send Message
             </button>

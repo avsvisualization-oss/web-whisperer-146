@@ -19,11 +19,11 @@ const FeaturedWork = () => {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-end justify-between mb-14 md:mb-20"
+          className="flex items-end justify-between mb-16 md:mb-24"
         >
           <div>
-            <div className="label-mono text-primary mb-5">Featured Work</div>
-            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-foreground tracking-[-0.035em]">
+            <div className="label-mono text-primary mb-6">Featured Work</div>
+            <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold text-foreground tracking-[-0.04em]">
               Selected projects
             </h2>
           </div>
@@ -35,7 +35,7 @@ const FeaturedWork = () => {
           </Link>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, i) => (
             <motion.div
               key={project.title}
@@ -43,7 +43,7 @@ const FeaturedWork = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-md aspect-[3/4] cursor-pointer"
+              className="group relative overflow-hidden rounded-lg aspect-[3/4] cursor-pointer"
             >
               <img
                 src={project.image}
@@ -51,11 +51,11 @@ const FeaturedWork = () => {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <div className="label-mono text-primary mb-1.5">
+              <div className="absolute bottom-0 left-0 right-0 p-7 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="label-mono text-primary mb-2">
                   {project.category}
                 </div>
-                <h3 className="font-display text-lg font-semibold text-foreground tracking-[-0.02em]">
+                <h3 className="font-display text-xl font-semibold text-foreground tracking-[-0.02em]">
                   {project.title}
                 </h3>
               </div>
@@ -63,7 +63,7 @@ const FeaturedWork = () => {
           ))}
         </div>
 
-        <div className="mt-10 text-center md:hidden">
+        <div className="mt-12 text-center md:hidden">
           <Link
             to="/portfolio"
             className="inline-flex items-center gap-2 text-[13px] font-medium text-primary tracking-wide"

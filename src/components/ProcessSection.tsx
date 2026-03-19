@@ -15,15 +15,15 @@ const ProcessSection = () => {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-24"
         >
-          <div className="label-mono text-primary mb-5">How We Work</div>
-          <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-foreground tracking-[-0.035em]">
+          <div className="label-mono text-primary mb-6">How We Work</div>
+          <h2 className="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-semibold text-foreground tracking-[-0.04em]">
             Simple, efficient process
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 md:gap-20">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
@@ -32,13 +32,13 @@ const ProcessSection = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              <div className="font-mono-data text-3xl font-medium text-primary/25 mb-5">
+              <div className="font-mono-data text-4xl font-medium text-primary/25 mb-6">
                 {step.number}
               </div>
-              <h3 className="font-display text-base font-semibold text-foreground mb-2 tracking-[-0.02em]">
+              <h3 className="font-display text-lg font-semibold text-foreground mb-3 tracking-[-0.02em]">
                 {step.title}
               </h3>
-              <p className="text-[13px] text-muted-foreground leading-[1.7]">
+              <p className="text-[13px] text-muted-foreground leading-[1.8]">
                 {step.description}
               </p>
             </motion.div>

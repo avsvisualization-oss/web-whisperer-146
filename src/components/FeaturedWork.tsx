@@ -59,7 +59,7 @@ const FeaturedWork = () => {
             viewport={{ once: true }}
             className="label-mono text-muted-foreground mb-8"
           >
-            Exteriors
+            Exteriors — High-end exterior renderings designed to support marketing, approvals, and pre-sales.
           </motion.p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
             {exteriors.map((project, i) => (

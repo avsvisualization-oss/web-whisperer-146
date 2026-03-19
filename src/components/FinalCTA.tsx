@@ -61,7 +61,7 @@ const FinalCTA = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             onSubmit={handleSubmit}
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-6 bg-secondary/50 rounded-2xl p-8 md:p-10 border border-border/50"
           >
             <div>
               <label className="label-mono text-muted-foreground mb-2.5 block">Name</label>

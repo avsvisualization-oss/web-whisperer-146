@@ -62,7 +62,7 @@ const InteractiveSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-24 relative rounded-2xl overflow-hidden border border-primary/20 bg-card"
+            className="mb-24 relative rounded-2xl overflow-hidden border border-primary/20 bg-card max-w-6xl mx-auto"
           >
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             <div className="aspect-[16/9] w-full bg-[hsl(var(--secondary))]">

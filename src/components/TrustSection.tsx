@@ -14,14 +14,14 @@ const clientNames = [
 
 const TrustSection = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="py-40 md:py-48 lg:py-56 bg-background relative">
       <div className="container-wide">
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-20 md:gap-32 mb-24"
+          className="flex flex-wrap justify-center gap-24 md:gap-36 mb-28"
         >
           {[
             { value: "500+", label: "Projects Delivered" },
@@ -29,16 +29,16 @@ const TrustSection = () => {
             { value: "8+", label: "Years in Market" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="font-mono-data text-5xl md:text-6xl font-medium text-primary tracking-tight">
+              <div className="font-mono-data text-5xl md:text-7xl font-medium text-primary tracking-tight">
                 {stat.value}
               </div>
-              <div className="label-mono text-muted-foreground mt-4">{stat.label}</div>
+              <div className="label-mono text-muted-foreground mt-5">{stat.label}</div>
             </div>
           ))}
         </motion.div>
 
         {/* Divider */}
-        <div className="border-t border-border mb-20" />
+        <div className="border-t border-border/50 mb-24" />
 
         {/* Trust statement */}
         <motion.div
@@ -47,18 +47,22 @@ const TrustSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          <p className="label-mono text-muted-foreground text-center mb-14">
+          <p className="label-mono text-muted-foreground text-center mb-16">
             Trusted by builders and developers across the United States
           </p>
 
-          <div className="flex flex-wrap justify-center gap-x-16 gap-y-7 max-w-4xl mx-auto">
-            {clientNames.map((name) => (
-              <span
+          <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 max-w-4xl mx-auto">
+            {clientNames.map((name, i) => (
+              <motion.span
                 key={name}
-                className="font-display text-base font-medium text-muted-foreground/50 hover:text-primary transition-colors duration-300 cursor-default"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="font-display text-lg font-medium text-muted-foreground/50 hover:text-primary transition-colors duration-300 cursor-default"
               >
                 {name}
-              </span>
+              </motion.span>
             ))}
           </div>
         </motion.div>

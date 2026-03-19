@@ -1,80 +1,72 @@
 import { motion } from "framer-motion";
-import { Zap, Target, Globe, TrendingUp } from "lucide-react";
 
 const values = [
   {
-    icon: Zap,
+    number: "01",
     title: "Fast Turnaround",
-    description: "Modern 3D workflows and AI-assisted tools deliver results on tight timelines.",
+    description: "Modern 3D workflows and AI-assisted tools deliver results on the tightest timelines.",
   },
   {
-    icon: Target,
+    number: "02",
     title: "Marketing-Driven",
     description: "Every visual is designed to support approvals, campaigns and sales conversations.",
   },
   {
-    icon: Globe,
+    number: "03",
     title: "US Market Expertise",
     description: "Deep understanding of residential construction, buyer preferences and builder workflows.",
   },
   {
-    icon: TrendingUp,
+    number: "04",
     title: "Consistent Quality",
     description: "Scalable production that maintains the same high standard across every project.",
   },
 ];
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.08 } },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 15 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
 const ValueSection = () => {
   return (
     <section className="section-padding bg-background">
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-20">
+          {/* Left — headline */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="lg:col-span-2"
           >
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4">
-              Why AVS
-            </p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight">
+            <div className="label-mono text-muted-foreground mb-5">Why AVS</div>
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-foreground leading-[1.1] tracking-[-0.035em]">
               Built for how homes are actually sold today.
             </h2>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-lg">
+            <p className="mt-6 text-[15px] text-muted-foreground leading-[1.7] max-w-md">
               We don't just create beautiful images. We build visual systems that
               integrate into your sales process and help your team close faster.
             </p>
           </motion.div>
 
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-60px" }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-8"
-          >
-            {values.map((v) => (
-              <motion.div key={v.title} variants={item}>
-                <v.icon className="w-5 h-5 text-foreground mb-4" strokeWidth={1.5} />
-                <h3 className="font-display text-base font-semibold text-foreground mb-2">
+          {/* Right — grid */}
+          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-10">
+            {values.map((v, i) => (
+              <motion.div
+                key={v.title}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.5 }}
+              >
+                <div className="font-mono-data text-xs text-muted-foreground/50 mb-4">
+                  {v.number}
+                </div>
+                <h3 className="font-display text-base font-semibold text-foreground mb-2 tracking-[-0.02em]">
                   {v.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-[13px] text-muted-foreground leading-[1.7]">
                   {v.description}
                 </p>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

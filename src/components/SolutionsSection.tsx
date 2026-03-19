@@ -19,94 +19,79 @@ const solutions = [
   },
   {
     title: "Aerial & Streetscapes",
-    description: "Community-scale visuals that communicate scale, context and neighborhood impact.",
+    description: "Community-scale visuals that communicate context, scale and neighborhood impact.",
     image: aerialImg,
   },
   {
     title: "Interactive Tools",
-    description: "Site plans, facade selectors and floor plans that empower sales teams.",
+    description: "Site plans, facade selectors and floor plans that empower sales teams to close.",
     image: interactiveImg,
   },
 ];
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.1 } },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0, 1] as const } },
-};
-
 const SolutionsSection = () => {
   return (
-    <section className="section-padding bg-secondary">
+    <section className="section-padding bg-secondary/50">
       <div className="container-wide">
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 md:mb-20"
+          className="mb-20"
         >
-          <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4">
-            What We Do
-          </p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground max-w-2xl leading-tight">
+          <div className="label-mono text-muted-foreground mb-5">What We Do</div>
+          <h2 className="font-display text-[clamp(2rem,4vw,3.5rem)] font-semibold text-foreground max-w-2xl leading-[1.1] tracking-[-0.035em]">
             Visual solutions built for how homes are sold today.
           </h2>
         </motion.div>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
-        >
-          {solutions.map((sol) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {solutions.map((sol, i) => (
             <motion.div
               key={sol.title}
-              variants={item}
-              className="group relative overflow-hidden rounded-lg aspect-[4/3] cursor-pointer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="group relative overflow-hidden rounded-md aspect-[4/3] cursor-pointer"
             >
               <img
                 src={sol.image}
                 alt={sol.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <div className="flex items-start justify-between gap-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-7 md:p-9">
+                <div className="flex items-end justify-between gap-4">
                   <div>
-                    <h3 className="font-display text-xl md:text-2xl font-semibold text-primary-foreground">
+                    <h3 className="font-display text-xl md:text-2xl font-semibold text-white tracking-[-0.02em]">
                       {sol.title}
                     </h3>
-                    <p className="mt-2 text-sm text-primary-foreground/70 max-w-sm">
+                    <p className="mt-2 text-[13px] text-white/65 max-w-sm leading-relaxed font-light">
                       {sol.description}
                     </p>
                   </div>
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ArrowUpRight className="w-4 h-4 text-primary-foreground" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                    <ArrowUpRight className="w-4 h-4 text-white" />
                   </div>
                 </div>
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-12 text-center"
+          className="mt-14 text-center"
         >
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-muted-foreground transition-colors"
+            className="inline-flex items-center gap-2 text-[13px] font-medium text-foreground hover:text-muted-foreground transition-colors tracking-wide"
           >
             View All Work
-            <ArrowUpRight className="w-4 h-4" />
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
         </motion.div>
       </div>

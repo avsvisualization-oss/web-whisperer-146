@@ -1,38 +1,27 @@
 import { motion } from "framer-motion";
 
-const clients = [
-  { name: "Creative Homes", src: "/clients/creative-homes.jpg" },
-  { name: "Davison", src: "/clients/davison.jpg" },
-  { name: "DR Horton", src: "/clients/dr-horton.jpg" },
-  { name: "Elliott Homes", src: "/clients/elliott.jpg" },
-  { name: "Americans", src: "/clients/americans.jpg" },
-  { name: "Hubt", src: "/clients/hubt.jpg" },
-  { name: "Madden", src: "/clients/madden.jpg" },
-  { name: "Pulte Homes", src: "/clients/pulte-homes.jpg" },
-  { name: "Shaddock", src: "/clients/shaddoc.jpg" },
-  { name: "House Plan Zone", src: "/clients/house-plan-zone.jpg" },
+const clientNames = [
+  "Pulte Homes",
+  "DR Horton",
+  "Creative Homes",
+  "Elliott Homes",
+  "Shaddock Homes",
+  "Madden Home Design",
+  "Davison Homes",
+  "House Plan Zone",
+  "Great American Homes",
 ];
 
 const TrustSection = () => {
   return (
     <section className="section-padding bg-background">
       <div className="container-wide">
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center text-sm font-medium text-muted-foreground uppercase tracking-widest mb-12"
-        >
-          Trusted by builders and developers across the United States
-        </motion.p>
-
         {/* Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="flex flex-wrap justify-center gap-12 md:gap-20 mb-16"
+          className="flex flex-wrap justify-center gap-16 md:gap-24 mb-20"
         >
           {[
             { value: "500+", label: "Projects Delivered" },
@@ -40,29 +29,39 @@ const TrustSection = () => {
             { value: "8+", label: "Years in Market" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              <div className="font-mono-data text-3xl md:text-4xl font-medium text-foreground tracking-tight">
                 {stat.value}
               </div>
-              <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+              <div className="label-mono text-muted-foreground mt-3">{stat.label}</div>
             </div>
           ))}
         </motion.div>
 
-        {/* Logo marquee */}
-        <div className="relative overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
-          <div className="flex animate-marquee items-center gap-16">
-            {[...clients, ...clients].map((client, i) => (
-              <img
-                key={`${client.name}-${i}`}
-                src={client.src}
-                alt={client.name}
-                className="h-8 md:h-10 object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300 flex-shrink-0"
-              />
+        {/* Divider */}
+        <div className="border-t border-border mb-16" />
+
+        {/* Client names */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+        >
+          <p className="label-mono text-muted-foreground text-center mb-12">
+            Trusted by builders and developers across the United States
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-5 max-w-4xl mx-auto">
+            {clientNames.map((name) => (
+              <span
+                key={name}
+                className="font-display text-[15px] font-medium text-muted-foreground/70 hover:text-foreground transition-colors duration-300 cursor-default"
+              >
+                {name}
+              </span>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

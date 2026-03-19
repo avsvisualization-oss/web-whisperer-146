@@ -12,20 +12,18 @@ const ProcessSection = () => {
     <section className="section-padding bg-background">
       <div className="container-wide">
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16 md:mb-20"
+          className="mb-20"
         >
-          <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4">
-            How We Work
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+          <div className="label-mono text-muted-foreground mb-5">How We Work</div>
+          <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-foreground tracking-[-0.035em]">
             Simple, efficient process
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
@@ -33,15 +31,14 @@ const ProcessSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="text-center lg:text-left"
             >
-              <div className="font-display text-4xl font-bold text-border mb-4">
+              <div className="font-mono-data text-3xl font-medium text-border mb-5">
                 {step.number}
               </div>
-              <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+              <h3 className="font-display text-base font-semibold text-foreground mb-2 tracking-[-0.02em]">
                 {step.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-[13px] text-muted-foreground leading-[1.7]">
                 {step.description}
               </p>
             </motion.div>

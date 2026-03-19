@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Rocket, Users, Eye, Home } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -19,6 +19,13 @@ const fade = {
     transition: { duration: 0.7, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] as const },
   }),
 };
+
+const useCases = [
+  { icon: Rocket, title: "Launching new communities", desc: "Generate interest and pre-sales before construction begins" },
+  { icon: Home, title: "Marketing pre-construction homes", desc: "Give buyers confidence with clear, realistic project visuals" },
+  { icon: Users, title: "Supporting sales teams", desc: "Equip your team with tools that close deals faster" },
+  { icon: Eye, title: "Helping buyers understand projects", desc: "Make complex plans simple with interactive exploration" },
+];
 
 const Services = () => {
   return (
@@ -44,7 +51,7 @@ const Services = () => {
             className="font-display font-semibold text-foreground leading-[1.05] max-w-4xl mb-8"
             style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
           >
-            Visual solutions built for real estate marketing
+            Visual tools designed to help you sell and launch projects faster
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -52,7 +59,7 @@ const Services = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
           >
-            From renderings to interactive tools, we help builders and developers present and sell projects more effectively.
+            A complete system of visual solutions — from photorealistic renderings to interactive buyer experiences — built to accelerate real estate marketing and sales.
           </motion.p>
         </div>
       </section>
@@ -72,7 +79,7 @@ const Services = () => {
                 Visuals that sell before the first brick is laid
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-lg">
-                Clear, realistic visuals that communicate design and drive interest. Help buyers see the finished product and make faster decisions.
+                Clear, realistic visuals that help buyers understand and connect with your project. Drive interest, build confidence, and accelerate purchasing decisions.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 rounded-full border border-border text-sm text-muted-foreground">
@@ -114,45 +121,49 @@ const Services = () => {
             <motion.div custom={1} variants={fade} className="order-1 lg:order-2">
               <p className="label-mono text-primary mb-5">02 — Animations</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
-                Bring projects to life before construction
+                Cinematic storytelling that increases engagement
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
-                Cinematic animations that enhance marketing impact. Launch campaigns, impress stakeholders, and generate interest with immersive video content.
+                Bring your project to life with immersive video content. Launch campaigns earlier, captivate stakeholders, and generate buyer interest before ground breaks.
               </p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* 3. Interactive — Prominent */}
-      <section className="relative py-40 md:py-52 lg:py-64 border-t border-border overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.03] via-primary/[0.06] to-primary/[0.03]" />
+      {/* 3. Interactive — Key Product */}
+      <section className="relative py-48 md:py-56 lg:py-72 border-t border-primary/10 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.04] via-primary/[0.08] to-primary/[0.04]" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
         <div className="container-wide relative z-10">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <motion.div custom={0} variants={fade} className="text-center mb-16">
+            <motion.div custom={0} variants={fade} className="text-center mb-20">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium tracking-wider uppercase mb-6">
+                Key Product
+              </span>
               <p className="label-mono text-primary mb-5">03 — Interactive</p>
               <h2
-                className="font-semibold text-foreground mb-6 leading-tight max-w-3xl mx-auto"
-                style={{ fontSize: "clamp(2.2rem, 5vw, 4rem)" }}
+                className="font-semibold text-foreground mb-8 leading-tight max-w-3xl mx-auto"
+                style={{ fontSize: "clamp(2.4rem, 5.5vw, 4.5rem)" }}
               >
-                A better way to explore and sell communities
+                The most effective way to explore and sell communities
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
-                Interactive tools that improve how buyers explore and understand your projects. Support sales teams, increase engagement, and close faster.
+              <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                Give buyers an interactive experience that builds confidence and drives decisions. Equip your sales team with tools that shorten the path to close.
               </p>
             </motion.div>
 
-            <motion.div custom={1} variants={fade} className="grid md:grid-cols-3 gap-6 mb-16">
+            <motion.div custom={1} variants={fade} className="grid md:grid-cols-3 gap-8 mb-20">
               {[
                 { img: siteplanImg, label: "Interactive Site Plans", desc: "Navigate lots, pricing and availability in real time" },
                 { img: interactiveImg, label: "Virtual Tours", desc: "Walk through homes before they're built" },
                 { img: vrImg, label: "360° Experiences", desc: "Immersive exploration from any device" },
               ].map((item) => (
-                <div key={item.label} className="group relative rounded-xl overflow-hidden border border-primary/10 bg-card">
+                <div key={item.label} className="group relative rounded-xl overflow-hidden border border-primary/15 bg-card hover:border-primary/30 transition-colors duration-500">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={item.img}
@@ -179,6 +190,7 @@ const Services = () => {
             </motion.div>
           </motion.div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       </section>
 
       {/* 4. AI Visuals */}
@@ -198,10 +210,10 @@ const Services = () => {
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
-                Scale your visual production with AI
+                Produce visuals faster without compromising quality
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
-                Fast, scalable visual production powered by AI technology. Generate concepts, iterate faster, and reduce time to market without sacrificing quality.
+                AI-powered production that accelerates your timeline. Generate concepts in hours, iterate instantly, and get to market before the competition.
               </p>
             </motion.div>
             <motion.div custom={1} variants={fade} className="relative aspect-video rounded-xl overflow-hidden border border-border bg-card flex items-center justify-center">
@@ -215,8 +227,36 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-32 md:py-40 border-t border-border">
+      {/* Use Cases */}
+      <section className="section-padding border-t border-border">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+          >
+            <motion.div custom={0} variants={fade} className="text-center mb-20">
+              <p className="label-mono text-primary mb-5">Real-World Applications</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
+                How our solutions are used
+              </h2>
+            </motion.div>
+
+            <motion.div custom={1} variants={fade} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((uc) => (
+                <div key={uc.title} className="p-8 rounded-xl border border-border bg-card hover:border-primary/20 transition-colors duration-500">
+                  <uc.icon className="w-8 h-8 text-primary mb-5" />
+                  <h3 className="text-foreground font-semibold text-lg mb-2">{uc.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{uc.desc}</p>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-40 md:py-52 border-t border-border">
         <div className="container-tight text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -224,19 +264,30 @@ const Services = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
-              Ready to elevate your project marketing?
-            </h2>
-            <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
-              Let's discuss how the right visual strategy can help you sell faster.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full text-sm tracking-wide hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] transition-all duration-300"
+            <h2
+              className="font-semibold text-foreground mb-6 leading-tight"
+              style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
             >
-              Start a Project
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+              Let's build the right visual strategy for your next project
+            </h2>
+            <p className="text-muted-foreground text-lg mb-12 max-w-xl mx-auto">
+              Whether you need renderings, animations, or interactive tools — we'll help you find the right approach.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full text-sm tracking-wide hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] transition-all duration-300"
+              >
+                Start a Project
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground font-medium rounded-full text-sm tracking-wide hover:border-primary/40 hover:text-primary transition-all duration-300"
+              >
+                Book a Call
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

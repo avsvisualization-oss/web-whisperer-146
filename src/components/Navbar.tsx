@@ -39,8 +39,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/90 backdrop-blur-xl border-b border-border"
-          : "bg-transparent"
+          ? "bg-background/70 backdrop-blur-md border-b border-border/30"
+          : "bg-background/20 backdrop-blur-sm"
       }`}
     >
       <div className="container-wide flex items-center justify-between h-20">

@@ -25,7 +25,7 @@ const interiors = [
 
 const FeaturedWork = () => {
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-secondary relative">
+    <section className="py-16 md:py-20 lg:py-28 bg-secondary relative">
       {/* Flow gradient */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
 

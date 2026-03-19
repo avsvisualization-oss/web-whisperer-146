@@ -38,7 +38,7 @@ const InteractiveSection = () => {
             className="mb-20"
           >
             <div className="label-mono text-primary mb-8">Interactive Solutions</div>
-            <h2 className="font-display text-[clamp(3rem,7vw,5.5rem)] font-semibold text-foreground max-w-5xl leading-[1.02] tracking-[-0.045em]">
+            <h2 className="font-display text-[clamp(3.5rem,8vw,6.5rem)] font-semibold text-foreground max-w-5xl leading-[1.02] tracking-[-0.045em]">
               Interactive Tools<br />
               <span className="text-primary">That Help You Sell</span>
             </h2>
@@ -62,7 +62,7 @@ const InteractiveSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-24 relative rounded-2xl overflow-hidden border border-primary/20 bg-card"
+            className="mb-24 relative rounded-2xl overflow-hidden border border-primary/20 bg-card max-w-6xl mx-auto"
           >
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             <div className="aspect-[16/9] w-full bg-[hsl(var(--secondary))]">

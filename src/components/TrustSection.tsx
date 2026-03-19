@@ -14,7 +14,7 @@ const clientNames = [
 
 const TrustSection = () => {
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-background relative">
+    <section className="py-12 md:py-16 lg:py-20 bg-background relative">
       <div className="container-wide">
         {/* Stats */}
         <motion.div

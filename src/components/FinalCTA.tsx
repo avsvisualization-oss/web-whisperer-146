@@ -108,9 +108,12 @@ const FinalCTA = () => {
                 placeholder="Tell us about your project..."
               />
             </div>
+            <p className="mt-8 text-center text-[13px] text-muted-foreground/60 font-light tracking-wide">
+              Let's start your next project
+            </p>
             <button
               type="submit"
-              className="mt-8 w-full py-5 text-[15px] font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_50px_hsl(210_100%_52%/0.55)] hover:scale-[1.03] transition-all duration-300 tracking-wide"
+              className="mt-3 w-full py-5 text-[15px] font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_50px_hsl(210_100%_52%/0.55)] hover:scale-[1.03] transition-all duration-300 tracking-wide"
             >
               Start a Project
             </button>

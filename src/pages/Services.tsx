@@ -162,7 +162,7 @@ const Services = () => {
             </motion.div>
 
             <motion.div custom={1} variants={fade} className="rounded-2xl overflow-hidden border border-primary/20 bg-card mb-20 max-w-5xl mx-auto">
-              <div className="w-full" style={{ height: 'clamp(400px, 50vw, 580px)' }}>
+              <div className="w-full" style={{ height: 'clamp(380px, 45vw, 540px)' }}>
                 <iframe
                   width="100%"
                   height="100%"

@@ -25,7 +25,7 @@ const InteractiveSection = () => {
   return (
     <section className="relative overflow-hidden">
       {/* Main interactive content */}
-      <div className="py-12 md:py-20 lg:py-28 bg-background relative">
+      <div className="py-10 md:py-16 lg:py-20 bg-background relative">
         {/* Large accent glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-primary/[0.04] rounded-full blur-[150px] pointer-events-none" />
 

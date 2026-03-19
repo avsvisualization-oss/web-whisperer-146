@@ -58,12 +58,12 @@ const InteractiveSection = () => {
             className="mb-32 relative rounded-2xl overflow-hidden border border-primary/20 bg-card"
           >
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-            <div className="aspect-[16/9] w-full">
+            <div className="aspect-[16/9] w-full bg-[hsl(var(--secondary))]">
               <img
                 src={siteplanImg}
                 alt="Interactive Site Plan — Bay Pointe"
                 loading="lazy"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             <div className="p-6 md:p-8 flex items-center justify-between border-t border-border">

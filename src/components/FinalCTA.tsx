@@ -26,11 +26,10 @@ const FinalCTA = () => {
           >
             <div className="label-mono text-primary mb-6">Get in Touch</div>
             <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold text-foreground leading-[1.05] tracking-[-0.04em]">
-              Start your next project.
+              Let's Build Something That Helps You Sell
             </h2>
             <p className="mt-7 text-[14px] text-muted-foreground leading-[1.8] max-w-md font-light">
-              Tell us about your project and we'll get back to you within
-              24 hours with a tailored plan.
+              Tell us about your project and we'll help you present it in the most effective way.
             </p>
 
             <div className="mt-16 flex flex-col gap-6">

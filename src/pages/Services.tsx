@@ -225,7 +225,7 @@ const Services = () => {
                 Produce visuals faster without compromising quality
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
-                AI-powered production that accelerates your timeline. Generate concepts in hours, iterate instantly, and get to market before the competition.
+                AI-powered tools to elevate visuals and accelerate content production.
               </p>
             </motion.div>
             <motion.div custom={1} variants={fade} className="relative aspect-video rounded-xl overflow-hidden border border-border bg-card flex items-center justify-center">

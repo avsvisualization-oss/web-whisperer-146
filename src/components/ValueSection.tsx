@@ -27,24 +27,24 @@ const ValueSection = () => {
   return (
     <section className="section-padding bg-background">
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-20 lg:gap-24">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <div className="label-mono text-primary mb-5">Why AVS</div>
-            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-foreground leading-[1.1] tracking-[-0.035em]">
+            <div className="label-mono text-primary mb-6">Why AVS</div>
+            <h2 className="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-semibold text-foreground leading-[1.05] tracking-[-0.04em]">
               Designed for marketing and sales teams.
             </h2>
-            <p className="mt-6 text-[15px] text-muted-foreground leading-[1.7] max-w-md">
+            <p className="mt-7 text-[14px] text-muted-foreground leading-[1.8] max-w-md">
               We don't just create beautiful images. We build visual tools that
               integrate into your sales process and improve marketing performance.
             </p>
           </motion.div>
 
-          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-10">
+          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-14">
             {values.map((v, i) => (
               <motion.div
                 key={v.title}
@@ -54,13 +54,13 @@ const ValueSection = () => {
                 transition={{ delay: i * 0.08, duration: 0.5 }}
                 className="group"
               >
-                <div className="font-mono-data text-xs text-primary/40 mb-4 group-hover:text-primary/70 transition-colors duration-300">
+                <div className="font-mono-data text-sm text-primary/40 mb-5 group-hover:text-primary/70 transition-colors duration-300">
                   {v.number}
                 </div>
-                <h3 className="font-display text-base font-semibold text-foreground mb-2 tracking-[-0.02em]">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-3 tracking-[-0.02em]">
                   {v.title}
                 </h3>
-                <p className="text-[13px] text-muted-foreground leading-[1.7]">
+                <p className="text-[13px] text-muted-foreground leading-[1.8]">
                   {v.description}
                 </p>
               </motion.div>

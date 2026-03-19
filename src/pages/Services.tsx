@@ -75,7 +75,7 @@ const Services = () => {
                 Visuals that sell before the first brick is laid
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-lg">
-                Clear, realistic visuals that help buyers understand and connect with your project. Drive interest, build confidence, and accelerate purchasing decisions.
+                Photorealistic visuals for marketing, approvals, and presentations.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 rounded-full border border-border text-sm text-muted-foreground">

@@ -46,6 +46,7 @@ const InteractiveSection = () => {
               Interactive tools help builders present, sell and communicate
               projects more effectively — improving conversion rates and
               giving buyers a deeper understanding before it's built.
+              Designed to support sales teams and improve buyer decision-making.
             </p>
           </motion.div>
 

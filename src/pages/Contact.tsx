@@ -7,6 +7,15 @@ import Footer from "@/components/Footer";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#contact-form") {
+      setTimeout(() => {
+        document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
+  }, [location]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

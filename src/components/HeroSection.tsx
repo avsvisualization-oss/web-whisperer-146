@@ -40,7 +40,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 text-[15px] text-muted-foreground max-w-md leading-relaxed font-light"
+          className="mt-7 text-[15px] text-muted-foreground max-w-md leading-relaxed font-light"
         >
           We help home builders and developers present projects with clarity, speed, and impact — from photorealistic renderings to interactive sales experiences.
         </motion.p>

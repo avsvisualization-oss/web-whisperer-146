@@ -65,7 +65,7 @@ const SolutionsSection = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className={`group relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer ${
-                sol.featured ? "ring-1 ring-primary/30 shadow-[0_0_30px_hsl(var(--primary)/0.1)]" : ""
+                sol.featured ? "ring-2 ring-primary/40 shadow-[0_0_40px_hsl(var(--primary)/0.15)]" : ""
               }`}
             >
               <img

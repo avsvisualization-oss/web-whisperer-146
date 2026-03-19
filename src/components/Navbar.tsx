@@ -9,7 +9,6 @@ const navLinks = [
   { label: "Interactive Tools", href: "/interactive" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {

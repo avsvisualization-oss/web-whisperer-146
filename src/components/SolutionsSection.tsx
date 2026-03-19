@@ -56,7 +56,7 @@ const SolutionsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {solutions.map((sol, i) => (
             <motion.div
               key={sol.title}
@@ -64,18 +64,31 @@ const SolutionsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer"
+              className={`group relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer ${
+                sol.featured ? "ring-1 ring-primary/30 shadow-[0_0_30px_hsl(var(--primary)/0.1)]" : ""
+              }`}
             >
               <img
                 src={sol.image}
                 alt={sol.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
+              <div className={`absolute inset-0 bg-gradient-to-t ${
+                sol.featured ? "from-background/95 via-background/50 to-primary/10" : "from-background/95 via-background/40 to-transparent"
+              }`} />
+              {sol.label && (
+                <div className="absolute top-4 left-4">
+                  <span className="px-3 py-1 rounded-full bg-primary/15 text-primary text-[10px] font-medium tracking-wider uppercase backdrop-blur-sm">
+                    {sol.label}
+                  </span>
+                </div>
+              )}
+              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-8">
                 <div className="flex items-end justify-between gap-4">
                   <div>
-                    <h3 className="font-display text-2xl md:text-[1.75rem] font-semibold text-foreground tracking-[-0.025em]">
+                    <h3 className={`font-display text-xl md:text-2xl font-semibold tracking-[-0.025em] ${
+                      sol.featured ? "text-primary" : "text-foreground"
+                    }`}>
                       {sol.title}
                     </h3>
                     <p className="mt-3 text-[13px] text-muted-foreground max-w-sm leading-relaxed font-light">

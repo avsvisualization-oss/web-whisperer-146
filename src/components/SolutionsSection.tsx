@@ -4,22 +4,33 @@ import { ArrowUpRight } from "lucide-react";
 import exteriorImg from "@/assets/portfolio-exterior-2.jpg";
 import interiorImg from "@/assets/portfolio-interior-1.jpg";
 import aerialImg from "@/assets/portfolio-aerial-1.jpg";
+import walkthroughImg from "@/assets/portfolio-interior-2.jpg";
 
 const solutions = [
   {
     title: "Exterior Renderings",
     description: "Photo-realistic visuals that drive buyer interest and accelerate pre-sales before ground breaks.",
     image: exteriorImg,
+    featured: false,
   },
   {
     title: "Interior Renderings",
     description: "Lifestyle scenes that help buyers see themselves in the home — reducing hesitation and closing deals faster.",
     image: interiorImg,
+    featured: false,
   },
   {
     title: "Animations & Motion",
     description: "Cinematic walkthroughs that boost engagement across every marketing channel and improve conversion rates.",
     image: aerialImg,
+    featured: false,
+  },
+  {
+    title: "360 Walkthrough",
+    description: "Immersive 360 walkthrough experiences that allow buyers to explore homes before construction. Ideal for sales centers, marketing, and client presentations.",
+    image: walkthroughImg,
+    featured: true,
+    label: "Sales Tool",
   },
 ];
 

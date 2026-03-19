@@ -51,6 +51,9 @@ const InteractiveSection = () => {
             <p className="mt-4 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
               Designed to support sales teams and improve buyer decision-making.
             </p>
+            <p className="mt-4 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
+              Used by sales teams to improve buyer understanding and speed up decision-making.
+            </p>
           </motion.div>
 
           {/* Interactive Experience Embed — Large, prominent */}

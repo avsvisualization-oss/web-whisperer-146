@@ -73,6 +73,15 @@ const HeroSection = () => {
             View Portfolio
           </Link>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.75 }}
+          className="mt-8 text-[13px] text-muted-foreground/60 font-light tracking-wide"
+        >
+          Built for home builders, developers, and marketing teams.
+        </motion.p>
       </div>
     </section>
   );

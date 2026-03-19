@@ -15,6 +15,15 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleStartJob = useCallback(() => {
+    if (location.pathname === "/contact") {
+      document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/contact#contact-form");
+    }
+  }, [location.pathname, navigate]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);

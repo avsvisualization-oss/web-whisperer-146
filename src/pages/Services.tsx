@@ -162,14 +162,18 @@ const Services = () => {
             </motion.div>
 
             <motion.div custom={1} variants={fade} className="rounded-2xl overflow-hidden border border-primary/20 bg-card mb-20 max-w-5xl mx-auto">
-              <div className="aspect-[16/9] w-full">
+              <div className="w-full" style={{ height: 'clamp(400px, 50vw, 580px)' }}>
                 <iframe
-                  src="https://avsrenderings.viewin360.co/share/collection/7M7R1?logo=0&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  scrolling="no"
+                  src="https://avsrenderings.viewin360.co/share/collection/7M7R1?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1"
                   className="w-full h-full"
-                  style={{ border: 0 }}
                   title="360 Virtual Walkthrough"
                   loading="lazy"
-                  allow="fullscreen; xr-spatial-tracking"
+                  allow="xr-spatial-tracking; gyroscope; accelerometer; fullscreen"
+                  allowFullScreen
                 />
               </div>
               <div className="p-6 md:p-8 border-t border-border flex items-center justify-between">
@@ -180,7 +184,7 @@ const Services = () => {
                   </p>
                 </div>
                 <a
-                  href="https://avsrenderings.viewin360.co/share/collection/7M7R1?logo=0&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1"
+                  href="https://avsrenderings.viewin360.co/share/collection/7M7R1?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-full text-sm tracking-wide hover:bg-primary/80 hover:shadow-[0_0_20px_hsl(210_100%_52%/0.3)] transition-all duration-300"

@@ -22,15 +22,13 @@ const About = () => {
                 Your visual partner for selling homes.
               </h1>
               <p className="mt-6 text-[15px] text-muted-foreground leading-[1.7]">
-                AVS Renderings is a visual solutions company that helps home
-                builders, residential developers and marketing teams sell
-                projects faster and more effectively.
+                We are a visualization partner for home builders across the United States.
               </p>
               <p className="mt-4 text-[15px] text-muted-foreground leading-[1.7]">
-                We go beyond creating beautiful renderings. We deliver strategic
-                visual tools — from interactive site plans to cinematic
-                animations — that integrate into your sales process and drive
-                measurable results.
+                Our focus goes beyond creating images — we help our clients sell, present, and launch projects more effectively.
+              </p>
+              <p className="mt-4 text-[15px] text-muted-foreground leading-[1.7]">
+                From renderings to interactive tools, everything we build is designed to support real business outcomes.
               </p>
             </motion.div>
 

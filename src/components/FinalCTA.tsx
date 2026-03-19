@@ -26,11 +26,10 @@ const FinalCTA = () => {
           >
             <div className="label-mono text-primary mb-6">Get in Touch</div>
             <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold text-foreground leading-[1.05] tracking-[-0.04em]">
-              Start your next project.
+              Let's Build Something That Helps You Sell
             </h2>
             <p className="mt-7 text-[14px] text-muted-foreground leading-[1.8] max-w-md font-light">
-              Tell us about your project and we'll get back to you within
-              24 hours with a tailored plan.
+              Tell us about your project and we'll help you present it in the most effective way.
             </p>
 
             <div className="mt-16 flex flex-col gap-6">
@@ -113,7 +112,7 @@ const FinalCTA = () => {
               type="submit"
               className="mt-6 w-full py-4.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] transition-all duration-300 tracking-wide"
             >
-              Send Message
+              Start a Project
             </button>
           </motion.form>
         </div>

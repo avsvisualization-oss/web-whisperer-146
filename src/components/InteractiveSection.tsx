@@ -39,13 +39,16 @@ const InteractiveSection = () => {
           >
             <div className="label-mono text-primary mb-8">Interactive Solutions</div>
             <h2 className="font-display text-[clamp(3rem,7vw,5.5rem)] font-semibold text-foreground max-w-5xl leading-[1.02] tracking-[-0.045em]">
-              Beyond renderings.<br />
-              <span className="text-primary">A better way to sell.</span>
+              Interactive Tools<br />
+              <span className="text-primary">That Help You Sell</span>
             </h2>
             <p className="mt-10 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
-              Interactive tools help builders present, sell and communicate
-              projects more effectively — improving conversion rates and
-              giving buyers a deeper understanding before it's built.
+              Our interactive solutions are designed to support sales teams and improve buyer understanding.
+            </p>
+            <p className="mt-4 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
+              From lot selection to community exploration, we create digital tools that make projects easier to understand, present, and sell.
+            </p>
+            <p className="mt-4 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
               Designed to support sales teams and improve buyer decision-making.
             </p>
           </motion.div>

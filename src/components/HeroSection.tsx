@@ -42,7 +42,16 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
           className="mt-10 text-[15px] text-muted-foreground max-w-md leading-relaxed font-light"
         >
-          We help home builders and developers present projects with clarity, speed, and impact — from photorealistic renderings to interactive sales tools.
+          We help home builders and developers present projects with clarity, speed, and impact — from photorealistic renderings to interactive sales experiences.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.55 }}
+          className="mt-6 text-[13px] text-muted-foreground/70 font-light tracking-wide"
+        >
+          Trusted by builders, developers, and marketing teams across the United States.
         </motion.p>
 
         <motion.div

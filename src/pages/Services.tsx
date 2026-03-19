@@ -75,7 +75,7 @@ const Services = () => {
                 Visuals that sell before the first brick is laid
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-lg">
-                Clear, realistic visuals that help buyers understand and connect with your project. Drive interest, build confidence, and accelerate purchasing decisions.
+                Photorealistic visuals for marketing, approvals, and presentations.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 rounded-full border border-border text-sm text-muted-foreground">
@@ -128,7 +128,7 @@ const Services = () => {
                 Cinematic storytelling that increases engagement
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
-                Bring your project to life with immersive video content. Launch campaigns earlier, captivate stakeholders, and generate buyer interest before ground breaks.
+                Cinematic walkthroughs that bring projects to life and enhance buyer engagement.
               </p>
             </motion.div>
           </motion.div>
@@ -157,7 +157,7 @@ const Services = () => {
                 Immersive 360 experiences that bring spaces to life
               </h2>
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-                Immersive 360 experiences that allow buyers and stakeholders to explore spaces interactively before construction.
+                Immersive 360 experiences that allow buyers to explore spaces before construction.
               </p>
             </motion.div>
 
@@ -225,7 +225,7 @@ const Services = () => {
                 Produce visuals faster without compromising quality
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
-                AI-powered production that accelerates your timeline. Generate concepts in hours, iterate instantly, and get to market before the competition.
+                AI-powered tools to elevate visuals and accelerate content production.
               </p>
             </motion.div>
             <motion.div custom={1} variants={fade} className="relative aspect-video rounded-xl overflow-hidden border border-border bg-card flex items-center justify-center">

@@ -20,7 +20,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="pt-32 pb-24 md:pt-40 md:pb-32">
+      <section id="contact-form" className="pt-32 pb-24 md:pt-40 md:pb-32">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             <motion.div

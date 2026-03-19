@@ -5,10 +5,11 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen mt-0 pt-0 flex items-end overflow-hidden">
       {/* Background Video — flush to viewport top, behind navbar */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden bg-black">
         <iframe
           src="https://player.vimeo.com/video/1168503087?background=1&autoplay=1&loop=1&muted=1&quality=720p"
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 border-0"
+          className="absolute inset-0 border-0"
+          style={{ width: '100vw', height: '56.25vw', minHeight: '100vh', minWidth: '177.78vh', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
           allow="autoplay; fullscreen"
           title="Hero background"
         />

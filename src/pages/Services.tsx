@@ -184,7 +184,7 @@ const Services = () => {
                   </p>
                 </div>
                 <a
-                  href="https://avsrenderings.viewin360.co/share/collection/7M7R1?logo=0&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1"
+                  href="https://avsrenderings.viewin360.co/share/collection/7M7R1?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-full text-sm tracking-wide hover:bg-primary/80 hover:shadow-[0_0_20px_hsl(210_100%_52%/0.3)] transition-all duration-300"

@@ -111,10 +111,18 @@ const Services = () => {
             viewport={{ once: true, margin: "-80px" }}
             className="grid lg:grid-cols-2 gap-16 items-center"
           >
-            <motion.div custom={0} variants={fade} className="order-2 lg:order-1 aspect-video rounded-lg overflow-hidden relative">
-              <img src={aerialImg} alt="Cinematic animation" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6">
+            <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden relative border border-border">
+              <div className="aspect-video w-full">
+                <iframe
+                  src="https://player.vimeo.com/video/1168259589?background=1&autoplay=1&loop=1&muted=1"
+                  className="w-full h-full"
+                  style={{ border: 0 }}
+                  allow="autoplay; fullscreen"
+                  title="Cinematic animation preview"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/70 to-transparent p-6">
                 <span className="label-mono text-primary/80">Cinematic Flythrough</span>
               </div>
             </motion.div>

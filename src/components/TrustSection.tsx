@@ -38,7 +38,7 @@ const TrustSection = () => {
         </motion.div>
 
         {/* Divider */}
-        <div className="border-t border-border/50 mb-24" />
+        <div className="border-t border-border/50 mb-16" />
 
         {/* Trust statement */}
         <motion.div

@@ -140,7 +140,7 @@ const InteractiveSection = () => {
           </motion.div>
 
           {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
             {benefits.map((b, i) => (
               <motion.div
                 key={b.title}

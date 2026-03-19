@@ -104,12 +104,12 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                to="/contact"
+              <button
+                onClick={handleStartJob}
                 className="mt-4 px-6 py-3 text-sm font-medium bg-primary text-primary-foreground rounded-full text-center"
               >
-                Start a Project
-              </Link>
+                Start a Job
+              </button>
             </div>
           </motion.div>
         )}

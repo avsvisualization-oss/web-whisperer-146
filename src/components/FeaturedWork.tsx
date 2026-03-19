@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-import ext1 from "@/assets/portfolio-exterior-1.jpg";
-import ext2 from "@/assets/portfolio-exterior-2.jpg";
-import ext3 from "@/assets/portfolio-exterior-3.jpg";
-import int1 from "@/assets/portfolio-interior-1.jpg";
-import int2 from "@/assets/portfolio-bedroom.jpg";
-import int3 from "@/assets/portfolio-kitchen.jpg";
+import ext1 from "@/assets/exterior-1.png";
+import ext2 from "@/assets/exterior-2.png";
+import ext3 from "@/assets/exterior-3.jpg";
+import int1 from "@/assets/interior-bedroom.jpg";
+import int2 from "@/assets/interior-kitchen-1.jpg";
+import int3 from "@/assets/interior-kitchen-2.jpg";
 
 const exteriors = [
   { image: ext1, title: "Coral Street" },

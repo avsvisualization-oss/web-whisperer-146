@@ -5,6 +5,17 @@ import FinalCTA from "@/components/FinalCTA";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
+import imgIgnacio from "@/assets/team/ignacio.png";
+import imgNatacha from "@/assets/team/natacha.jpg";
+import imgGabriel from "@/assets/team/gabriel.jpg";
+import imgMike from "@/assets/team/mike.jpg";
+import imgMatias from "@/assets/team/matias.png";
+import imgFabian from "@/assets/team/fabian.png";
+import imgMilena from "@/assets/team/milena.png";
+import imgAgustina from "@/assets/team/agustina.png";
+import imgNati from "@/assets/team/nati.jpg";
+import imgAbril from "@/assets/team/abril.jpg";
+
 const differentiators = [
   "Built for production scale, not one-off projects",
   "Fast turnaround with consistent, reliable quality",
@@ -25,14 +36,32 @@ const steps = [
   { number: "04", text: "Final assets ready for marketing and sales" },
 ];
 
-const team = [
-  { name: "Ignacio Abellán", role: "Founder / Client Strategy" },
-  { name: "Mike", role: "Director / Team Leader" },
-  { name: "Fabian", role: "Director / Team Leader" },
-  { name: "Matias", role: "Director / Team Leader" },
-  { name: "Natacha", role: "Operations Manager" },
-  { name: "Agustina", role: "Project Manager" },
-  { name: "Milena", role: "Project Manager" },
+const teamGroups = [
+  {
+    title: "Leadership",
+    members: [
+      { name: "Ignacio Abellán", role: "Founder & Director", image: imgIgnacio },
+      { name: "Natacha", role: "Operations Manager", image: imgNatacha },
+      { name: "Gabriel", role: "Accounting & Finance Manager", image: imgGabriel },
+    ],
+  },
+  {
+    title: "Management",
+    members: [
+      { name: "Mike", role: "Development Manager", image: imgMike },
+      { name: "Matias", role: "Interior Division Manager", image: imgMatias },
+      { name: "Fabian", role: "Animation Division Manager", image: imgFabian },
+    ],
+  },
+  {
+    title: "Production",
+    members: [
+      { name: "Milena", role: "Project Manager", image: imgMilena },
+      { name: "Agustina", role: "Project Manager", image: imgAgustina },
+      { name: "Nati", role: "Home Renderings Manager", image: imgNati },
+      { name: "Abril", role: "3D Modeling Manager", image: imgAbril },
+    ],
+  },
 ];
 
 const About = () => {
@@ -166,46 +195,62 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership */}
-      <section className="py-16 md:py-20">
+      {/* Team */}
+      <section className="py-16 md:py-24">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 max-w-2xl"
+            className="mb-14 max-w-2xl"
           >
-            <div className="label-mono text-primary mb-5">Leadership</div>
+            <div className="label-mono text-primary mb-5">Our Team</div>
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground tracking-[-0.035em] mb-4">
-              Meet the team behind AVS
+              The People Behind Every Delivery
             </h2>
             <p className="text-[14px] text-muted-foreground leading-[1.7]">
-              A leadership team combining expertise in real estate, marketing, and production — focused on delivering consistent, high-quality results at scale.
+              A structured team built to deliver consistency, speed and quality at scale.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-            {team.map((member, i) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+          {teamGroups.map((group, gi) => (
+            <div key={group.title} className={gi > 0 ? "mt-12" : ""}>
+              <motion.h3
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.06 }}
-                className="p-5 rounded-md bg-secondary border border-border/30"
+                className="label-mono text-muted-foreground mb-6"
               >
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <span className="text-[13px] font-medium text-primary">
-                    {member.name.split(" ").map(n => n[0]).join("")}
-                  </span>
-                </div>
-                <h3 className="font-display text-[15px] font-semibold text-foreground tracking-[-0.02em]">
-                  {member.name}
-                </h3>
-                <p className="text-[12px] text-muted-foreground mt-1">{member.role}</p>
-              </motion.div>
-            ))}
-          </div>
+                {group.title}
+              </motion.h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {group.members.map((member, i) => (
+                  <motion.div
+                    key={member.name}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.06 }}
+                    className="group rounded-lg overflow-hidden bg-secondary border border-border/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:border-border/60"
+                  >
+                    <div className="aspect-square overflow-hidden bg-[hsl(220,20%,95%)]">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover object-top grayscale-[30%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-500"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h4 className="font-display text-[15px] font-semibold text-foreground tracking-[-0.02em]">
+                        {member.name}
+                      </h4>
+                      <p className="text-[12px] text-muted-foreground mt-1">{member.role}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

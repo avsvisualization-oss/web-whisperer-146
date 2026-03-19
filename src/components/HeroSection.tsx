@@ -1,18 +1,19 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import heroImg from "@/assets/portfolio-exterior-1.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden">
-      {/* Background */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src={heroImg}
-          alt="Premium architectural rendering"
-          className="w-full h-full object-cover"
+        <iframe
+          src="https://player.vimeo.com/video/1168503087?background=1&autoplay=1&loop=1&muted=1&quality=720p"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full min-h-full"
+          style={{ border: 0 }}
+          allow="autoplay; fullscreen"
+          title="Hero background"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/40" />
       </div>
 
       {/* Content */}

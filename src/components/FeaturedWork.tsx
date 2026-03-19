@@ -1,14 +1,35 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-import img1 from "@/assets/portfolio-exterior-3.jpg";
-import img2 from "@/assets/portfolio-interior-2.jpg";
-import img3 from "@/assets/portfolio-aerial-3.jpg";
 
-const projects = [
-  { image: img1, category: "Exteriors", title: "Powell Residence" },
-  { image: img2, category: "Interiors", title: "The Elms Kitchen" },
-  { image: img3, category: "Aerials", title: "Community Aerial" },
+const exteriors = [
+  {
+    image: "https://www.dropbox.com/scl/fi/regu7ho7f2oee8e76ma9q/F_Coral-Street-Cam-01.png?raw=1",
+    title: "Coral Street",
+  },
+  {
+    image: "https://www.dropbox.com/scl/fi/zbqopnq9jp5c5y4hioszm/avs-ai-studio-generation-1-2.png?raw=1",
+    title: "AVS AI Studio",
+  },
+  {
+    image: "https://www.dropbox.com/scl/fi/v6ulwaowqobcybpxu7enh/dzmNa7JA.jpeg?raw=1",
+    title: "Modern Residence",
+  },
+];
+
+const interiors = [
+  {
+    image: "https://www.dropbox.com/scl/fi/qpda5gw3mcdxmu1lf9bb7/DelWebb-Maygrass-ENTRY03.png?raw=1",
+    title: "Maygrass Entry",
+  },
+  {
+    image: "https://www.dropbox.com/scl/fi/e1dylllyglyps3nfc0b8k/26-0175-abhp-009-00494-redwood_BEDROOM.jpg?raw=1",
+    title: "Redwood Bedroom",
+  },
+  {
+    image: "https://www.dropbox.com/scl/fi/fpdhjyczre7mwx6s09dv4/26-0175-abhp-009-00494-redwood_KITCHEN.jpg?raw=1",
+    title: "Redwood Kitchen",
+  },
 ];
 
 const FeaturedWork = () => {
@@ -18,6 +39,7 @@ const FeaturedWork = () => {
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
 
       <div className="container-wide">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,32 +60,80 @@ const FeaturedWork = () => {
           </Link>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-          {projects.map((project, i) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <div className="label-mono text-primary mb-2">
-                  {project.category}
+        {/* Exteriors */}
+        <div className="mb-8">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="label-mono text-muted-foreground mb-8"
+          >
+            Exteriors
+          </motion.p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+            {exteriors.map((project, i) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="group relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <div className="label-mono text-primary mb-2">Exteriors</div>
+                  <h3 className="font-display text-xl font-semibold text-foreground tracking-[-0.02em]">
+                    {project.title}
+                  </h3>
                 </div>
-                <h3 className="font-display text-xl font-semibold text-foreground tracking-[-0.02em]">
-                  {project.title}
-                </h3>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Interiors */}
+        <div className="mt-20">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="label-mono text-muted-foreground mb-8"
+          >
+            Interiors
+          </motion.p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+            {interiors.map((project, i) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="group relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <div className="label-mono text-primary mb-2">Interiors</div>
+                  <h3 className="font-display text-xl font-semibold text-foreground tracking-[-0.02em]">
+                    {project.title}
+                  </h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-14 text-center md:hidden">

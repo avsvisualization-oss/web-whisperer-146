@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect, useCallback } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -9,13 +9,21 @@ const navLinks = [
   { label: "Interactive Tools", href: "/interactive" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleStartJob = useCallback(() => {
+    if (location.pathname === "/contact") {
+      document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/contact#contact-form");
+    }
+  }, [location.pathname, navigate]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -57,12 +65,12 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <Link
-            to="/contact"
+          <button
+            onClick={handleStartJob}
             className="ml-2 px-6 py-2.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_20px_hsl(210_100%_52%/0.3)] transition-all duration-300 tracking-wide"
           >
-            Start a Project
-          </Link>
+            Start a Job
+          </button>
         </div>
 
         <button
@@ -96,12 +104,12 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                to="/contact"
+              <button
+                onClick={handleStartJob}
                 className="mt-4 px-6 py-3 text-sm font-medium bg-primary text-primary-foreground rounded-full text-center"
               >
-                Start a Project
-              </Link>
+                Start a Job
+              </button>
             </div>
           </motion.div>
         )}

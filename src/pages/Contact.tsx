@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -6,6 +7,15 @@ import Footer from "@/components/Footer";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#contact-form") {
+      setTimeout(() => {
+        document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
+  }, [location]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,7 +30,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="pt-32 pb-24 md:pt-40 md:pb-32">
+      <section id="contact-form" className="pt-32 pb-24 md:pt-40 md:pb-32">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             <motion.div

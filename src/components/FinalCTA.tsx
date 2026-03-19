@@ -110,7 +110,7 @@ const FinalCTA = () => {
             </div>
             <button
               type="submit"
-              className="mt-6 w-full py-4.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] transition-all duration-300 tracking-wide"
+              className="mt-8 w-full py-5 text-[15px] font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/90 hover:shadow-[0_0_40px_hsl(210_100%_52%/0.45)] hover:scale-[1.02] transition-all duration-300 tracking-wide"
             >
               Start a Project
             </button>

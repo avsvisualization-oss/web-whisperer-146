@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <iframe
           src="https://player.vimeo.com/video/1168503087?background=1&autoplay=1&loop=1&muted=1&quality=720p"
-          className="absolute inset-0 h-full w-full border-0"
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 border-0"
           allow="autoplay; fullscreen"
           title="Hero background"
         />

@@ -58,7 +58,7 @@ const teamGroups = [
     members: [
       { name: "Milena", role: "Project Manager", image: imgMilena },
       { name: "Agustina", role: "Project Manager", image: imgAgustina },
-      { name: "Nati", role: "Home Renderings Manager", image: imgNati },
+      { name: "Anita", role: "Home Renderings Manager", image: imgNati },
       { name: "Abril", role: "3D Modeling Manager", image: imgAbril },
     ],
   },

@@ -65,12 +65,12 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <Link
-            to="/contact"
+          <button
+            onClick={handleStartJob}
             className="ml-2 px-6 py-2.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_20px_hsl(210_100%_52%/0.3)] transition-all duration-300 tracking-wide"
           >
-            Start a Project
-          </Link>
+            Start a Job
+          </button>
         </div>
 
         <button

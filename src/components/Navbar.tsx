@@ -35,9 +35,9 @@ const Navbar = () => {
       }`}
     >
       <div className="container-wide flex items-center justify-between h-20">
-        <Link to="/" className="font-display text-lg tracking-tight text-foreground">
-          <span className="font-semibold">avs</span>
-          <span className="font-light text-muted-foreground">renderings</span>
+        <Link to="/" className="font-display text-xl tracking-tight text-foreground">
+          <span className="font-semibold">AVS</span>
+          <span className="font-light text-primary">Renderings</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-10">
@@ -45,10 +45,10 @@ const Navbar = () => {
             <Link
               key={link.href}
               to={link.href}
-              className={`text-[13px] font-medium tracking-wide transition-colors ${
+              className={`text-[13px] font-medium tracking-wide transition-colors duration-300 ${
                 location.pathname === link.href
                   ? "text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "text-muted-foreground hover:text-primary"
               }`}
             >
               {link.label}
@@ -56,7 +56,7 @@ const Navbar = () => {
           ))}
           <Link
             to="/contact"
-            className="ml-2 px-6 py-2.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+            className="ml-2 px-6 py-2.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_20px_hsl(210_100%_52%/0.3)] transition-all duration-300 tracking-wide"
           >
             Start a Project
           </Link>

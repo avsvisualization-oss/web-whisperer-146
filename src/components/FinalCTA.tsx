@@ -36,14 +36,14 @@ const FinalCTA = () => {
             <div className="mt-14 flex flex-col gap-5">
               <a
                 href="mailto:info@avs-renderings.com"
-                className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 <Mail className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
                 <span className="text-[13px]">info@avs-renderings.com</span>
               </a>
               <a
                 href="tel:+13028673810"
-                className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 <Phone className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
                 <span className="text-[13px]">+1 (302) 867-3810</span>
@@ -71,7 +71,7 @@ const FinalCTA = () => {
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors"
+                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors duration-300"
                 placeholder="Your name"
               />
             </div>
@@ -82,7 +82,7 @@ const FinalCTA = () => {
                 required
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors"
+                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors duration-300"
                 placeholder="your@email.com"
               />
             </div>
@@ -94,7 +94,7 @@ const FinalCTA = () => {
                 type="text"
                 value={form.company}
                 onChange={(e) => setForm({ ...form, company: e.target.value })}
-                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors"
+                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors duration-300"
                 placeholder="Company name"
               />
             </div>
@@ -105,13 +105,13 @@ const FinalCTA = () => {
                 rows={4}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors resize-none"
+                className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
                 placeholder="Tell us about your project..."
               />
             </div>
             <button
               type="submit"
-              className="mt-4 w-full py-4 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors tracking-wide"
+              className="mt-4 w-full py-4 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_24px_hsl(210_100%_52%/0.3)] transition-all duration-300 tracking-wide"
             >
               Send Message
             </button>

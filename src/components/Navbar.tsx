@@ -1,106 +1,113 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Mail, Phone, MapPin } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Interactive", href: "#interactive" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "About", href: "/about" },
+  { label: "Team", href: "/team" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location]);
 
   return (
-    <>
-      {/* Top bar */}
-      <div className="hidden md:flex items-center justify-between px-8 py-2 bg-secondary text-muted-foreground text-sm font-mono-data">
-        <div className="flex items-center gap-6">
-          <span className="flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5" />
-            1200 Ponce de Leon, St 703, Coral Gables FL 33134
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Mail className="w-3.5 h-3.5" />
-            info@avs-renderings.com
-          </span>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-background/90 backdrop-blur-xl border-b border-border"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="container-wide flex items-center justify-between h-20">
+        {/* Logo */}
+        <Link to="/" className="font-display text-lg tracking-tight text-foreground">
+          <span className="font-semibold">avs</span>
+          <span className="font-light">renderings</span>
+        </Link>
+
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-10">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              to={link.href}
+              className={`text-[13px] font-medium tracking-wide transition-colors ${
+                location.pathname === link.href
+                  ? "text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            to="/contact"
+            className="ml-2 px-6 py-2.5 text-[13px] font-medium bg-foreground text-background rounded-full hover:bg-foreground/90 transition-colors"
+          >
+            Start a Project
+          </Link>
         </div>
-        <span className="flex items-center gap-1.5">
-          <Phone className="w-3.5 h-3.5" />
-          +1 (302) 867-3810
-        </span>
+
+        {/* Mobile toggle */}
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="md:hidden p-2 text-foreground"
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
       </div>
 
-      {/* Main nav */}
-      <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-        <div className="container flex items-center justify-between h-16">
-          <a href="#home" className="text-xl font-semibold tracking-tight">
-            <span className="text-foreground">avs</span>
-            <span className="text-primary">renderings</span>
-          </a>
-
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              className="text-sm font-medium px-5 py-2 rounded-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-            >
-              Get a Quote
-            </a>
-          </div>
-
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden text-foreground"
-            aria-label="Toggle menu"
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-background border-b border-border overflow-hidden"
           >
-            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
-        </div>
-
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="md:hidden overflow-hidden bg-background border-b border-border"
-            >
-              <div className="container py-4 flex flex-col gap-3">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="text-sm text-muted-foreground hover:text-foreground py-2"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-                <a
-                  href="#contact"
-                  onClick={() => setOpen(false)}
-                  className="text-sm font-medium px-5 py-2.5 rounded-sm bg-primary text-primary-foreground text-center"
+            <div className="container-wide py-8 flex flex-col gap-5">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`text-base font-medium ${
+                    location.pathname === link.href
+                      ? "text-foreground"
+                      : "text-muted-foreground"
+                  }`}
                 >
-                  Get a Quote
-                </a>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
-    </>
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                to="/contact"
+                className="mt-4 px-6 py-3 text-sm font-medium bg-foreground text-background rounded-full text-center"
+              >
+                Start a Project
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
   );
 };
 

@@ -9,7 +9,7 @@ const steps = [
 
 const ProcessSection = () => {
   return (
-    <section className="py-24 md:py-32 lg:py-40 bg-background relative">
+    <section className="py-16 md:py-24 lg:py-32 bg-background relative">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 12 }}

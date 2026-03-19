@@ -1,0 +1,172 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import siteplanImg from "@/assets/siteplan.jpg";
+
+const fade = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] as const },
+  }),
+};
+
+const Interactive = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+
+      {/* Hero */}
+      <section className="relative pt-40 pb-28 md:pt-52 md:pb-36 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <div className="container-wide relative z-10">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="label-mono text-primary mb-6"
+          >
+            Interactive Tools
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="font-display font-semibold text-foreground leading-[1.05] max-w-4xl mb-8"
+            style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
+          >
+            Interactive experiences that help sell communities
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+          >
+            From interactive site plans to virtual tours — give buyers the tools to explore your community on their own terms.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Interactive Site Plan */}
+      <section className="section-padding border-t border-border">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="grid lg:grid-cols-2 gap-16 items-center"
+          >
+            <motion.div custom={0} variants={fade}>
+              <p className="label-mono text-primary mb-5">01 — Interactive Site Plans</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
+                The most effective way to explore and sell communities
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-lg">
+                Give buyers an interactive experience that builds confidence and drives decisions. Equip your sales team with tools that shorten the path to close.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-4 py-2 rounded-full border border-border text-sm text-muted-foreground">
+                  Site Plans
+                </span>
+                <span className="px-4 py-2 rounded-full border border-border text-sm text-muted-foreground">
+                  Floor Plans
+                </span>
+                <span className="px-4 py-2 rounded-full border border-border text-sm text-muted-foreground">
+                  Lot Selection
+                </span>
+              </div>
+            </motion.div>
+            <motion.div custom={1} variants={fade} className="rounded-xl overflow-hidden border border-border">
+              <div className="aspect-[4/3] w-full bg-secondary">
+                <img
+                  src={siteplanImg}
+                  alt="Interactive Site Plan"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 360 Walkthrough */}
+      <section className="section-padding border-t border-border">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="grid lg:grid-cols-2 gap-16 items-center"
+          >
+            <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden border border-border">
+              <div className="aspect-video w-full">
+                <iframe
+                  src="https://my.matterport.com/show/?m=SxQL3iGyvPs&play=1"
+                  className="w-full h-full"
+                  style={{ border: 0 }}
+                  title="360 Virtual Walkthrough"
+                  loading="lazy"
+                  allow="fullscreen; xr-spatial-tracking"
+                />
+              </div>
+            </motion.div>
+            <motion.div custom={1} variants={fade} className="order-1 lg:order-2">
+              <p className="label-mono text-primary mb-5">02 — Virtual Tours</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
+                Immersive 360 experiences that bring spaces to life
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
+                Allow buyers and stakeholders to explore spaces interactively before construction. Walk through rooms, look around, and experience the space as if you were there.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-40 md:py-52 border-t border-border">
+        <div className="container-tight text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <h2
+              className="font-semibold text-foreground mb-6 leading-tight"
+              style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
+            >
+              Ready to give your buyers a better experience?
+            </h2>
+            <p className="text-muted-foreground text-lg mb-12 max-w-xl mx-auto">
+              Let's build interactive tools that help your team sell smarter and close faster.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full text-sm tracking-wide hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] transition-all duration-300"
+              >
+                Start a Project
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground font-medium rounded-full text-sm tracking-wide hover:border-primary/40 hover:text-primary transition-all duration-300"
+              >
+                Book a Call
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Interactive;

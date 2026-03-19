@@ -25,7 +25,7 @@ const values = [
 
 const ValueSection = () => {
   return (
-    <section className="py-40 md:py-52 lg:py-64 bg-background relative">
+    <section className="py-24 md:py-32 lg:py-40 bg-background relative">
       {/* Subtle top gradient for flow */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-secondary to-transparent pointer-events-none" />
 

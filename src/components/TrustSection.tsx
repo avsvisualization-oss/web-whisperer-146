@@ -21,7 +21,7 @@ const TrustSection = () => {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-16 md:gap-24 mb-20"
+          className="flex flex-wrap justify-center gap-16 md:gap-28 mb-20"
         >
           {[
             { value: "500+", label: "Projects Delivered" },
@@ -29,7 +29,7 @@ const TrustSection = () => {
             { value: "8+", label: "Years in Market" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="font-mono-data text-3xl md:text-4xl font-medium text-primary tracking-tight">
+              <div className="font-mono-data text-4xl md:text-5xl font-medium text-primary tracking-tight">
                 {stat.value}
               </div>
               <div className="label-mono text-muted-foreground mt-3">{stat.label}</div>
@@ -40,7 +40,7 @@ const TrustSection = () => {
         {/* Divider */}
         <div className="border-t border-border mb-16" />
 
-        {/* Client names */}
+        {/* Trust statement */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -51,11 +51,11 @@ const TrustSection = () => {
             Trusted by builders and developers across the United States
           </p>
 
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-5 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-x-14 gap-y-6 max-w-4xl mx-auto">
             {clientNames.map((name) => (
               <span
                 key={name}
-                className="font-display text-[15px] font-medium text-muted-foreground/60 hover:text-primary transition-colors duration-300 cursor-default"
+                className="font-display text-[15px] font-medium text-muted-foreground/50 hover:text-primary transition-colors duration-300 cursor-default"
               >
                 {name}
               </span>

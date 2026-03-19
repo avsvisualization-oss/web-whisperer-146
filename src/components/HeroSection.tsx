@@ -12,7 +12,7 @@ const HeroSection = () => {
           alt="Premium architectural rendering"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
       </div>
 
       {/* Content */}
@@ -30,19 +30,19 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-[clamp(2.5rem,6vw,5.5rem)] font-semibold text-foreground max-w-[18ch] leading-[1.05] tracking-[-0.04em]"
+          className="font-display text-[clamp(3rem,7vw,6.5rem)] font-semibold text-foreground max-w-[16ch] leading-[1.02] tracking-[-0.045em]"
         >
-          Visual tools that help you sell homes before they exist.
+          Sell homes before they're built.
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-7 text-[17px] text-muted-foreground max-w-xl leading-relaxed font-light"
+          className="mt-8 text-[17px] text-muted-foreground max-w-lg leading-relaxed font-light"
         >
-          We partner with builders and developers to create high-impact visuals
-          that drive sales and marketing performance.
+          High-impact renderings, animations and interactive tools designed 
+          to drive sales and marketing performance for builders and developers.
         </motion.p>
 
         <motion.div
@@ -53,13 +53,13 @@ const HeroSection = () => {
         >
           <Link
             to="/portfolio"
-            className="px-8 py-3.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors tracking-wide"
+            className="px-8 py-3.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_24px_hsl(210_100%_52%/0.3)] transition-all duration-300 tracking-wide"
           >
             View Work
           </Link>
           <Link
             to="/contact"
-            className="px-8 py-3.5 text-[13px] font-medium border border-foreground/20 text-foreground rounded-full hover:bg-foreground/5 transition-colors tracking-wide"
+            className="px-8 py-3.5 text-[13px] font-medium border border-foreground/20 text-foreground rounded-full hover:border-primary hover:text-primary transition-all duration-300 tracking-wide"
           >
             Start a Project
           </Link>

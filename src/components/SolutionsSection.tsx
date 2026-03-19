@@ -4,28 +4,22 @@ import { ArrowUpRight } from "lucide-react";
 import exteriorImg from "@/assets/portfolio-exterior-2.jpg";
 import interiorImg from "@/assets/portfolio-interior-1.jpg";
 import aerialImg from "@/assets/portfolio-aerial-1.jpg";
-import interactiveImg from "@/assets/portfolio-siteplan.jpg";
 
 const solutions = [
   {
-    title: "Exterior Visuals",
-    description: "Photo-realistic renderings that showcase architectural character and drive buyer interest.",
+    title: "Exterior Renderings",
+    description: "Photo-realistic visuals that showcase curb appeal and drive buyer interest before ground breaks.",
     image: exteriorImg,
   },
   {
-    title: "Interior Experiences",
-    description: "Detailed spaces that help buyers envision living in the home before it's built.",
+    title: "Interior Renderings",
+    description: "Detailed lifestyle scenes that help buyers envision living in the home and accelerate decisions.",
     image: interiorImg,
   },
   {
-    title: "Aerial & Streetscapes",
-    description: "Community-scale visuals that communicate context, scale and neighborhood impact.",
+    title: "Animations & Motion",
+    description: "Cinematic animations that bring projects to life and enhance marketing impact across every channel.",
     image: aerialImg,
-  },
-  {
-    title: "Interactive Tools",
-    description: "Site plans, facade selectors and floor plans that empower sales teams to close.",
-    image: interactiveImg,
   },
 ];
 
@@ -40,12 +34,15 @@ const SolutionsSection = () => {
           className="mb-20"
         >
           <div className="label-mono text-primary mb-5">What We Do</div>
-          <h2 className="font-display text-[clamp(2rem,4vw,3.5rem)] font-semibold text-foreground max-w-2xl leading-[1.1] tracking-[-0.035em]">
-            Visual solutions built for how homes are sold today.
+          <h2 className="font-display text-[clamp(2rem,4vw,3.5rem)] font-semibold text-foreground max-w-3xl leading-[1.1] tracking-[-0.035em]">
+            Visual solutions designed for how homes are sold today.
           </h2>
+          <p className="mt-5 text-[15px] text-muted-foreground max-w-xl leading-[1.7] font-light">
+            Every visual we create is built to support sales teams, marketing campaigns, and buyer engagement — not just to look good.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {solutions.map((sol, i) => (
             <motion.div
               key={sol.title}
@@ -53,7 +50,7 @@ const SolutionsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-md aspect-[4/3] cursor-pointer"
+              className="group relative overflow-hidden rounded-md aspect-[3/4] cursor-pointer"
             >
               <img
                 src={sol.image}
@@ -88,7 +85,7 @@ const SolutionsSection = () => {
         >
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-2 text-[13px] font-medium text-primary hover:text-primary/80 transition-colors tracking-wide"
+            className="inline-flex items-center gap-2 text-[13px] font-medium text-primary hover:text-primary/80 transition-colors duration-300 tracking-wide"
           >
             View All Work
             <ArrowUpRight className="w-3.5 h-3.5" />

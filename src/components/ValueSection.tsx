@@ -3,23 +3,23 @@ import { motion } from "framer-motion";
 const values = [
   {
     number: "01",
-    title: "Fast Turnaround",
-    description: "Modern 3D workflows and AI-assisted tools deliver results on the tightest timelines.",
+    title: "Sell Homes Faster",
+    description: "Visuals designed to convert — helping sales teams close deals before construction begins.",
   },
   {
     number: "02",
-    title: "Marketing-Driven",
-    description: "Every visual is designed to support approvals, campaigns and sales conversations.",
+    title: "Launch Before Construction",
+    description: "Start marketing and pre-selling with photo-realistic visuals long before breaking ground.",
   },
   {
     number: "03",
-    title: "US Market Expertise",
-    description: "Deep understanding of residential construction, buyer preferences and builder workflows.",
+    title: "Marketing-Ready Output",
+    description: "Every deliverable is optimized for campaigns, brochures, websites and social media from day one.",
   },
   {
     number: "04",
-    title: "Consistent Quality",
-    description: "Scalable production that maintains the same high standard across every project.",
+    title: "Built for Scale",
+    description: "Consistent quality across hundreds of projects — reliable production your team can count on.",
   },
 ];
 
@@ -36,11 +36,11 @@ const ValueSection = () => {
           >
             <div className="label-mono text-primary mb-5">Why AVS</div>
             <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-foreground leading-[1.1] tracking-[-0.035em]">
-              Built for how homes are actually sold today.
+              Designed for marketing and sales teams.
             </h2>
             <p className="mt-6 text-[15px] text-muted-foreground leading-[1.7] max-w-md">
-              We don't just create beautiful images. We build visual systems that
-              integrate into your sales process and help your team close faster.
+              We don't just create beautiful images. We build visual tools that
+              integrate into your sales process and improve marketing performance.
             </p>
           </motion.div>
 
@@ -52,8 +52,9 @@ const ValueSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.5 }}
+                className="group"
               >
-                <div className="font-mono-data text-xs text-primary/40 mb-4">
+                <div className="font-mono-data text-xs text-primary/40 mb-4 group-hover:text-primary/70 transition-colors duration-300">
                   {v.number}
                 </div>
                 <h3 className="font-display text-base font-semibold text-foreground mb-2 tracking-[-0.02em]">

@@ -29,13 +29,13 @@ const FeaturedWork = () => {
           </div>
           <Link
             to="/portfolio"
-            className="hidden md:inline-flex items-center gap-2 text-[13px] font-medium text-primary hover:text-primary/80 transition-colors tracking-wide"
+            className="hidden md:inline-flex items-center gap-2 text-[13px] font-medium text-primary hover:text-primary/80 transition-colors duration-300 tracking-wide"
           >
             View All <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {projects.map((project, i) => (
             <motion.div
               key={project.title}

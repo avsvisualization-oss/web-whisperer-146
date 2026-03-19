@@ -43,6 +43,12 @@ const PortfolioSection = () => {
         <h2 className="text-3xl md:text-5xl font-semibold text-foreground max-w-2xl text-balance">
           Discover Our Projects
         </h2>
+        <Link
+          to="/portfolio"
+          className="inline-flex items-center gap-2 mt-4 text-sm text-primary hover:text-primary/80 transition-colors font-medium"
+        >
+          View Full Gallery <ArrowRight className="w-4 h-4" />
+        </Link>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project, i) => (

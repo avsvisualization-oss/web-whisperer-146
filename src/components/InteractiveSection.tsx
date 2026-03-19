@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, MousePointerClick, Eye, Users } from "lucide-react";
+import siteplanImg from "@/assets/siteplan.jpg";
 
 const benefits = [
   {

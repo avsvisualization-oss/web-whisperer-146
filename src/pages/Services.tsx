@@ -147,7 +147,7 @@ const Services = () => {
           >
             <motion.div custom={0} variants={fade} className="text-center mb-20">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium tracking-wider uppercase mb-6">
-                Key Product
+                Popular for Sales Teams
               </span>
               <p className="label-mono text-primary mb-5">03 — Walkthrough</p>
               <h2
@@ -157,7 +157,7 @@ const Services = () => {
                 Immersive 360 experiences that bring spaces to life
               </h2>
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-                Immersive 360 experiences that allow buyers to explore spaces before construction.
+                Immersive 360 experiences that allow buyers to explore spaces before construction. Ideal for sales centers and client presentations.
               </p>
             </motion.div>
 

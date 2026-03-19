@@ -157,7 +157,7 @@ const Services = () => {
                 Immersive 360 experiences that bring spaces to life
               </h2>
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-                Immersive 360 experiences that allow buyers and stakeholders to explore spaces interactively before construction.
+                Immersive 360 experiences that allow buyers to explore spaces before construction.
               </p>
             </motion.div>
 

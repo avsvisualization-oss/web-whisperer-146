@@ -14,14 +14,14 @@ const clientNames = [
 
 const TrustSection = () => {
   return (
-    <section className="py-40 md:py-48 lg:py-56 bg-background relative">
+    <section className="py-24 md:py-32 lg:py-40 bg-background relative">
       <div className="container-wide">
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-24 md:gap-36 mb-28"
+          className="flex flex-wrap justify-center gap-24 md:gap-36 mb-20"
         >
           {[
             { value: "500+", label: "Projects Delivered" },
@@ -38,7 +38,7 @@ const TrustSection = () => {
         </motion.div>
 
         {/* Divider */}
-        <div className="border-t border-border/50 mb-24" />
+        <div className="border-t border-border/50 mb-16" />
 
         {/* Trust statement */}
         <motion.div

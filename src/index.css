@@ -83,7 +83,7 @@
   }
 
   .section-padding {
-    @apply py-32 md:py-40 lg:py-52;
+    @apply py-24 md:py-32 lg:py-40;
   }
 
   .container-tight {

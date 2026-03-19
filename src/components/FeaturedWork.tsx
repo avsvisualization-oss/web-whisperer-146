@@ -25,7 +25,7 @@ const interiors = [
 
 const FeaturedWork = () => {
   return (
-    <section className="py-40 md:py-52 lg:py-64 bg-secondary relative">
+    <section className="py-24 md:py-32 lg:py-40 bg-secondary relative">
       {/* Flow gradient */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
 
@@ -35,7 +35,7 @@ const FeaturedWork = () => {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-end justify-between mb-20 md:mb-28"
+          className="flex items-end justify-between mb-16 md:mb-20"
         >
           <div>
             <div className="label-mono text-primary mb-6">Featured Work</div>

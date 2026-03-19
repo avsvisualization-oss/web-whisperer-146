@@ -25,7 +25,7 @@ const InteractiveSection = () => {
   return (
     <section className="relative overflow-hidden">
       {/* Main interactive content */}
-      <div className="py-40 md:py-52 lg:py-64 bg-background relative">
+      <div className="py-24 md:py-32 lg:py-40 bg-background relative">
         {/* Large accent glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-primary/[0.04] rounded-full blur-[150px] pointer-events-none" />
 
@@ -62,7 +62,7 @@ const InteractiveSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-32 relative rounded-2xl overflow-hidden border border-primary/20 bg-card"
+            className="mb-24 relative rounded-2xl overflow-hidden border border-primary/20 bg-card"
           >
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             <div className="aspect-[16/9] w-full bg-[hsl(var(--secondary))]">
@@ -97,7 +97,7 @@ const InteractiveSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-32"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-24"
           >
             {/* Static side */}
             <div className="relative rounded-2xl overflow-hidden border border-border/20 bg-secondary/40 p-12 flex flex-col justify-between min-h-[400px]">
@@ -140,7 +140,7 @@ const InteractiveSection = () => {
           </motion.div>
 
           {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
             {benefits.map((b, i) => (
               <motion.div
                 key={b.title}

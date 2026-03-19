@@ -9,13 +9,13 @@ const steps = [
 
 const ProcessSection = () => {
   return (
-    <section className="py-40 md:py-52 lg:py-64 bg-background relative">
+    <section className="py-24 md:py-32 lg:py-40 bg-background relative">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-28"
+          className="mb-20"
         >
           <div className="label-mono text-primary mb-6">How We Work</div>
           <h2 className="font-display text-[clamp(2.5rem,5.5vw,4rem)] font-semibold text-foreground tracking-[-0.04em]">

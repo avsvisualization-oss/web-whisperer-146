@@ -13,11 +13,11 @@ const HeroSection = () => {
           allow="autoplay; fullscreen"
           title="Hero background"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative container-wide pb-32 md:pb-40 pt-40">
+      <div className="relative container-wide pb-24 md:pb-32 pt-32">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

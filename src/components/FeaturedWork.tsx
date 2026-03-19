@@ -1,34 +1,25 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import ext1 from "@/assets/portfolio-exterior-1.jpg";
+import ext2 from "@/assets/portfolio-exterior-2.jpg";
+import ext3 from "@/assets/portfolio-exterior-3.jpg";
+import int1 from "@/assets/portfolio-interior-1.jpg";
+import int2 from "@/assets/portfolio-bedroom.jpg";
+import int3 from "@/assets/portfolio-kitchen.jpg";
 
 const exteriors = [
-  {
-    image: "https://www.dropbox.com/scl/fi/regu7ho7f2oee8e76ma9q/F_Coral-Street-Cam-01.png?raw=1",
-    title: "Coral Street",
-  },
-  {
-    image: "https://www.dropbox.com/scl/fi/zbqopnq9jp5c5y4hioszm/avs-ai-studio-generation-1-2.png?raw=1",
-    title: "AVS AI Studio",
-  },
-  {
-    image: "https://www.dropbox.com/scl/fi/v6ulwaowqobcybpxu7enh/dzmNa7JA.jpeg?raw=1",
-    title: "Modern Residence",
-  },
+  { image: ext1, title: "Coral Street" },
+  { image: ext2, title: "Modern Residence" },
+  { image: ext3, title: "Lakeside Community" },
 ];
 
 const interiors = [
+  { image: int1, title: "Grand Entry" },
+  { image: int2, title: "Primary Bedroom" },
   {
-    image: "https://www.dropbox.com/scl/fi/qpda5gw3mcdxmu1lf9bb7/DelWebb-Maygrass-ENTRY03.png?raw=1",
-    title: "Maygrass Entry",
-  },
-  {
-    image: "https://www.dropbox.com/scl/fi/e1dylllyglyps3nfc0b8k/26-0175-abhp-009-00494-redwood_BEDROOM.jpg?raw=1",
-    title: "Redwood Bedroom",
-  },
-  {
-    image: "https://www.dropbox.com/scl/fi/fpdhjyczre7mwx6s09dv4/26-0175-abhp-009-00494-redwood_KITCHEN.jpg?raw=1",
-    title: "Redwood Kitchen",
+    image: int3,
+    title: "Chef's Kitchen",
   },
 ];
 

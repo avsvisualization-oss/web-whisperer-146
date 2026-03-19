@@ -254,59 +254,24 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-14 md:py-20">
+      <section className="py-12 md:py-16 bg-[hsl(0,0%,4%)]">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-10 max-w-2xl"
+            className="mb-8 max-w-2xl"
           >
-            <div className="label-mono text-primary mb-4">Our Team</div>
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground tracking-[-0.035em] mb-3">
+            <div className="label-mono text-primary mb-3">Our Team</div>
+            <h2 className="font-display text-xl md:text-2xl font-semibold text-white tracking-[-0.035em] mb-2">
               The People Behind Every Delivery
             </h2>
-            <p className="text-[13px] text-muted-foreground leading-[1.7]">
+            <p className="text-[13px] text-white/50 leading-[1.7]">
               A structured team built to deliver consistency, speed and quality at scale.
             </p>
           </motion.div>
 
-          {teamGroups.map((group, gi) => (
-            <div key={group.title} className={gi > 0 ? "mt-8" : ""}>
-              <motion.h3
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="label-mono text-muted-foreground/60 text-[10px] mb-4"
-              >
-                {group.title}
-              </motion.h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                {group.members.map((member, i) => (
-                  <motion.div
-                    key={member.name}
-                    initial={{ opacity: 0, y: 6 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.04 }}
-                    className="group flex flex-col items-center text-center py-5 px-3 rounded-md transition-all duration-300 hover:bg-secondary/50"
-                  >
-                    <div className="w-20 h-20 rounded-full overflow-hidden bg-[hsl(220,15%,92%)] mb-3 ring-1 ring-border/20">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover object-top grayscale-[40%] opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-400"
-                      />
-                    </div>
-                    <h4 className="font-display text-[13px] font-medium text-foreground tracking-[-0.01em]">
-                      {member.name}
-                    </h4>
-                    <p className="text-[11px] text-muted-foreground/70 mt-0.5">{member.role}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          ))}
+          <TeamCarousel />
         </div>
       </section>
 

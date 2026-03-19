@@ -42,8 +42,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
           className="mt-10 text-[15px] text-muted-foreground max-w-md leading-relaxed font-light"
         >
-          High-impact renderings, animations and interactive tools that
-          improve conversion and accelerate sales for builders and developers.
+          We help home builders and developers present projects with clarity, speed, and impact — from photorealistic renderings to interactive sales tools.
         </motion.p>
 
         <motion.div

@@ -52,16 +52,16 @@ const HeroSection = () => {
           className="mt-14 flex flex-wrap gap-5"
         >
           <Link
-            to="/portfolio"
+            to="/contact"
             className="px-10 py-4 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] transition-all duration-300 tracking-wide"
           >
-            View Work
+            Start a Project
           </Link>
           <Link
-            to="/contact"
+            to="/portfolio"
             className="px-10 py-4 text-[13px] font-medium border border-foreground/15 text-foreground rounded-full hover:border-primary hover:text-primary hover:shadow-[0_0_20px_hsl(210_100%_52%/0.15)] transition-all duration-300 tracking-wide"
           >
-            Start a Project
+            View Portfolio
           </Link>
         </motion.div>
       </div>

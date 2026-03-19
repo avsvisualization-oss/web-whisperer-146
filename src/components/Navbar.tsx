@@ -47,9 +47,11 @@ const Navbar = () => {
               key={link.href}
               to={link.href}
               className={`text-[13px] font-medium tracking-wide transition-colors duration-300 ${
-                location.pathname === link.href
-                  ? "text-foreground"
-                  : "text-muted-foreground hover:text-primary"
+                link.label === "Interactive Tools"
+                  ? "text-primary"
+                  : location.pathname === link.href
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-primary"
               }`}
             >
               {link.label}

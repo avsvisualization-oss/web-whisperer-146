@@ -128,7 +128,7 @@ const Services = () => {
                 Cinematic storytelling that increases engagement
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
-                Bring your project to life with immersive video content. Launch campaigns earlier, captivate stakeholders, and generate buyer interest before ground breaks.
+                Cinematic walkthroughs that bring projects to life and enhance buyer engagement.
               </p>
             </motion.div>
           </motion.div>

@@ -162,15 +162,19 @@ const Services = () => {
             </motion.div>
 
             <motion.div custom={1} variants={fade} className="rounded-2xl overflow-hidden border border-primary/20 bg-card mb-20">
-              <div className="aspect-[16/9] w-full">
-                <iframe
-                  src="https://my.matterport.com/show/?m=SxQL3iGyvPs&play=1"
-                  className="w-full h-full"
-                  style={{ border: 0 }}
-                  title="360 Virtual Walkthrough"
+              <div className="aspect-[16/9] w-full relative group cursor-pointer" onClick={() => window.open('https://avsrenderings.viewin360.co/share/collection/7M7R1?logo=0&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1', '_blank')}>
+                <img
+                  src={interiorImg}
+                  alt="360 Virtual Walkthrough Preview"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   loading="lazy"
-                  allow="fullscreen; xr-spatial-tracking"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full bg-primary/90 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_40px_hsl(210_100%_52%/0.5)] transition-all duration-300">
+                    <Eye className="w-8 h-8 text-primary-foreground" />
+                  </div>
+                </div>
               </div>
               <div className="p-6 md:p-8 border-t border-border flex items-center justify-between">
                 <div>
@@ -180,12 +184,12 @@ const Services = () => {
                   </p>
                 </div>
                 <a
-                  href="https://my.matterport.com/show/?m=SxQL3iGyvPs"
+                  href="https://avsrenderings.viewin360.co/share/collection/7M7R1?logo=0&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-full text-sm tracking-wide hover:bg-primary/80 hover:shadow-[0_0_20px_hsl(210_100%_52%/0.3)] transition-all duration-300"
                 >
-                  Open Walkthrough
+                  Open 360 Experience
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

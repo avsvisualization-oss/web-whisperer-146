@@ -135,7 +135,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 3. Interactive — Key Product */}
+      {/* 3. Walkthrough */}
       <section className="relative py-48 md:py-56 lg:py-72 border-t border-primary/10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.04] via-primary/[0.08] to-primary/[0.04]" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
@@ -149,34 +149,45 @@ const Services = () => {
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium tracking-wider uppercase mb-6">
                 Key Product
               </span>
-              <p className="label-mono text-primary mb-5">03 — Interactive</p>
+              <p className="label-mono text-primary mb-5">03 — Walkthrough</p>
               <h2
                 className="font-semibold text-foreground mb-8 leading-tight max-w-3xl mx-auto"
                 style={{ fontSize: "clamp(2.4rem, 5.5vw, 4.5rem)" }}
               >
-                The most effective way to explore and sell communities
+                Immersive 360 experiences that bring spaces to life
               </h2>
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-                Give buyers an interactive experience that builds confidence and drives decisions. Equip your sales team with tools that shorten the path to close.
+                Immersive 360 experiences that allow buyers and stakeholders to explore spaces interactively before construction.
               </p>
             </motion.div>
 
             <motion.div custom={1} variants={fade} className="rounded-2xl overflow-hidden border border-primary/20 bg-card mb-20">
               <div className="aspect-[16/9] w-full">
                 <iframe
-                  src="https://avs-interactive.com/avs/Interactive-Apps/siteplan/baypointe/20"
+                  src="https://my.matterport.com/show/?m=SxQL3iGyvPs&play=1"
                   className="w-full h-full"
                   style={{ border: 0 }}
-                  title="Interactive Site Plan — Bay Pointe"
+                  title="360 Virtual Walkthrough"
                   loading="lazy"
-                  allow="fullscreen"
+                  allow="fullscreen; xr-spatial-tracking"
                 />
               </div>
-              <div className="p-6 md:p-8 border-t border-border">
-                <p className="label-mono text-primary mb-1">Live Demo</p>
-                <p className="text-sm text-muted-foreground font-light">
-                  Explore an interactive site plan — click lots, view details, navigate the community
-                </p>
+              <div className="p-6 md:p-8 border-t border-border flex items-center justify-between">
+                <div>
+                  <p className="label-mono text-primary mb-1">Live 360 Tour</p>
+                  <p className="text-sm text-muted-foreground font-light">
+                    Explore a fully immersive walkthrough — navigate rooms, look around, and experience the space
+                  </p>
+                </div>
+                <a
+                  href="https://my.matterport.com/show/?m=SxQL3iGyvPs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-full text-sm tracking-wide hover:bg-primary/80 hover:shadow-[0_0_20px_hsl(210_100%_52%/0.3)] transition-all duration-300"
+                >
+                  Open Walkthrough
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             </motion.div>
 
@@ -185,7 +196,7 @@ const Services = () => {
                 to="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full text-sm tracking-wide hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] transition-all duration-300"
               >
-                Explore Interactive Solutions
+                Explore Walkthrough Solutions
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>

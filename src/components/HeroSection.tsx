@@ -12,11 +12,11 @@ const HeroSection = () => {
           alt="Premium architectural rendering"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/30" />
       </div>
 
       {/* Content */}
-      <div className="relative container-wide pb-28 md:pb-36 pt-40">
+      <div className="relative container-wide pb-32 md:pb-40 pt-40">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -30,7 +30,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-[clamp(3.5rem,8vw,7.5rem)] font-semibold text-foreground max-w-[16ch] leading-[0.98] tracking-[-0.05em]"
+          className="font-display text-[clamp(3.5rem,9vw,8.5rem)] font-semibold text-foreground max-w-[14ch] leading-[0.95] tracking-[-0.05em]"
         >
           Sell homes before they're built.
         </motion.h1>
@@ -42,14 +42,14 @@ const HeroSection = () => {
           className="mt-10 text-[15px] text-muted-foreground max-w-md leading-relaxed font-light"
         >
           High-impact renderings, animations and interactive tools that
-          drive sales and marketing performance for builders and developers.
+          improve conversion and accelerate sales for builders and developers.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-12 flex flex-wrap gap-5"
+          className="mt-14 flex flex-wrap gap-5"
         >
           <Link
             to="/portfolio"

@@ -8,41 +8,44 @@ import aerialImg from "@/assets/portfolio-aerial-1.jpg";
 const solutions = [
   {
     title: "Exterior Renderings",
-    description: "Photo-realistic visuals that showcase curb appeal and drive buyer interest before ground breaks.",
+    description: "Photo-realistic visuals that drive buyer interest and accelerate pre-sales before ground breaks.",
     image: exteriorImg,
   },
   {
     title: "Interior Renderings",
-    description: "Detailed lifestyle scenes that help buyers envision living in the home and accelerate decisions.",
+    description: "Lifestyle scenes that help buyers see themselves in the home — reducing hesitation and closing deals faster.",
     image: interiorImg,
   },
   {
     title: "Animations & Motion",
-    description: "Cinematic animations that bring projects to life and enhance marketing impact across every channel.",
+    description: "Cinematic walkthroughs that boost engagement across every marketing channel and improve conversion rates.",
     image: aerialImg,
   },
 ];
 
 const SolutionsSection = () => {
   return (
-    <section className="section-padding bg-secondary">
-      <div className="container-wide">
+    <section className="py-40 md:py-52 lg:py-64 bg-secondary relative">
+      {/* Soft gradient transition from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+
+      <div className="container-wide relative">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-24"
+          className="mb-28"
         >
           <div className="label-mono text-primary mb-6">What We Do</div>
-          <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold text-foreground max-w-3xl leading-[1.05] tracking-[-0.04em]">
+          <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-semibold text-foreground max-w-3xl leading-[1.05] tracking-[-0.04em]">
             Visual solutions designed for how homes are sold today.
           </h2>
-          <p className="mt-6 text-[14px] text-muted-foreground max-w-xl leading-[1.8] font-light">
-            Every visual we create is built to support sales teams, marketing campaigns, and buyer engagement — not just to look good.
+          <p className="mt-7 text-[14px] text-muted-foreground max-w-xl leading-[1.8] font-light">
+            Every visual we create is built to support sales teams, improve conversion, and drive buyer engagement — not just to look good.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {solutions.map((sol, i) => (
             <motion.div
               key={sol.title}
@@ -50,7 +53,7 @@ const SolutionsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative overflow-hidden rounded-lg aspect-[3/4] cursor-pointer"
+              className="group relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer"
             >
               <img
                 src={sol.image}
@@ -81,7 +84,7 @@ const SolutionsSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="mt-20 text-center"
         >
           <Link
             to="/portfolio"
@@ -92,6 +95,9 @@ const SolutionsSection = () => {
           </Link>
         </motion.div>
       </div>
+
+      {/* Soft gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
     </section>
   );
 };

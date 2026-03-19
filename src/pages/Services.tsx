@@ -161,26 +161,23 @@ const Services = () => {
               </p>
             </motion.div>
 
-            <motion.div custom={1} variants={fade} className="grid md:grid-cols-3 gap-8 mb-20">
-              {[
-                { img: siteplanImg, label: "Interactive Site Plans", desc: "Navigate lots, pricing and availability in real time" },
-                { img: interactiveImg, label: "Virtual Tours", desc: "Walk through homes before they're built" },
-                { img: vrImg, label: "360° Experiences", desc: "Immersive exploration from any device" },
-              ].map((item) => (
-                <div key={item.label} className="group relative rounded-xl overflow-hidden border border-primary/15 bg-card hover:border-primary/30 transition-colors duration-500">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={item.img}
-                      alt={item.label}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-foreground font-semibold text-lg mb-1">{item.label}</h3>
-                    <p className="text-muted-foreground text-sm">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+            <motion.div custom={1} variants={fade} className="rounded-2xl overflow-hidden border border-primary/20 bg-card mb-20">
+              <div className="aspect-[16/9] w-full">
+                <iframe
+                  src="https://avs-interactive.com/avs/Interactive-Apps/siteplan/baypointe/20"
+                  className="w-full h-full"
+                  style={{ border: 0 }}
+                  title="Interactive Site Plan — Bay Pointe"
+                  loading="lazy"
+                  allow="fullscreen"
+                />
+              </div>
+              <div className="p-6 md:p-8 border-t border-border">
+                <p className="label-mono text-primary mb-1">Live Demo</p>
+                <p className="text-sm text-muted-foreground font-light">
+                  Explore an interactive site plan — click lots, view details, navigate the community
+                </p>
+              </div>
             </motion.div>
 
             <motion.div custom={2} variants={fade} className="text-center">

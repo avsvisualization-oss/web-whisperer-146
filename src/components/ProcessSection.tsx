@@ -17,7 +17,7 @@ const ProcessSection = () => {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <div className="label-mono text-muted-foreground mb-5">How We Work</div>
+          <div className="label-mono text-primary mb-5">How We Work</div>
           <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-foreground tracking-[-0.035em]">
             Simple, efficient process
           </h2>
@@ -32,7 +32,7 @@ const ProcessSection = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              <div className="font-mono-data text-3xl font-medium text-border mb-5">
+              <div className="font-mono-data text-3xl font-medium text-primary/25 mb-5">
                 {step.number}
               </div>
               <h3 className="font-display text-base font-semibold text-foreground mb-2 tracking-[-0.02em]">

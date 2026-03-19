@@ -53,10 +53,11 @@ const Team = () => {
 
       <section className="pt-32 pb-8 md:pt-40 md:pb-12">
         <div className="container-wide">
+          <div className="label-mono text-primary mb-5">Our People</div>
           <motion.h1
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-display text-4xl md:text-6xl font-bold text-foreground"
+            className="font-display text-4xl md:text-6xl font-semibold text-foreground tracking-[-0.04em]"
           >
             Meet the Team
           </motion.h1>
@@ -64,7 +65,7 @@ const Team = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-4 text-lg text-muted-foreground max-w-xl"
+            className="mt-4 text-[15px] text-muted-foreground max-w-xl"
           >
             The people behind every rendering, animation and interactive experience.
           </motion.p>
@@ -78,25 +79,24 @@ const Team = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {team.map((member) => (
               <motion.div
                 key={member.name}
                 variants={item}
-                className="p-8 rounded-lg border border-border bg-card hover:border-foreground/20 transition-colors"
+                className="p-8 rounded-md border border-border bg-card hover:border-primary/30 transition-colors"
               >
-                {/* Avatar placeholder */}
-                <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mb-6">
-                  <span className="font-display text-lg font-bold text-muted-foreground">
+                <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mb-6">
+                  <span className="font-display text-sm font-semibold text-primary">
                     {member.name.split(" ").map((n) => n[0]).join("")}
                   </span>
                 </div>
-                <h3 className="font-display text-lg font-semibold text-foreground">
+                <h3 className="font-display text-base font-semibold text-foreground tracking-[-0.02em]">
                   {member.name}
                 </h3>
-                <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
-                <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
+                <p className="text-[13px] text-primary mt-1">{member.role}</p>
+                <p className="text-[13px] text-muted-foreground mt-4 leading-[1.7]">
                   {member.description}
                 </p>
               </motion.div>

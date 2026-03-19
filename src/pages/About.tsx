@@ -10,7 +10,6 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      {/* Hero */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -18,18 +17,16 @@ const About = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4">
-                About AVS
-              </p>
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground leading-tight">
+              <div className="label-mono text-primary mb-5">About AVS</div>
+              <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-tight tracking-[-0.04em]">
                 Your visual partner for selling homes.
               </h1>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              <p className="mt-6 text-[15px] text-muted-foreground leading-[1.7]">
                 AVS Renderings is a visual solutions company that helps home
                 builders, residential developers and marketing teams sell
                 projects faster and more effectively.
               </p>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-[15px] text-muted-foreground leading-[1.7]">
                 We go beyond creating beautiful renderings. We deliver strategic
                 visual tools — from interactive site plans to cinematic
                 animations — that integrate into your sales process and drive
@@ -41,7 +38,7 @@ const About = () => {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="rounded-lg overflow-hidden aspect-[4/3]"
+              className="rounded-md overflow-hidden aspect-[4/3]"
             >
               <img
                 src={aboutImg}
@@ -53,16 +50,16 @@ const About = () => {
         </div>
       </section>
 
-      {/* What makes us different */}
       <section className="section-padding bg-secondary">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="mb-16"
           >
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+            <div className="label-mono text-primary mb-5">What Sets Us Apart</div>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground tracking-[-0.035em]">
               What makes us different
             </h2>
           </motion.div>
@@ -92,10 +89,10 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                <h3 className="font-display text-lg font-semibold text-foreground mb-3">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-3 tracking-[-0.02em]">
                   {item.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-[13px] text-muted-foreground leading-[1.7]">
                   {item.description}
                 </p>
               </motion.div>
@@ -104,7 +101,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission */}
       <section className="section-padding bg-background">
         <div className="container-tight text-center">
           <motion.div
@@ -112,17 +108,15 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4">
-              Our Mission
-            </p>
-            <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground leading-snug max-w-3xl mx-auto">
+            <div className="label-mono text-primary mb-5">Our Mission</div>
+            <h2 className="font-display text-2xl md:text-4xl font-semibold text-foreground leading-snug max-w-3xl mx-auto tracking-[-0.035em]">
               To help every builder and developer communicate their vision with
               clarity, precision and impact — before a single wall goes up.
             </h2>
             <div className="mt-10">
               <Link
                 to="/contact"
-                className="px-7 py-3.5 text-sm font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+                className="px-8 py-3.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors tracking-wide"
               >
                 Work With Us
               </Link>

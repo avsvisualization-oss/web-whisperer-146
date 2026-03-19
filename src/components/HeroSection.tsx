@@ -12,7 +12,7 @@ const HeroSection = () => {
           alt="Premium architectural rendering"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20" />
       </div>
 
       {/* Content */}
@@ -21,7 +21,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.1 }}
-          className="label-mono text-white/60 mb-6"
+          className="label-mono text-primary mb-6"
         >
           Visual Solutions for Home Builders
         </motion.div>
@@ -30,7 +30,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-[clamp(2.5rem,6vw,5.5rem)] font-semibold text-white max-w-[18ch] leading-[1.05] tracking-[-0.04em]"
+          className="font-display text-[clamp(2.5rem,6vw,5.5rem)] font-semibold text-foreground max-w-[18ch] leading-[1.05] tracking-[-0.04em]"
         >
           Visual tools that help you sell homes before they exist.
         </motion.h1>
@@ -39,7 +39,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-7 text-[17px] text-white/70 max-w-xl leading-relaxed font-light"
+          className="mt-7 text-[17px] text-muted-foreground max-w-xl leading-relaxed font-light"
         >
           We partner with builders and developers to create high-impact visuals
           that drive sales and marketing performance.
@@ -53,13 +53,13 @@ const HeroSection = () => {
         >
           <Link
             to="/portfolio"
-            className="px-8 py-3.5 text-[13px] font-medium bg-white text-black rounded-full hover:bg-white/90 transition-colors tracking-wide"
+            className="px-8 py-3.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors tracking-wide"
           >
             View Work
           </Link>
           <Link
             to="/contact"
-            className="px-8 py-3.5 text-[13px] font-medium border border-white/30 text-white rounded-full hover:bg-white/10 transition-colors tracking-wide"
+            className="px-8 py-3.5 text-[13px] font-medium border border-foreground/20 text-foreground rounded-full hover:bg-foreground/5 transition-colors tracking-wide"
           >
             Start a Project
           </Link>

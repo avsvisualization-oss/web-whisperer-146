@@ -23,42 +23,41 @@ const Contact = () => {
       <section className="pt-32 pb-24 md:pt-40 md:pb-32">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-            {/* Left */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground leading-tight">
+              <div className="label-mono text-primary mb-5">Contact</div>
+              <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-tight tracking-[-0.04em]">
                 Start a project
               </h1>
-              <p className="mt-4 text-lg text-muted-foreground max-w-md">
+              <p className="mt-4 text-[15px] text-muted-foreground max-w-md leading-[1.7]">
                 Tell us about your project and we'll get back to you within 24
                 hours with a tailored plan.
               </p>
 
-              <div className="mt-12 flex flex-col gap-6">
+              <div className="mt-12 flex flex-col gap-5">
                 <a
                   href="mailto:info@avs-renderings.com"
-                  className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors"
+                  className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors"
                 >
-                  <Mail className="w-5 h-5 flex-shrink-0" strokeWidth={1.5} />
-                  <span className="text-sm">info@avs-renderings.com</span>
+                  <Mail className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
+                  <span className="text-[13px]">info@avs-renderings.com</span>
                 </a>
                 <a
                   href="tel:+13028673810"
-                  className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors"
+                  className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors"
                 >
-                  <Phone className="w-5 h-5 flex-shrink-0" strokeWidth={1.5} />
-                  <span className="text-sm">+1 (302) 867-3810</span>
+                  <Phone className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
+                  <span className="text-[13px]">+1 (302) 867-3810</span>
                 </a>
                 <div className="flex items-center gap-4 text-muted-foreground">
-                  <MapPin className="w-5 h-5 flex-shrink-0" strokeWidth={1.5} />
-                  <span className="text-sm">1200 Ponce de Leon, St 703, Coral Gables FL 33134</span>
+                  <MapPin className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
+                  <span className="text-[13px]">1200 Ponce de Leon, St 703, Coral Gables FL 33134</span>
                 </div>
               </div>
             </motion.div>
 
-            {/* Form */}
             <motion.form
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -67,59 +66,53 @@ const Contact = () => {
               className="flex flex-col gap-5"
             >
               <div>
-                <label className="block text-xs font-medium text-foreground mb-2 uppercase tracking-wider">
-                  Name
-                </label>
+                <label className="label-mono text-muted-foreground mb-2 block">Name</label>
                 <input
                   type="text"
                   required
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-foreground/20"
+                  className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-foreground mb-2 uppercase tracking-wider">
-                  Email
-                </label>
+                <label className="label-mono text-muted-foreground mb-2 block">Email</label>
                 <input
                   type="email"
                   required
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-foreground/20"
+                  className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors"
                   placeholder="your@email.com"
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-foreground mb-2 uppercase tracking-wider">
-                  Company
+                <label className="label-mono text-muted-foreground mb-2 block">
+                  Company <span className="normal-case tracking-normal">(optional)</span>
                 </label>
                 <input
                   type="text"
                   value={form.company}
                   onChange={(e) => setForm({ ...form, company: e.target.value })}
-                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-foreground/20"
-                  placeholder="Company name (optional)"
+                  className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors"
+                  placeholder="Company name"
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-foreground mb-2 uppercase tracking-wider">
-                  Message
-                </label>
+                <label className="label-mono text-muted-foreground mb-2 block">Message</label>
                 <textarea
                   required
                   rows={5}
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-foreground/20 resize-none"
+                  className="w-full px-0 py-3 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
               <button
                 type="submit"
-                className="w-full py-3.5 text-sm font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors mt-2"
+                className="w-full py-4 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors mt-2 tracking-wide"
               >
                 Send Message
               </button>

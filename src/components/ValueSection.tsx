@@ -28,14 +28,13 @@ const ValueSection = () => {
     <section className="section-padding bg-background">
       <div className="container-wide">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-20">
-          {/* Left — headline */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <div className="label-mono text-muted-foreground mb-5">Why AVS</div>
+            <div className="label-mono text-primary mb-5">Why AVS</div>
             <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold text-foreground leading-[1.1] tracking-[-0.035em]">
               Built for how homes are actually sold today.
             </h2>
@@ -45,7 +44,6 @@ const ValueSection = () => {
             </p>
           </motion.div>
 
-          {/* Right — grid */}
           <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-10">
             {values.map((v, i) => (
               <motion.div
@@ -55,7 +53,7 @@ const ValueSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.5 }}
               >
-                <div className="font-mono-data text-xs text-muted-foreground/50 mb-4">
+                <div className="font-mono-data text-xs text-primary/40 mb-4">
                   {v.number}
                 </div>
                 <h3 className="font-display text-base font-semibold text-foreground mb-2 tracking-[-0.02em]">

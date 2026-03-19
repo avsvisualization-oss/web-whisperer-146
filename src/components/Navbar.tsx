@@ -35,13 +35,11 @@ const Navbar = () => {
       }`}
     >
       <div className="container-wide flex items-center justify-between h-20">
-        {/* Logo */}
         <Link to="/" className="font-display text-lg tracking-tight text-foreground">
           <span className="font-semibold">avs</span>
-          <span className="font-light">renderings</span>
+          <span className="font-light text-muted-foreground">renderings</span>
         </Link>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link
@@ -58,13 +56,12 @@ const Navbar = () => {
           ))}
           <Link
             to="/contact"
-            className="ml-2 px-6 py-2.5 text-[13px] font-medium bg-foreground text-background rounded-full hover:bg-foreground/90 transition-colors"
+            className="ml-2 px-6 py-2.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
           >
             Start a Project
           </Link>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden p-2 text-foreground"
@@ -74,7 +71,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -99,7 +95,7 @@ const Navbar = () => {
               ))}
               <Link
                 to="/contact"
-                className="mt-4 px-6 py-3 text-sm font-medium bg-foreground text-background rounded-full text-center"
+                className="mt-4 px-6 py-3 text-sm font-medium bg-primary text-primary-foreground rounded-full text-center"
               >
                 Start a Project
               </Link>

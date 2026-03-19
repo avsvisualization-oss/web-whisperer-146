@@ -29,7 +29,7 @@ const TrustSection = () => {
             { value: "8+", label: "Years in Market" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="font-mono-data text-3xl md:text-4xl font-medium text-foreground tracking-tight">
+              <div className="font-mono-data text-3xl md:text-4xl font-medium text-primary tracking-tight">
                 {stat.value}
               </div>
               <div className="label-mono text-muted-foreground mt-3">{stat.label}</div>
@@ -55,7 +55,7 @@ const TrustSection = () => {
             {clientNames.map((name) => (
               <span
                 key={name}
-                className="font-display text-[15px] font-medium text-muted-foreground/70 hover:text-foreground transition-colors duration-300 cursor-default"
+                className="font-display text-[15px] font-medium text-muted-foreground/60 hover:text-primary transition-colors duration-300 cursor-default"
               >
                 {name}
               </span>

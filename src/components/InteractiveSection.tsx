@@ -25,7 +25,7 @@ const InteractiveSection = () => {
   return (
     <section className="relative overflow-hidden">
       {/* Main interactive content */}
-      <div className="py-16 md:py-24 lg:py-32 bg-background relative">
+      <div className="py-12 md:py-20 lg:py-28 bg-background relative">
         {/* Large accent glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-primary/[0.04] rounded-full blur-[150px] pointer-events-none" />
 
@@ -38,7 +38,7 @@ const InteractiveSection = () => {
             className="mb-20"
           >
             <div className="label-mono text-primary mb-8">Interactive Solutions</div>
-            <h2 className="font-display text-[clamp(3.5rem,8vw,6.5rem)] font-semibold text-foreground max-w-5xl leading-[1.02] tracking-[-0.045em]">
+            <h2 className="font-display text-[clamp(3.75rem,9vw,7rem)] font-semibold text-foreground max-w-5xl leading-[1.02] tracking-[-0.045em]">
               Interactive Tools<br />
               <span className="text-primary">That Help You Sell</span>
             </h2>
@@ -62,7 +62,7 @@ const InteractiveSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-24 relative rounded-2xl overflow-hidden border border-primary/20 bg-card max-w-6xl mx-auto"
+            className="mb-24 relative rounded-2xl overflow-hidden border border-primary/20 bg-card max-w-7xl mx-auto"
           >
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             <div className="aspect-[16/9] w-full bg-[hsl(var(--secondary))]">

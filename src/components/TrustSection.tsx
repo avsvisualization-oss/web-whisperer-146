@@ -24,9 +24,9 @@ const TrustSection = () => {
           className="flex flex-wrap justify-center gap-24 md:gap-36 mb-20"
         >
           {[
-            { value: "500+", label: "Projects Delivered" },
-            { value: "50+", label: "Builder Partners" },
-            { value: "8+", label: "Years in Market" },
+            { value: "10,000+", label: "Projects Completed" },
+            { value: "72", label: "Builder Partners" },
+            { value: "15+", label: "Years in the Industry" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-mono-data text-5xl md:text-7xl font-medium text-primary tracking-tight">

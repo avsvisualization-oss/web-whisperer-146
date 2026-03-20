@@ -90,7 +90,7 @@ const FeaturedWork = () => {
         </div>
 
         {/* Interiors */}
-        <div className="mt-20">
+        <div className="mt-10 md:mt-20">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

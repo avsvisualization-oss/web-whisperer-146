@@ -96,7 +96,7 @@ const TeamCarousel = () => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onScroll={handleScroll}
-      className="flex gap-6 overflow-x-auto cursor-grab active:cursor-grabbing"
+      className="flex gap-4 overflow-x-auto cursor-grab active:cursor-grabbing"
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
       {items.map((member, i) => (

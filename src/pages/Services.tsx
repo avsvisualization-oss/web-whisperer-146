@@ -77,13 +77,17 @@ const Services = () => {
               <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-lg">
                 Photorealistic visuals for marketing, approvals, and presentations.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 mb-6">
                 <span className="px-4 py-2 rounded-full border border-border text-sm text-muted-foreground">
                   Exterior Renderings
                 </span>
                 <span className="px-4 py-2 rounded-full border border-border text-sm text-muted-foreground">
                   Interior Renderings
                 </span>
+              </div>
+              <div className="flex flex-col gap-1 text-[13px] text-muted-foreground/60 font-light">
+                <span>Home Renderings — Starting at $270</span>
+                <span>Interior Renderings — Starting at $290</span>
               </div>
             </motion.div>
             <motion.div custom={1} variants={fade} className="grid grid-cols-2 gap-4">
@@ -127,8 +131,11 @@ const Services = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
                 Cinematic storytelling that increases engagement
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-lg mb-6">
                 Cinematic walkthroughs that bring projects to life and enhance buyer engagement.
+              </p>
+              <p className="text-[13px] text-muted-foreground/60 font-light">
+                Home Animations — Starting at $1,900
               </p>
             </motion.div>
           </motion.div>

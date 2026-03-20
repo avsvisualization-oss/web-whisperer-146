@@ -12,18 +12,21 @@ const solutions = [
     description: "Photo-realistic visuals that drive buyer interest and accelerate pre-sales before ground breaks.",
     image: exteriorImg,
     featured: false,
+    pricing: "Starting at $270",
   },
   {
     title: "Interior Renderings",
     description: "Lifestyle scenes that help buyers see themselves in the home — reducing hesitation and closing deals faster.",
     image: interiorImg,
     featured: false,
+    pricing: "Starting at $290",
   },
   {
     title: "Animations & Motion",
     description: "Cinematic walkthroughs that boost engagement across every marketing channel and improve conversion rates.",
     image: aerialImg,
     featured: false,
+    pricing: "Starting at $1,900",
   },
   {
     title: "360 Walkthrough",
@@ -94,6 +97,11 @@ const SolutionsSection = () => {
                     <p className="mt-2 md:mt-3 text-[11px] sm:text-[13px] text-muted-foreground max-w-sm leading-relaxed font-light hidden sm:block">
                       {sol.description}
                     </p>
+                    {sol.pricing && (
+                      <p className="mt-2 text-[10px] sm:text-[11px] text-muted-foreground/60 font-light tracking-wide">
+                        {sol.pricing}
+                      </p>
+                    )}
                   </div>
                   <div className="flex-shrink-0 w-11 h-11 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                     <ArrowUpRight className="w-4 h-4 text-primary" />

@@ -162,6 +162,13 @@ const projects: Project[] = [
 
   // Street Scenes
   { image: portfolioStreet1, title: "Community Streetscape", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene01, title: "Street Scene 01", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene02, title: "Street Scene 02", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene03, title: "Street Scene 03", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene04, title: "Street Scene 04", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene05, title: "Street Scene 05", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene13, title: "Street Scene 13", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene14, title: "Street Scene 14", category: "Street Scenes", type: "image" },
 
   // Aerials
   { image: portfolioAerial, title: "Community Overview", category: "Aerials", type: "image" },

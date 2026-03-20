@@ -211,6 +211,9 @@ const FinalCTA = () => {
               className="mt-1 w-full py-5 text-[15px] font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_50px_hsl(210_100%_52%/0.55)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 tracking-wide">
               Start a Project
             </button>
+            <p className="mt-3 text-[11px] text-muted-foreground/50 text-center tracking-wide">
+              Flexible payment options available — ACH, Wire and Credit Card
+            </p>
           </motion.form>
         </div>
       </div>

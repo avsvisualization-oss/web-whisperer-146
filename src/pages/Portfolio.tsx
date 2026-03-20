@@ -104,7 +104,7 @@ import portfolioTownHome12 from "@/assets/portfolio-town-home-12.jpg";
 const categories = ["All", "Exteriors", "Interiors", "Animations", "360 Walkthroughs", "Street Scenes", "Aerials", "Clubhouse", "Amenities"] as const;
 type Category = (typeof categories)[number];
 
-type ProjectType = "image" | "video" | "walkthrough";
+type ProjectType = "image" | "video" | "walkthrough" | "video-embed" | "360-embed";
 
 interface Project {
   image: string;
@@ -113,6 +113,7 @@ interface Project {
   type: ProjectType;
   videoUrl?: string;
   walkthroughUrl?: string;
+  embedUrl?: string;
 }
 
 const projects: Project[] = [

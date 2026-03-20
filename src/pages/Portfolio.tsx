@@ -80,6 +80,10 @@ import portfolioSingleFamily07 from "@/assets/portfolio-single-family-07.jpg";
 import portfolioSingleFamily08 from "@/assets/portfolio-single-family-08.jpg";
 import portfolioSingleFamily09 from "@/assets/portfolio-single-family-09.jpg";
 import portfolioSingleFamily10 from "@/assets/portfolio-single-family-10b.jpg";
+import portfolioSingleFamily13 from "@/assets/portfolio-single-family-13.jpg";
+import portfolioSingleFamily14 from "@/assets/portfolio-single-family-14.jpg";
+import portfolioSingleFamily15 from "@/assets/portfolio-single-family-15.jpg";
+import portfolioSingleFamily16 from "@/assets/portfolio-single-family-16.jpg";
 
 const categories = ["All", "Exteriors", "Interiors", "Animations", "360 Walkthroughs", "Street Scenes", "Aerials", "Clubhouse", "Amenities"] as const;
 type Category = (typeof categories)[number];
@@ -192,6 +196,10 @@ const projects: Project[] = [
   { image: portfolioSingleFamily08, title: "Single Family 08", category: "Exteriors", type: "image" },
   { image: portfolioSingleFamily09, title: "Single Family 09", category: "Exteriors", type: "image" },
   { image: portfolioSingleFamily10, title: "Single Family 10", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily13, title: "Single Family 13", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily14, title: "Single Family 14", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily15, title: "Single Family 15", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily16, title: "Single Family 16", category: "Exteriors", type: "image" },
 ];
 
 const Portfolio = () => {

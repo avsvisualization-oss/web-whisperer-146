@@ -254,13 +254,13 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-12 md:py-16 bg-[hsl(0,0%,4%)]">
+      <section className="py-8 md:py-10 bg-[hsl(0,0%,4%)]">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-8 max-w-2xl"
+            className="mb-5 max-w-2xl"
           >
             <div className="label-mono text-primary mb-3">Our Team</div>
             <h2 className="font-display text-xl md:text-2xl font-semibold text-white tracking-[-0.035em] mb-2">

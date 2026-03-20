@@ -35,6 +35,11 @@ import portfolioAerial06 from "@/assets/portfolio-aerial-06.jpg";
 import portfolioAerial07 from "@/assets/portfolio-aerial-07.jpg";
 import portfolioAerial08 from "@/assets/portfolio-aerial-08.jpg";
 import portfolioAerial09 from "@/assets/portfolio-aerial-09.jpg";
+import portfolioAerial10 from "@/assets/portfolio-aerial-10.jpg";
+import portfolioAerial11 from "@/assets/portfolio-aerial-11.jpg";
+import portfolioAerial12 from "@/assets/portfolio-aerial-12.jpg";
+import portfolioAerial13 from "@/assets/portfolio-aerial-13.jpg";
+import portfolioAerial14 from "@/assets/portfolio-aerial-14.jpg";
 import portfolioMasterplan from "@/assets/portfolio-masterplan.jpg";
 import portfolioClubhouse1 from "@/assets/portfolio-clubhouse-1.jpg";
 import portfolioAmenities1 from "@/assets/portfolio-amenities-1.jpg";
@@ -106,6 +111,11 @@ const projects: Project[] = [
   { image: portfolioAerial07, title: "Lakeside Residential Community", category: "Aerials", type: "image" },
   { image: portfolioAerial08, title: "Community Pool & Recreation", category: "Aerials", type: "image" },
   { image: portfolioAerial09, title: "Amenity Center Overview", category: "Aerials", type: "image" },
+  { image: portfolioAerial10, title: "Waterfront Residential Aerial", category: "Aerials", type: "image" },
+  { image: portfolioAerial11, title: "Clubhouse & Sports Complex", category: "Aerials", type: "image" },
+  { image: portfolioAerial12, title: "Modern Urban Townhomes", category: "Aerials", type: "image" },
+  { image: portfolioAerial13, title: "Multi-Family Residential", category: "Aerials", type: "image" },
+  { image: portfolioAerial14, title: "Urban Mixed-Use Development", category: "Aerials", type: "image" },
 
   // Clubhouse
   { image: portfolioClubhouse1, title: "Community Clubhouse", category: "Clubhouse", type: "image" },

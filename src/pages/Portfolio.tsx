@@ -146,7 +146,7 @@ const Portfolio = () => {
 
       {/* Filters */}
       <div className="container-wide mb-12">
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           {categories.map((cat) => (
             <button
               key={cat}

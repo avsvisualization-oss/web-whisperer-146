@@ -42,16 +42,16 @@ const InteractiveSection = () => {
               Interactive Tools<br />
               <span className="text-primary">That Help You Sell</span>
             </h2>
-            <p className="mt-10 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
+            <p className="mt-6 md:mt-10 text-[14px] md:text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
               Our interactive solutions are designed to support sales teams and improve buyer understanding.
             </p>
-            <p className="mt-4 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
+            <p className="mt-3 md:mt-4 text-[14px] md:text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
               From lot selection to community exploration, we create digital tools that make projects easier to understand, present, and sell.
             </p>
-            <p className="mt-4 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
+            <p className="mt-3 md:mt-4 text-[14px] md:text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
               Designed to support sales teams and improve buyer decision-making.
             </p>
-            <p className="mt-4 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
+            <p className="mt-3 md:mt-4 text-[14px] md:text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
               Used by sales teams to improve buyer understanding and speed up decision-making.
             </p>
           </motion.div>

@@ -12,6 +12,7 @@ import Team from "./pages/Team";
 import Services from "./pages/Services";
 import Interactive from "./pages/Interactive";
 import NotFound from "./pages/NotFound";
+import Unsubscribe from "./pages/Unsubscribe";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>

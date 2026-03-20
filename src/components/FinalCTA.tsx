@@ -17,7 +17,7 @@ const FinalCTA = () => {
   return (
     <section id="contact" className="section-padding bg-card">
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-28">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-28">
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}

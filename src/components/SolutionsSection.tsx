@@ -86,7 +86,7 @@ const SolutionsSection = () => {
               <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
                 <div className="flex items-end justify-between gap-4">
                   <div>
-                    <h3 className={`font-display text-xl md:text-2xl font-semibold tracking-[-0.025em] ${
+                    <h3 className={`font-display text-sm sm:text-lg md:text-2xl font-semibold tracking-[-0.025em] ${
                       sol.featured ? "text-primary" : "text-foreground"
                     }`}>
                       {sol.title}

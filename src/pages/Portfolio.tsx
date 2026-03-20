@@ -180,6 +180,18 @@ const projects: Project[] = [
 
   // Amenities
   { image: portfolioAmenities1, title: "Community Amenities", category: "Amenities", type: "image" },
+
+  // Single Family
+  { image: portfolioSingleFamily01, title: "Single Family 01", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily02, title: "Single Family 02", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily03, title: "Single Family 03", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily04, title: "Single Family 04", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily05, title: "Single Family 05", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily06, title: "Single Family 06", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily07, title: "Single Family 07", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily08, title: "Single Family 08", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily09, title: "Single Family 09", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily10, title: "Single Family 10", category: "Exteriors", type: "image" },
 ];
 
 const Portfolio = () => {

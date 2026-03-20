@@ -4,7 +4,7 @@ import { createClient } from 'npm:@supabase/supabase-js@2'
 import { TEMPLATES } from '../_shared/transactional-email-templates/registry.ts'
 
 // Configuration baked in at scaffold time
-const SITE_NAME = "web-whisperer-146"
+const SITE_NAME = "AVS"
 const SENDER_DOMAIN = "notify.avs-renderings.com"
 const FROM_DOMAIN = "avs-renderings.com"
 

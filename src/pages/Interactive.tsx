@@ -96,6 +96,40 @@ const Interactive = () => {
         </div>
       </section>
 
+      {/* Interactive Floor Plans */}
+      <section className="section-padding border-t border-border">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="grid lg:grid-cols-2 gap-16 items-center"
+          >
+            <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden border border-border">
+              <div className="aspect-video w-full bg-secondary">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                  playsInline
+                >
+                  <source src="/videos/Interactive_Floor_plans.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </motion.div>
+            <motion.div custom={1} variants={fade} className="order-1 lg:order-2">
+              <p className="label-mono text-primary mb-5">06 — Interactive Floor Plans</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
+                Navigate floor plans with interactive detail
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
+                Let buyers explore room layouts, dimensions, and configurations interactively — making it easy to envision how each space fits their lifestyle.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Exterior Design Tool */}
       <section className="section-padding border-t border-border">
         <div className="container-wide">

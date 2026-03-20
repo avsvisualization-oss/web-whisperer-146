@@ -235,6 +235,41 @@ const projects: Project[] = [
   { image: portfolioTownHome10, title: "Town Home 10", category: "Exteriors", type: "image" },
   { image: portfolioTownHome11, title: "Town Home 11", category: "Exteriors", type: "image" },
   { image: portfolioTownHome12, title: "Town Home 12", category: "Exteriors", type: "image" },
+
+  // Animation Embeds
+  { image: "", title: "Animation 01", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1098628348" },
+  { image: "", title: "Animation 02", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1175277607" },
+  { image: "", title: "Animation 03", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1132137539" },
+  { image: "", title: "Animation 04", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1141523635" },
+  { image: "", title: "Animation 05", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1175247875" },
+  { image: "", title: "Animation 06", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1175293460" },
+  { image: "", title: "Animation 07", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1169622799" },
+  { image: "", title: "Animation 08", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1168503087" },
+  { image: "", title: "Animation 09", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1168250391" },
+  { image: "", title: "Animation 10", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1148133455" },
+  { image: "", title: "Animation 11", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1168259589" },
+  { image: "", title: "Animation 12", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1098895117" },
+  { image: "", title: "Animation 13", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1092880102" },
+  { image: "", title: "Animation 14", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1092597367" },
+  { image: "", title: "Animation 15", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1092597424" },
+  { image: "", title: "Animation 16", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1085815238" },
+  { image: "", title: "Animation 17", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1067401088" },
+  { image: "", title: "Animation 18", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1047970627" },
+  { image: "", title: "Animation 19", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1047260833" },
+  { image: "", title: "Animation 20", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1017702646" },
+  { image: "", title: "Animation 21", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/996374199" },
+
+  // 360 Walkthrough Embeds
+  { image: "", title: "360 Tour 01", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7XF1M?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 02", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7F4yg?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 03", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7KXpP?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 04", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7FvDf?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 05", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7cV5m?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 06", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7csrm?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 07", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7XFQf?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 08", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7X1yY?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 09", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7c4vL?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 10", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7K5pq?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
 ];
 
 const Portfolio = () => {

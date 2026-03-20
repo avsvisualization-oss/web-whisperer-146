@@ -100,7 +100,7 @@ const InteractiveSection = () => {
             className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 mb-14 md:mb-24"
           >
             {/* Static side */}
-            <div className="relative rounded-2xl overflow-hidden border border-border/20 bg-secondary/40 p-12 flex flex-col justify-between min-h-[400px]">
+            <div className="relative rounded-2xl overflow-hidden border border-border/20 bg-secondary/40 p-6 sm:p-8 md:p-12 flex flex-col justify-between min-h-[280px] md:min-h-[400px]">
               <div>
                 <div className="label-mono text-muted-foreground/50 mb-5">Traditional Approach</div>
                 <h3 className="font-display text-3xl font-semibold text-muted-foreground/70 tracking-[-0.03em]">

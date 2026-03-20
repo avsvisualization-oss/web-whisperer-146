@@ -118,7 +118,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.12 }}
-            className="bg-card rounded-2xl shadow-[0_2px_24px_-4px_hsl(var(--foreground)/0.08)] border border-border/50 p-6 md:p-10"
+            className="bg-[hsl(220_10%_14%)] rounded-[20px] shadow-[0_4px_40px_-8px_hsl(0_0%_0%/0.5)] border border-border/30 p-8 md:p-12"
           >
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               {/* Honeypot */}

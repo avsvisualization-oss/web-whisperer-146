@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useRef, useCallback } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import siteplanImg from "@/assets/siteplan.jpg";
@@ -12,6 +13,42 @@ const fade = {
     y: 0,
     transition: { duration: 0.7, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] as const },
   }),
+};
+
+const AutoplayVideo = ({ src, className }: { src: string; className?: string }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      className={className}
+      muted
+      loop
+      playsInline
+      preload="metadata"
+    >
+      <source src={src} type="video/mp4" />
+    </video>
+  );
 };
 
 const Interactive = () => {
@@ -82,14 +119,10 @@ const Interactive = () => {
             </motion.div>
             <motion.div custom={1} variants={fade} className="rounded-xl overflow-hidden border border-border">
               <div className="aspect-video w-full bg-secondary">
-                <video
-                  className="w-full h-full object-cover"
-                  controls
-                  preload="metadata"
-                  playsInline
-                >
-                  <source src="/videos/Interactive_Site_Plan_1.mp4" type="video/mp4" />
-                </video>
+                <AutoplayVideo
+                  src="/videos/Interactive_Site_Plan_1.mp4"
+                  className="w-full h-full object-contain bg-black/5"
+                />
               </div>
             </motion.div>
           </motion.div>
@@ -107,14 +140,10 @@ const Interactive = () => {
           >
             <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden border border-border">
               <div className="aspect-video w-full bg-secondary">
-                <video
-                  className="w-full h-full object-cover"
-                  controls
-                  preload="metadata"
-                  playsInline
-                >
-                  <source src="/videos/Interactive_Floor_plans.mp4" type="video/mp4" />
-                </video>
+                <AutoplayVideo
+                  src="/videos/Interactive_Floor_plans.mp4"
+                  className="w-full h-full object-contain bg-black/5"
+                />
               </div>
             </motion.div>
             <motion.div custom={1} variants={fade} className="order-1 lg:order-2">
@@ -141,14 +170,10 @@ const Interactive = () => {
           >
             <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden border border-border">
               <div className="aspect-video w-full bg-secondary">
-                <video
-                  className="w-full h-full object-cover"
-                  controls
-                  preload="metadata"
-                  playsInline
-                >
-                  <source src="/videos/Exterior_Design_Tool.mp4" type="video/mp4" />
-                </video>
+                <AutoplayVideo
+                  src="/videos/Exterior_Design_Tool.mp4"
+                  className="w-full h-full object-contain bg-black/5"
+                />
               </div>
             </motion.div>
             <motion.div custom={1} variants={fade} className="order-1 lg:order-2">
@@ -184,14 +209,10 @@ const Interactive = () => {
             </motion.div>
             <motion.div custom={1} variants={fade} className="rounded-xl overflow-hidden border border-border">
               <div className="aspect-video w-full bg-secondary">
-                <video
-                  className="w-full h-full object-cover"
-                  controls
-                  preload="metadata"
-                  playsInline
-                >
-                  <source src="/videos/Overl_lap_Tool.mp4" type="video/mp4" />
-                </video>
+                <AutoplayVideo
+                  src="/videos/Overl_lap_Tool.mp4"
+                  className="w-full h-full object-contain bg-black/5"
+                />
               </div>
             </motion.div>
           </motion.div>
@@ -209,14 +230,10 @@ const Interactive = () => {
           >
             <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden border border-border">
               <div className="aspect-video w-full bg-secondary">
-                <video
-                  className="w-full h-full object-cover"
-                  controls
-                  preload="metadata"
-                  playsInline
-                >
-                  <source src="/videos/Interior_Design_Tool.mp4" type="video/mp4" />
-                </video>
+                <AutoplayVideo
+                  src="/videos/Interior_Design_Tool.mp4"
+                  className="w-full h-full object-contain bg-black/5"
+                />
               </div>
             </motion.div>
             <motion.div custom={1} variants={fade} className="order-1 lg:order-2">

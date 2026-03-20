@@ -65,7 +65,7 @@ const TeamCarousel = () => {
       return;
     }
 
-    scrollPositionRef.current += 0.5;
+    scrollPositionRef.current += 0.15;
     const singleSetWidth = el.scrollWidth / 3;
 
     if (scrollPositionRef.current >= singleSetWidth) {
@@ -96,15 +96,15 @@ const TeamCarousel = () => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onScroll={handleScroll}
-      className="flex gap-6 overflow-x-auto cursor-grab active:cursor-grabbing"
+      className="flex gap-4 overflow-x-auto cursor-grab active:cursor-grabbing"
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
       {items.map((member, i) => (
         <div
           key={`${member.name}-${i}`}
-          className="group flex flex-col items-center text-center shrink-0 w-[130px] py-4 transition-all duration-300"
+          className="group flex flex-col items-center text-center shrink-0 w-[110px] py-2 transition-all duration-300"
         >
-          <div className="w-[90px] h-[90px] rounded-full overflow-hidden bg-secondary mb-3 ring-1 ring-border/20">
+          <div className="w-[76px] h-[76px] rounded-full overflow-hidden bg-secondary mb-2 ring-1 ring-border/20">
             <img
               src={member.image}
               alt={member.name}
@@ -254,13 +254,13 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-12 md:py-16 bg-[hsl(0,0%,4%)]">
+      <section className="py-8 md:py-10 bg-[hsl(0,0%,4%)]">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-8 max-w-2xl"
+            className="mb-5 max-w-2xl"
           >
             <div className="label-mono text-primary mb-3">Our Team</div>
             <h2 className="font-display text-xl md:text-2xl font-semibold text-white tracking-[-0.035em] mb-2">

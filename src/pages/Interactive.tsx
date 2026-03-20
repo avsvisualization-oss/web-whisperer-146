@@ -127,6 +127,40 @@ const Interactive = () => {
         </div>
       </section>
 
+      {/* Overlap Tool */}
+      <section className="section-padding border-t border-border">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="grid lg:grid-cols-2 gap-16 items-center"
+          >
+            <motion.div custom={0} variants={fade}>
+              <p className="label-mono text-primary mb-5">04 — Overlap Tool</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
+                Compare designs with precision overlays
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
+                Layer and compare renderings side by side to evaluate design options, revisions, and material choices with clarity and confidence.
+              </p>
+            </motion.div>
+            <motion.div custom={1} variants={fade} className="rounded-xl overflow-hidden border border-border">
+              <div className="aspect-video w-full bg-secondary">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                  playsInline
+                >
+                  <source src="/videos/Overl_lap_Tool.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* 360 Walkthrough */}
       <section className="section-padding border-t border-border">
         <div className="container-wide">

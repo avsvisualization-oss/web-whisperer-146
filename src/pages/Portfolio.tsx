@@ -25,6 +25,16 @@ import portfolioAerial1 from "@/assets/portfolio-aerial-1.jpg";
 import portfolioAerial2 from "@/assets/portfolio-aerial-2.jpg";
 import portfolioAerial3 from "@/assets/portfolio-aerial-3.jpg";
 import portfolioAerial4 from "@/assets/portfolio-aerial-4.jpg";
+import portfolioAerial01 from "@/assets/portfolio-aerial-01.jpg";
+import portfolioAerial02 from "@/assets/portfolio-aerial-02.jpg";
+import portfolioAerial03 from "@/assets/portfolio-aerial-03.jpg";
+import portfolioAerial04 from "@/assets/portfolio-aerial-04.jpg";
+import portfolioAerial05 from "@/assets/portfolio-aerial-05.jpg";
+import portfolioAerial05b from "@/assets/portfolio-aerial-05b.jpg";
+import portfolioAerial06 from "@/assets/portfolio-aerial-06.jpg";
+import portfolioAerial07 from "@/assets/portfolio-aerial-07.jpg";
+import portfolioAerial08 from "@/assets/portfolio-aerial-08.jpg";
+import portfolioAerial09 from "@/assets/portfolio-aerial-09.jpg";
 import portfolioMasterplan from "@/assets/portfolio-masterplan.jpg";
 import portfolioClubhouse1 from "@/assets/portfolio-clubhouse-1.jpg";
 import portfolioAmenities1 from "@/assets/portfolio-amenities-1.jpg";
@@ -86,6 +96,16 @@ const projects: Project[] = [
   { image: portfolioAerial3, title: "Residential Community", category: "Aerials", type: "image" },
   { image: portfolioAerial4, title: "Master-Planned Overview", category: "Aerials", type: "image" },
   { image: portfolioMasterplan, title: "Residential Master Plan", category: "Aerials", type: "image" },
+  { image: portfolioAerial01, title: "Lakefront Community Aerial", category: "Aerials", type: "image" },
+  { image: portfolioAerial02, title: "Suburban Development Aerial", category: "Aerials", type: "image" },
+  { image: portfolioAerial03, title: "Autumn Townhome Community", category: "Aerials", type: "image" },
+  { image: portfolioAerial04, title: "Resort Clubhouse at Sunset", category: "Aerials", type: "image" },
+  { image: portfolioAerial05b, title: "Mixed-Use Residential Building", category: "Aerials", type: "image" },
+  { image: portfolioAerial05, title: "Modern Townhome Streetview", category: "Aerials", type: "image" },
+  { image: portfolioAerial06, title: "Luxury Resort Amenities", category: "Aerials", type: "image" },
+  { image: portfolioAerial07, title: "Lakeside Residential Community", category: "Aerials", type: "image" },
+  { image: portfolioAerial08, title: "Community Pool & Recreation", category: "Aerials", type: "image" },
+  { image: portfolioAerial09, title: "Amenity Center Overview", category: "Aerials", type: "image" },
 
   // Clubhouse
   { image: portfolioClubhouse1, title: "Community Clubhouse", category: "Clubhouse", type: "image" },

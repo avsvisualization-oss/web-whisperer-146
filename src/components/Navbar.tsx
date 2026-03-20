@@ -18,10 +18,10 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleStartJob = useCallback(() => {
-    if (location.pathname === "/contact") {
+    if (location.pathname === "/") {
       document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
     } else {
-      navigate("/contact#contact-form");
+      navigate("/#contact-form");
     }
   }, [location.pathname, navigate]);
 

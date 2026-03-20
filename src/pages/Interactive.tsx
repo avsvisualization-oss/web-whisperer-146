@@ -319,7 +319,7 @@ const Interactive = () => {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                to="/contact"
+                to="/#contact-form"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground font-medium rounded-full text-sm tracking-wide hover:border-primary/40 hover:text-primary transition-all duration-300"
               >
                 Book a Call

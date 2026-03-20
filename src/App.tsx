@@ -12,6 +12,7 @@ import Team from "./pages/Team";
 import Services from "./pages/Services";
 import Interactive from "./pages/Interactive";
 import NotFound from "./pages/NotFound";
+import Unsubscribe from "./pages/Unsubscribe";
 
 const queryClient = new QueryClient();
 

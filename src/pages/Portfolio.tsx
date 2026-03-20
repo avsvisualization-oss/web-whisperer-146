@@ -124,6 +124,10 @@ const projects: Project[] = [
   { image: portfolioInterior18, title: "Guest Bedroom Suite", category: "Interiors", type: "image" },
   { image: portfolioInterior19, title: "Rustic Master Retreat", category: "Interiors", type: "image" },
   { image: portfolioInterior20, title: "Coastal Kitchen Design", category: "Interiors", type: "image" },
+  { image: portfolioInterior21, title: "Modern Home Office", category: "Interiors", type: "image" },
+  { image: portfolioInterior22, title: "Sage Study Room", category: "Interiors", type: "image" },
+  { image: portfolioInterior23, title: "Rustic Executive Office", category: "Interiors", type: "image" },
+  { image: portfolioInterior24, title: "Navy Blue Study", category: "Interiors", type: "image" },
 
   // Animations
   { image: portfolioAerial1, title: "Community Flythrough", category: "Animations", type: "video", videoUrl: "https://player.vimeo.com/video/1168259589" },

@@ -35,7 +35,7 @@ const FeaturedWork = () => {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-end justify-between mb-16 md:mb-20"
+          className="flex items-end justify-between mb-10 md:mb-16 lg:mb-20"
         >
           <div>
             <div className="label-mono text-primary mb-6">Featured Work</div>
@@ -61,7 +61,7 @@ const FeaturedWork = () => {
           >
             Exteriors — High-end exterior renderings designed to support marketing, approvals, and pre-sales.
           </motion.p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 md:gap-10">
             {exteriors.map((project, i) => (
               <motion.div
                 key={project.title}
@@ -90,7 +90,7 @@ const FeaturedWork = () => {
         </div>
 
         {/* Interiors */}
-        <div className="mt-20">
+        <div className="mt-10 md:mt-20">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -99,7 +99,7 @@ const FeaturedWork = () => {
           >
             Interiors — Spaces that feel real before they are built — helping buyers connect with the home before it exists.
           </motion.p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 md:gap-10">
             {interiors.map((project, i) => (
               <motion.div
                 key={project.title}

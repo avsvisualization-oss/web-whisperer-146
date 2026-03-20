@@ -35,23 +35,23 @@ const InteractiveSection = () => {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-20"
+            className="mb-10 md:mb-20"
           >
             <div className="label-mono text-primary mb-8">Interactive Solutions</div>
-            <h2 className="font-display text-[clamp(3.75rem,9vw,7rem)] font-semibold text-foreground max-w-5xl leading-[1.02] tracking-[-0.045em]">
+            <h2 className="font-display text-[clamp(2rem,7vw,7rem)] font-semibold text-foreground max-w-5xl leading-[1.02] tracking-[-0.045em]">
               Interactive Tools<br />
               <span className="text-primary">That Help You Sell</span>
             </h2>
-            <p className="mt-10 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
+            <p className="mt-6 md:mt-10 text-[14px] md:text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
               Our interactive solutions are designed to support sales teams and improve buyer understanding.
             </p>
-            <p className="mt-4 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
+            <p className="mt-3 md:mt-4 text-[14px] md:text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
               From lot selection to community exploration, we create digital tools that make projects easier to understand, present, and sell.
             </p>
-            <p className="mt-4 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
+            <p className="mt-3 md:mt-4 text-[14px] md:text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
               Designed to support sales teams and improve buyer decision-making.
             </p>
-            <p className="mt-4 text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
+            <p className="mt-3 md:mt-4 text-[14px] md:text-[16px] text-muted-foreground max-w-2xl leading-[1.9] font-light">
               Used by sales teams to improve buyer understanding and speed up decision-making.
             </p>
           </motion.div>
@@ -62,7 +62,7 @@ const InteractiveSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-24 relative rounded-2xl overflow-hidden border border-primary/20 bg-card max-w-7xl mx-auto"
+            className="mb-14 md:mb-24 relative rounded-2xl overflow-hidden border border-primary/20 bg-card max-w-7xl mx-auto"
           >
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             <div className="aspect-[16/9] w-full bg-[hsl(var(--secondary))]">
@@ -73,7 +73,7 @@ const InteractiveSection = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="p-6 md:p-8 flex items-center justify-between border-t border-border">
+            <div className="p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:justify-between border-t border-border">
               <div>
                 <p className="label-mono text-primary mb-1">Live Interactive Experience</p>
                 <p className="text-sm text-muted-foreground font-light">
@@ -84,7 +84,7 @@ const InteractiveSection = () => {
                 href="https://avs-interactive.com/avs/Interactive-Apps/siteplan/baypointe/20"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:inline-flex items-center gap-2 px-6 py-3 border border-primary/30 text-primary text-[13px] font-medium rounded-full hover:bg-primary/10 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 border border-primary/30 text-primary text-[12px] sm:text-[13px] font-medium rounded-full hover:bg-primary/10 transition-all duration-300"
               >
                 Open Full Screen <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
@@ -97,10 +97,10 @@ const InteractiveSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-24"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 mb-14 md:mb-24"
           >
             {/* Static side */}
-            <div className="relative rounded-2xl overflow-hidden border border-border/20 bg-secondary/40 p-12 flex flex-col justify-between min-h-[400px]">
+            <div className="relative rounded-2xl overflow-hidden border border-border/20 bg-secondary/40 p-6 sm:p-8 md:p-12 flex flex-col justify-between min-h-[280px] md:min-h-[400px]">
               <div>
                 <div className="label-mono text-muted-foreground/50 mb-5">Traditional Approach</div>
                 <h3 className="font-display text-3xl font-semibold text-muted-foreground/70 tracking-[-0.03em]">
@@ -118,7 +118,7 @@ const InteractiveSection = () => {
             </div>
 
             {/* Interactive side */}
-            <div className="relative rounded-2xl overflow-hidden border border-primary/30 bg-primary/[0.06] p-12 flex flex-col justify-between min-h-[400px]">
+            <div className="relative rounded-2xl overflow-hidden border border-primary/30 bg-primary/[0.06] p-6 sm:p-8 md:p-12 flex flex-col justify-between min-h-[280px] md:min-h-[400px]">
               <div className="absolute top-0 right-0 w-48 h-48 bg-primary/15 rounded-full blur-[80px] pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/10 rounded-full blur-[60px] pointer-events-none" />
               <div className="relative">
@@ -140,7 +140,7 @@ const InteractiveSection = () => {
           </motion.div>
 
           {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-16 mb-10 md:mb-16">
             {benefits.map((b, i) => (
               <motion.div
                 key={b.title}

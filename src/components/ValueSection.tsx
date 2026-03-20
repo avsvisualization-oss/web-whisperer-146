@@ -30,7 +30,7 @@ const ValueSection = () => {
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-secondary to-transparent pointer-events-none" />
 
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-20 lg:gap-28">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 md:gap-16 lg:gap-28">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ const ValueSection = () => {
             </p>
           </motion.div>
 
-          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-16">
+          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-16">
             {values.map((v, i) => (
               <motion.div
                 key={v.title}

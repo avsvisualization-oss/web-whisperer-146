@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-end overflow-hidden">
+    <section className="relative min-h-[85vh] md:min-h-screen flex items-end overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0">
         <iframe
@@ -17,7 +17,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative container-wide pb-16 md:pb-20 pt-32">
+      <div className="relative container-wide pb-10 md:pb-20 pt-24 md:pt-32">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -31,7 +31,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-[clamp(3.5rem,9vw,8.5rem)] font-semibold text-foreground max-w-[14ch] leading-[0.95] tracking-[-0.05em]"
+          className="font-display text-[clamp(2.2rem,7vw,8.5rem)] font-semibold text-foreground max-w-[14ch] leading-[0.95] tracking-[-0.05em]"
         >
           Visuals and Interactive Tools Built to Help You Sell Homes Faster
         </motion.h1>
@@ -58,17 +58,17 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-14 flex flex-wrap gap-5"
+          className="mt-8 md:mt-14 flex flex-wrap gap-3 md:gap-5"
         >
           <Link
             to="/contact"
-            className="px-10 py-4 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] transition-all duration-300 tracking-wide"
+            className="px-7 md:px-10 py-3.5 md:py-4 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] transition-all duration-300 tracking-wide"
           >
             Start a Project
           </Link>
           <Link
             to="/portfolio"
-            className="px-10 py-4 text-[13px] font-medium border border-foreground/15 text-foreground rounded-full hover:border-primary hover:text-primary hover:shadow-[0_0_20px_hsl(210_100%_52%/0.15)] transition-all duration-300 tracking-wide"
+            className="px-7 md:px-10 py-3.5 md:py-4 text-[13px] font-medium border border-foreground/15 text-foreground rounded-full hover:border-primary hover:text-primary hover:shadow-[0_0_20px_hsl(210_100%_52%/0.15)] transition-all duration-300 tracking-wide"
           >
             View Portfolio
           </Link>

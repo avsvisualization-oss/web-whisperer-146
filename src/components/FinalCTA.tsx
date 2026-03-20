@@ -17,7 +17,7 @@ const FinalCTA = () => {
   return (
     <section id="contact" className="section-padding bg-card">
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-28">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-28">
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -32,7 +32,7 @@ const FinalCTA = () => {
               Tell us about your project and we'll help you present it in the most effective way.
             </p>
 
-            <div className="mt-16 flex flex-col gap-6">
+            <div className="mt-8 md:mt-16 flex flex-col gap-5 md:gap-6">
               <a
                 href="mailto:info@avs-renderings.com"
                 className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors duration-300"

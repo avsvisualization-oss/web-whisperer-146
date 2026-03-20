@@ -45,7 +45,7 @@ const SolutionsSection = () => {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-10 md:mb-20"
         >
           <div className="label-mono text-primary mb-6">What We Do</div>
           <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-semibold text-foreground max-w-3xl leading-[1.05] tracking-[-0.04em]">
@@ -56,7 +56,7 @@ const SolutionsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {solutions.map((sol, i) => (
             <motion.div
               key={sol.title}
@@ -83,15 +83,15 @@ const SolutionsSection = () => {
                   </span>
                 </div>
               )}
-              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-8">
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
                 <div className="flex items-end justify-between gap-4">
                   <div>
-                    <h3 className={`font-display text-xl md:text-2xl font-semibold tracking-[-0.025em] ${
+                    <h3 className={`font-display text-sm sm:text-lg md:text-2xl font-semibold tracking-[-0.025em] ${
                       sol.featured ? "text-primary" : "text-foreground"
                     }`}>
                       {sol.title}
                     </h3>
-                    <p className="mt-3 text-[13px] text-muted-foreground max-w-sm leading-relaxed font-light">
+                    <p className="mt-2 md:mt-3 text-[11px] sm:text-[13px] text-muted-foreground max-w-sm leading-relaxed font-light hidden sm:block">
                       {sol.description}
                     </p>
                   </div>
@@ -108,7 +108,7 @@ const SolutionsSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-20 text-center"
+          className="mt-10 md:mt-20 text-center"
         >
           <Link
             to="/portfolio"

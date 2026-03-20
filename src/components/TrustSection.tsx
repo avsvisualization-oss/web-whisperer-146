@@ -21,7 +21,7 @@ const TrustSection = () => {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-24 md:gap-36 mb-20"
+          className="flex flex-wrap justify-center gap-10 sm:gap-16 md:gap-36 mb-12 md:mb-20"
         >
           {[
             { value: "10,000+", label: "Projects Completed" },
@@ -38,7 +38,7 @@ const TrustSection = () => {
         </motion.div>
 
         {/* Divider */}
-        <div className="border-t border-border/50 mb-16" />
+        <div className="border-t border-border/50 mb-10 md:mb-16" />
 
         {/* Trust statement */}
         <motion.div
@@ -47,11 +47,11 @@ const TrustSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          <p className="label-mono text-muted-foreground text-center mb-16">
+          <p className="label-mono text-muted-foreground text-center mb-8 md:mb-16">
             Trusted by builders and developers across the United States
           </p>
 
-          <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-x-8 sm:gap-x-12 md:gap-x-16 gap-y-5 md:gap-y-8 max-w-4xl mx-auto">
             {clientNames.map((name, i) => (
               <motion.span
                 key={name}

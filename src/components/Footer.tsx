@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="container-wide py-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-14">
+      <div className="container-wide py-12 md:py-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-14">
           <div className="md:col-span-2">
             <Link to="/" className="font-display text-xl text-foreground">
               <span className="font-semibold">AVS</span>
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-10 md:mt-16 pt-6 md:pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[11px] text-muted-foreground">
             © {new Date().getFullYear()} AVS Renderings. All rights reserved.
           </p>

@@ -29,7 +29,7 @@ const Services = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-28 md:pt-52 md:pb-36 overflow-hidden">
+      <section className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-52 md:pb-36 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="container-wide relative z-10">
           <motion.p
@@ -136,7 +136,7 @@ const Services = () => {
       </section>
 
       {/* 3. Walkthrough */}
-      <section className="relative py-48 md:py-56 lg:py-72 border-t border-primary/10 overflow-hidden">
+      <section className="relative py-20 sm:py-32 md:py-48 lg:py-72 border-t border-primary/10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.04] via-primary/[0.08] to-primary/[0.04]" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
         <div className="container-wide relative z-10">
@@ -145,7 +145,7 @@ const Services = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <motion.div custom={0} variants={fade} className="text-center mb-20">
+            <motion.div custom={0} variants={fade} className="text-center mb-10 md:mb-20">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium tracking-wider uppercase mb-6">
                 Popular for Sales Teams
               </span>
@@ -161,8 +161,8 @@ const Services = () => {
               </p>
             </motion.div>
 
-            <motion.div custom={1} variants={fade} className="rounded-2xl overflow-hidden border border-primary/20 bg-card mb-20 max-w-5xl mx-auto">
-              <div className="w-full" style={{ height: 'clamp(380px, 45vw, 540px)' }}>
+            <motion.div custom={1} variants={fade} className="rounded-2xl overflow-hidden border border-primary/20 bg-card mb-10 md:mb-20 max-w-5xl mx-auto">
+              <div className="w-full" style={{ height: 'clamp(250px, 45vw, 540px)' }}>
                 <iframe
                   width="100%"
                   height="100%"
@@ -176,7 +176,7 @@ const Services = () => {
                   allowFullScreen
                 />
               </div>
-              <div className="p-6 md:p-8 border-t border-border flex items-center justify-between">
+              <div className="p-4 sm:p-6 md:p-8 border-t border-border flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:justify-between">
                 <div>
                   <p className="label-mono text-primary mb-1">Live 360 Tour</p>
                   <p className="text-sm text-muted-foreground font-light">
@@ -272,7 +272,7 @@ const Services = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-40 md:py-52 border-t border-border">
+      <section className="py-20 sm:py-28 md:py-40 lg:py-52 border-t border-border">
         <div className="container-tight text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

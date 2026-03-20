@@ -158,28 +158,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-8 md:py-10 bg-[hsl(0,0%,4%)]">
-        <div className="container-wide">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-5 max-w-2xl"
-          >
-            <div className="label-mono text-primary mb-3">Our Team</div>
-            <h2 className="font-display text-xl md:text-2xl font-semibold text-white tracking-[-0.035em] mb-2">
-              The People Behind Every Delivery
-            </h2>
-            <p className="text-[13px] text-white/50 leading-[1.7]">
-              A structured team built to deliver consistency, speed and quality at scale.
-            </p>
-          </motion.div>
-
-          <TeamCarousel />
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-16 md:py-20 bg-secondary">
         <div className="container-tight text-center">

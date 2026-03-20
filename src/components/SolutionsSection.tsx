@@ -45,7 +45,7 @@ const SolutionsSection = () => {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-10 md:mb-20"
         >
           <div className="label-mono text-primary mb-6">What We Do</div>
           <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-semibold text-foreground max-w-3xl leading-[1.05] tracking-[-0.04em]">

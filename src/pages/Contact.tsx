@@ -86,7 +86,7 @@ const Contact = () => {
       <section id="contact-form" className="pt-28 pb-16 md:pt-32 md:pb-20 relative flex items-start justify-center">
         {/* Background */}
         <div className="absolute inset-0 bg-background" />
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-transparent to-secondary/10" />
 
         <div className="relative z-10 w-full max-w-[880px] mx-auto px-5">
           {/* Header above card */}

@@ -145,7 +145,7 @@ const Services = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <motion.div custom={0} variants={fade} className="text-center mb-20">
+            <motion.div custom={0} variants={fade} className="text-center mb-10 md:mb-20">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium tracking-wider uppercase mb-6">
                 Popular for Sales Teams
               </span>

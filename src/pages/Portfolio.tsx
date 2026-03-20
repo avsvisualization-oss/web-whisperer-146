@@ -60,6 +60,10 @@ import portfolioInterior17 from "@/assets/portfolio-interior-17.jpg";
 import portfolioInterior18 from "@/assets/portfolio-interior-18.jpg";
 import portfolioInterior19 from "@/assets/portfolio-interior-19.jpg";
 import portfolioInterior20 from "@/assets/portfolio-interior-20.jpg";
+import portfolioInterior21 from "@/assets/portfolio-interior-21.jpg";
+import portfolioInterior22 from "@/assets/portfolio-interior-22.jpg";
+import portfolioInterior23 from "@/assets/portfolio-interior-23.jpg";
+import portfolioInterior24 from "@/assets/portfolio-interior-24.jpg";
 import portfolioMasterplan from "@/assets/portfolio-masterplan.jpg";
 import portfolioClubhouse1 from "@/assets/portfolio-clubhouse-1.jpg";
 import portfolioAmenities1 from "@/assets/portfolio-amenities-1.jpg";
@@ -120,6 +124,10 @@ const projects: Project[] = [
   { image: portfolioInterior18, title: "Guest Bedroom Suite", category: "Interiors", type: "image" },
   { image: portfolioInterior19, title: "Rustic Master Retreat", category: "Interiors", type: "image" },
   { image: portfolioInterior20, title: "Coastal Kitchen Design", category: "Interiors", type: "image" },
+  { image: portfolioInterior21, title: "Modern Home Office", category: "Interiors", type: "image" },
+  { image: portfolioInterior22, title: "Sage Study Room", category: "Interiors", type: "image" },
+  { image: portfolioInterior23, title: "Rustic Executive Office", category: "Interiors", type: "image" },
+  { image: portfolioInterior24, title: "Navy Blue Study", category: "Interiors", type: "image" },
 
   // Animations
   { image: portfolioAerial1, title: "Community Flythrough", category: "Animations", type: "video", videoUrl: "https://player.vimeo.com/video/1168259589" },

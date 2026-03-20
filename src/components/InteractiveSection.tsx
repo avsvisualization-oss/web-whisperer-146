@@ -84,7 +84,7 @@ const InteractiveSection = () => {
                 href="https://avs-interactive.com/avs/Interactive-Apps/siteplan/baypointe/20"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:inline-flex items-center gap-2 px-6 py-3 border border-primary/30 text-primary text-[13px] font-medium rounded-full hover:bg-primary/10 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 border border-primary/30 text-primary text-[12px] sm:text-[13px] font-medium rounded-full hover:bg-primary/10 transition-all duration-300"
               >
                 Open Full Screen <ArrowUpRight className="w-3.5 h-3.5" />
               </a>

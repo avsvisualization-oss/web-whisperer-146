@@ -83,7 +83,7 @@ const SolutionsSection = () => {
                   </span>
                 </div>
               )}
-              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-8">
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
                 <div className="flex items-end justify-between gap-4">
                   <div>
                     <h3 className={`font-display text-xl md:text-2xl font-semibold tracking-[-0.025em] ${

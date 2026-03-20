@@ -35,7 +35,7 @@ const FeaturedWork = () => {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-end justify-between mb-16 md:mb-20"
+          className="flex items-end justify-between mb-10 md:mb-16 lg:mb-20"
         >
           <div>
             <div className="label-mono text-primary mb-6">Featured Work</div>

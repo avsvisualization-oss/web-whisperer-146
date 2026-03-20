@@ -172,7 +172,7 @@ const Interactive = () => {
               <div className="aspect-video w-full bg-secondary">
                 <AutoplayVideo
                   src="/videos/Exterior_Design_Tool.mp4"
-                  className="w-full h-full object-contain bg-black/5"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </motion.div>

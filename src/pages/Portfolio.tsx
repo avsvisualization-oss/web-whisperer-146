@@ -20,6 +20,13 @@ import portfolioInterior4 from "@/assets/portfolio-interior-4.jpg";
 import portfolioKitchen from "@/assets/portfolio-kitchen.jpg";
 import portfolioBedroom from "@/assets/portfolio-bedroom.jpg";
 import portfolioStreet1 from "@/assets/portfolio-street-1.jpg";
+import portfolioStreetScene01 from "@/assets/portfolio-street-scene-01.jpg";
+import portfolioStreetScene02 from "@/assets/portfolio-street-scene-02.jpg";
+import portfolioStreetScene03 from "@/assets/portfolio-street-scene-03.jpg";
+import portfolioStreetScene04 from "@/assets/portfolio-street-scene-04.jpg";
+import portfolioStreetScene05 from "@/assets/portfolio-street-scene-05.jpg";
+import portfolioStreetScene13 from "@/assets/portfolio-street-scene-13.jpg";
+import portfolioStreetScene14 from "@/assets/portfolio-street-scene-14.jpg";
 import portfolioAerial from "@/assets/portfolio-aerial.jpg";
 import portfolioAerial1 from "@/assets/portfolio-aerial-1.jpg";
 import portfolioAerial2 from "@/assets/portfolio-aerial-2.jpg";
@@ -155,6 +162,13 @@ const projects: Project[] = [
 
   // Street Scenes
   { image: portfolioStreet1, title: "Community Streetscape", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene01, title: "Street Scene 01", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene02, title: "Street Scene 02", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene03, title: "Street Scene 03", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene04, title: "Street Scene 04", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene05, title: "Street Scene 05", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene13, title: "Street Scene 13", category: "Street Scenes", type: "image" },
+  { image: portfolioStreetScene14, title: "Street Scene 14", category: "Street Scenes", type: "image" },
 
   // Aerials
   { image: portfolioAerial, title: "Community Overview", category: "Aerials", type: "image" },

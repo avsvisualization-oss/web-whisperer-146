@@ -17,7 +17,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative container-wide pb-10 md:pb-20 pt-24 md:pt-32">
+      <div className="relative container-wide py-10 md:py-0">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

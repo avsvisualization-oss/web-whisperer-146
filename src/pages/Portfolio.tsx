@@ -211,7 +211,31 @@ const Portfolio = () => {
   const [videoModal, setVideoModal] = useState<string | null>(null);
 
   const filtered = activeCategory === "All"
-    ? projects
+    ? (() => {
+        // Curated interleaved order for visual variety across all categories
+        const categoryOrder: Exclude<Category, "All">[] = [
+          "Exteriors", "Interiors", "Aerials", "Animations", "Street Scenes", "360 Walkthroughs"
+        ];
+        const buckets: Record<string, Project[]> = {};
+        categoryOrder.forEach(c => { buckets[c] = projects.filter(p => p.category === c); });
+        const indices: Record<string, number> = {};
+        categoryOrder.forEach(c => { indices[c] = 0; });
+        const result: Project[] = [];
+        let remaining = projects.length;
+        let catIdx = 0;
+        while (remaining > 0) {
+          const cat = categoryOrder[catIdx % categoryOrder.length];
+          if (indices[cat] < buckets[cat].length) {
+            result.push(buckets[cat][indices[cat]]);
+            indices[cat]++;
+            remaining--;
+          }
+          catIdx++;
+          // Skip empty buckets
+          if (categoryOrder.every(c => indices[c] >= buckets[c].length)) break;
+        }
+        return result;
+      })()
     : projects.filter((p) => p.category === activeCategory);
 
   const handleCardClick = (project: Project, index: number) => {

@@ -244,7 +244,7 @@ const Interactive = () => {
             <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden border border-border">
               <div className="aspect-video w-full">
                 <iframe
-                  src="https://my.matterport.com/show/?m=SxQL3iGyvPs&play=1"
+                  src="https://avsrenderings.viewin360.co/share/collection/7XF1M?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1"
                   className="w-full h-full"
                   style={{ border: 0 }}
                   title="360 Virtual Walkthrough"

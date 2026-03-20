@@ -70,6 +70,16 @@ import portfolioAmenities1 from "@/assets/portfolio-amenities-1.jpg";
 import portfolioInteractiveTour from "@/assets/portfolio-interactive-tour.jpg";
 import portfolioVR from "@/assets/portfolio-vr.jpg";
 import portfolioSiteplan from "@/assets/portfolio-siteplan.jpg";
+import portfolioSingleFamily01 from "@/assets/portfolio-single-family-01.jpg";
+import portfolioSingleFamily02 from "@/assets/portfolio-single-family-02.jpg";
+import portfolioSingleFamily03 from "@/assets/portfolio-single-family-03.jpg";
+import portfolioSingleFamily04 from "@/assets/portfolio-single-family-04.jpg";
+import portfolioSingleFamily05 from "@/assets/portfolio-single-family-05.jpg";
+import portfolioSingleFamily06 from "@/assets/portfolio-single-family-06.jpg";
+import portfolioSingleFamily07 from "@/assets/portfolio-single-family-07.jpg";
+import portfolioSingleFamily08 from "@/assets/portfolio-single-family-08.jpg";
+import portfolioSingleFamily09 from "@/assets/portfolio-single-family-09.jpg";
+import portfolioSingleFamily10 from "@/assets/portfolio-single-family-10b.jpg";
 
 const categories = ["All", "Exteriors", "Interiors", "Animations", "360 Walkthroughs", "Street Scenes", "Aerials", "Clubhouse", "Amenities"] as const;
 type Category = (typeof categories)[number];
@@ -170,6 +180,18 @@ const projects: Project[] = [
 
   // Amenities
   { image: portfolioAmenities1, title: "Community Amenities", category: "Amenities", type: "image" },
+
+  // Single Family
+  { image: portfolioSingleFamily01, title: "Single Family 01", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily02, title: "Single Family 02", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily03, title: "Single Family 03", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily04, title: "Single Family 04", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily05, title: "Single Family 05", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily06, title: "Single Family 06", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily07, title: "Single Family 07", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily08, title: "Single Family 08", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily09, title: "Single Family 09", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily10, title: "Single Family 10", category: "Exteriors", type: "image" },
 ];
 
 const Portfolio = () => {

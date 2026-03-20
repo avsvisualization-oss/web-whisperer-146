@@ -7,6 +7,7 @@ import ValueSection from "@/components/ValueSection";
 import FeaturedWork from "@/components/FeaturedWork";
 import ProcessSection from "@/components/ProcessSection";
 import FinalCTA from "@/components/FinalCTA";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
       <InteractiveSection />
       <ValueSection />
       <ProcessSection />
+      <ContactForm />
       <FinalCTA />
       <Footer />
     </div>

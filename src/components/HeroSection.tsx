@@ -68,7 +68,7 @@ const HeroSection = () => {
           </Link>
           <Link
             to="/portfolio"
-            className="px-10 py-4 text-[13px] font-medium border border-foreground/15 text-foreground rounded-full hover:border-primary hover:text-primary hover:shadow-[0_0_20px_hsl(210_100%_52%/0.15)] transition-all duration-300 tracking-wide"
+            className="px-7 md:px-10 py-3.5 md:py-4 text-[13px] font-medium border border-foreground/15 text-foreground rounded-full hover:border-primary hover:text-primary hover:shadow-[0_0_20px_hsl(210_100%_52%/0.15)] transition-all duration-300 tracking-wide"
           >
             View Portfolio
           </Link>

@@ -47,7 +47,7 @@ const ValueSection = () => {
             </p>
           </motion.div>
 
-          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-16">
+          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-16">
             {values.map((v, i) => (
               <motion.div
                 key={v.title}

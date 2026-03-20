@@ -51,7 +51,7 @@ const TrustSection = () => {
             Trusted by builders and developers across the United States
           </p>
 
-          <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-x-8 sm:gap-x-12 md:gap-x-16 gap-y-5 md:gap-y-8 max-w-4xl mx-auto">
             {clientNames.map((name, i) => (
               <motion.span
                 key={name}

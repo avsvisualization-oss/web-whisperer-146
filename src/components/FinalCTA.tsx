@@ -32,7 +32,7 @@ const FinalCTA = () => {
               Tell us about your project and we'll help you present it in the most effective way.
             </p>
 
-            <div className="mt-16 flex flex-col gap-6">
+            <div className="mt-8 md:mt-16 flex flex-col gap-5 md:gap-6">
               <a
                 href="mailto:info@avs-renderings.com"
                 className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors duration-300"

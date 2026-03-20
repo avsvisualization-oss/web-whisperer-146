@@ -32,7 +32,7 @@ const Contact = () => {
 
       <section id="contact-form" className="pt-32 pb-24 md:pt-40 md:pb-32">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 lg:gap-24">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}

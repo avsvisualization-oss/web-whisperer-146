@@ -29,7 +29,7 @@ const Services = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-28 md:pt-52 md:pb-36 overflow-hidden">
+      <section className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-52 md:pb-36 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="container-wide relative z-10">
           <motion.p

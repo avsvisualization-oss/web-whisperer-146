@@ -112,7 +112,7 @@ const TeamCarousel = () => {
               draggable={false}
             />
           </div>
-          <h4 className="font-display text-[12px] font-medium text-white tracking-[-0.01em] leading-tight">
+          <h4 className="font-display text-[11px] sm:text-[12px] font-medium text-white tracking-[-0.01em] leading-tight">
             {member.name}
           </h4>
           <p className="text-[10px] text-white/40 mt-0.5">{member.role}</p>

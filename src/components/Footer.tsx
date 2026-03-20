@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-10 md:mt-16 pt-6 md:pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[11px] text-muted-foreground">
             © {new Date().getFullYear()} AVS Renderings. All rights reserved.
           </p>

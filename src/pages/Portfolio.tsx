@@ -151,7 +151,7 @@ const Portfolio = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 text-[13px] font-medium rounded-full transition-colors ${
+              className={`px-3.5 sm:px-5 py-1.5 sm:py-2 text-[12px] sm:text-[13px] font-medium rounded-full transition-colors ${
                 activeCategory === cat
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-muted-foreground hover:text-foreground"

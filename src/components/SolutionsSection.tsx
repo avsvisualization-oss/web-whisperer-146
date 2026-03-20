@@ -108,7 +108,7 @@ const SolutionsSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-20 text-center"
+          className="mt-10 md:mt-20 text-center"
         >
           <Link
             to="/portfolio"

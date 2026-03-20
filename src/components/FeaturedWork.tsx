@@ -99,7 +99,7 @@ const FeaturedWork = () => {
           >
             Interiors — Spaces that feel real before they are built — helping buyers connect with the home before it exists.
           </motion.p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 md:gap-10">
             {interiors.map((project, i) => (
               <motion.div
                 key={project.title}

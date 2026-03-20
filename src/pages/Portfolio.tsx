@@ -196,6 +196,10 @@ const projects: Project[] = [
   { image: portfolioSingleFamily08, title: "Single Family 08", category: "Exteriors", type: "image" },
   { image: portfolioSingleFamily09, title: "Single Family 09", category: "Exteriors", type: "image" },
   { image: portfolioSingleFamily10, title: "Single Family 10", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily13, title: "Single Family 13", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily14, title: "Single Family 14", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily15, title: "Single Family 15", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily16, title: "Single Family 16", category: "Exteriors", type: "image" },
 ];
 
 const Portfolio = () => {

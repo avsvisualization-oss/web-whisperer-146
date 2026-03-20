@@ -91,7 +91,7 @@ const SolutionsSection = () => {
                     }`}>
                       {sol.title}
                     </h3>
-                    <p className="mt-3 text-[13px] text-muted-foreground max-w-sm leading-relaxed font-light">
+                    <p className="mt-2 md:mt-3 text-[11px] sm:text-[13px] text-muted-foreground max-w-sm leading-relaxed font-light hidden sm:block">
                       {sol.description}
                     </p>
                   </div>

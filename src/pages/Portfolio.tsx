@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Play, ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/Navbar";

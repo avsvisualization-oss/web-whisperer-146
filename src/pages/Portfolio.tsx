@@ -90,6 +90,16 @@ const projects: Project[] = [
   { image: portfolioInterior4, title: "Master Bathroom", category: "Interiors", type: "image" },
   { image: portfolioKitchen, title: "Luxury Kitchen Design", category: "Interiors", type: "image" },
   { image: portfolioBedroom, title: "Penthouse Master Suite", category: "Interiors", type: "image" },
+  { image: portfolioInterior01, title: "Spa Bathroom Retreat", category: "Interiors", type: "image" },
+  { image: portfolioInterior02, title: "Vaulted Ceiling Bedroom", category: "Interiors", type: "image" },
+  { image: portfolioInterior03, title: "Contemporary Dining Room", category: "Interiors", type: "image" },
+  { image: portfolioInterior04, title: "Marble Butler's Pantry", category: "Interiors", type: "image" },
+  { image: portfolioInterior05, title: "Fireplace Living Room", category: "Interiors", type: "image" },
+  { image: portfolioInterior06, title: "Sunlit Great Room", category: "Interiors", type: "image" },
+  { image: portfolioInterior07, title: "Designer Shower Suite", category: "Interiors", type: "image" },
+  { image: portfolioInterior08, title: "Elegant Dining & Kitchen", category: "Interiors", type: "image" },
+  { image: portfolioInterior09, title: "Double Vanity Bathroom", category: "Interiors", type: "image" },
+  { image: portfolioInterior10, title: "Master Bedroom Suite", category: "Interiors", type: "image" },
 
   // Animations
   { image: portfolioAerial1, title: "Community Flythrough", category: "Animations", type: "video", videoUrl: "https://player.vimeo.com/video/1168259589" },

@@ -118,7 +118,7 @@ const InteractiveSection = () => {
             </div>
 
             {/* Interactive side */}
-            <div className="relative rounded-2xl overflow-hidden border border-primary/30 bg-primary/[0.06] p-12 flex flex-col justify-between min-h-[400px]">
+            <div className="relative rounded-2xl overflow-hidden border border-primary/30 bg-primary/[0.06] p-6 sm:p-8 md:p-12 flex flex-col justify-between min-h-[280px] md:min-h-[400px]">
               <div className="absolute top-0 right-0 w-48 h-48 bg-primary/15 rounded-full blur-[80px] pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/10 rounded-full blur-[60px] pointer-events-none" />
               <div className="relative">

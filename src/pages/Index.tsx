@@ -20,7 +20,7 @@ const Index = () => {
       <ValueSection />
       <ProcessSection />
       <ContactForm />
-      <FinalCTA />
+      
       <Footer />
     </div>
   );

@@ -41,7 +41,7 @@ const teamMembers = [
   { name: "Ignacio Abellán", role: "Founder & Director", image: imgIgnacio },
   { name: "Natacha", role: "Operations Manager", image: imgNatacha },
   { name: "Gabriel", role: "Accounting & Finance Manager", image: imgGabriel },
-  { name: "Mike", role: "Development Manager", image: imgMike },
+  { name: "Head of Development", role: "Development Manager", image: imgMike },
   { name: "Matias", role: "Interior Division Manager", image: imgMatias },
   { name: "Fabian", role: "Animation Division Manager", image: imgFabian },
   { name: "Milena", role: "Project Manager", image: imgMilena },

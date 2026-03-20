@@ -97,7 +97,7 @@ const InteractiveSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-24"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 mb-14 md:mb-24"
           >
             {/* Static side */}
             <div className="relative rounded-2xl overflow-hidden border border-border/20 bg-secondary/40 p-12 flex flex-col justify-between min-h-[400px]">

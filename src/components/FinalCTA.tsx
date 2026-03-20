@@ -1,221 +1,42 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ChevronDown, Check } from "lucide-react";
-
-const ROLE_OPTIONS = ["Home Builder", "Developer", "Architect", "Marketing Agency", "Other"];
-const PROJECT_OPTIONS = ["Single Family", "Townhomes", "Community / Masterplan", "Marketing Package", "Interactive Tools"];
-const SERVICE_OPTIONS = ["Exterior Renderings", "Interior Renderings", "Animations", "Interactive Tools", "360 Walkthrough"];
-const TIMELINE_OPTIONS = ["ASAP", "2–4 weeks", "1–3 months", "Just exploring"];
-const BUDGET_OPTIONS = ["$500 – $2,000", "$2,000 – $5,000", "$5,000 – $10,000", "$10,000+"];
-
-const inputClass = "w-full px-0 py-3.5 bg-transparent border-b border-border text-[15px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors duration-300";
-const selectClass = "w-full px-0 py-3.5 bg-transparent border-b border-border text-[15px] text-foreground focus:outline-none focus:border-primary transition-colors duration-300 appearance-none cursor-pointer";
-
-const isValidEmail = (email: string) => {
-  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  if (!re.test(email)) return false;
-  const disposable = ["mailinator.com", "guerrillamail.com", "tempmail.com", "throwaway.email", "yopmail.com"];
-  const domain = email.split("@")[1]?.toLowerCase();
-  return !disposable.includes(domain);
-};
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
 const FinalCTA = () => {
-  const [form, setForm] = useState({
-    name: "", email: "", company: "", role: "", projectType: "",
-    services: [] as string[], timeline: "", budget: "", message: "",
-  });
-  const [honeypot, setHoneypot] = useState("");
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  const toggleService = (s: string) => {
-    setForm(f => ({
-      ...f,
-      services: f.services.includes(s) ? f.services.filter(x => x !== s) : [...f.services, s],
-    }));
-  };
-
-  const validate = () => {
-    const e: Record<string, string> = {};
-    if (!form.name.trim()) e.name = "Required";
-    if (!form.email.trim()) e.email = "Required";
-    else if (!isValidEmail(form.email)) e.email = "Enter a valid work email";
-    if (!form.company.trim()) e.company = "Required";
-    setErrors(e);
-    return Object.keys(e).length === 0;
-  };
-
-  const handleSubmit = (ev: React.FormEvent) => {
-    ev.preventDefault();
-    if (honeypot) return;
-    if (!validate()) return;
-
-    const lines = [
-      `Name: ${form.name}`, `Email: ${form.email}`, `Company: ${form.company}`,
-      form.role && `Role: ${form.role}`, form.projectType && `Project Type: ${form.projectType}`,
-      form.services.length && `Services: ${form.services.join(", ")}`,
-      form.timeline && `Timeline: ${form.timeline}`, form.budget && `Budget: ${form.budget}`,
-      form.message && `\nMessage:\n${form.message}`,
-    ].filter(Boolean).join("\n");
-
-    const subject = encodeURIComponent(`Project inquiry from ${form.name} – ${form.company}`);
-    const body = encodeURIComponent(lines);
-    window.location.href = `mailto:info@avs-renderings.com?subject=${subject}&body=${body}`;
-  };
-
-  const set = (key: string, val: string) => {
-    setForm(f => ({ ...f, [key]: val }));
-    if (errors[key]) setErrors(e => { const n = { ...e }; delete n[key]; return n; });
-  };
-
   return (
     <section id="contact" className="section-padding bg-card">
-      <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-28">
-          {/* Left */}
-          <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <div className="label-mono text-primary mb-6">Get in Touch</div>
-            <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold text-foreground leading-[1.05] tracking-[-0.04em]">
-              Let's Build Something That Helps You Sell
-            </h2>
-            <p className="mt-7 text-[14px] text-muted-foreground leading-[1.8] max-w-md font-light">
-              Tell us about your project and we'll help you present it in the most effective way.
-            </p>
+      <div className="container-wide max-w-3xl mx-auto text-center">
+        <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <div className="label-mono text-primary mb-6">Get in Touch</div>
+          <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold text-foreground leading-[1.05] tracking-[-0.04em]">
+            Let's Build Something That Helps You Sell
+          </h2>
+          <p className="mt-7 text-[14px] text-muted-foreground leading-[1.8] max-w-md mx-auto font-light">
+            Tell us about your project and we'll help you present it in the most effective way.
+          </p>
 
-            <div className="mt-8 md:mt-16 flex flex-col gap-5 md:gap-6">
-              <a href="mailto:info@avs-renderings.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors duration-300">
-                <Mail className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
-                <span className="text-[13px]">info@avs-renderings.com</span>
-              </a>
-              <a href="tel:+13028673810" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors duration-300">
-                <Phone className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
-                <span className="text-[13px]">+1 (302) 867-3810</span>
-              </a>
-              <div className="flex items-center gap-4 text-muted-foreground">
-                <MapPin className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
-                <span className="text-[13px]">1200 Ponce de Leon, St 703, Coral Gables FL 33134</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right — Form */}
-          <motion.form
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-5 bg-secondary/50 rounded-2xl p-8 md:p-10 border border-border/50"
+          <a
+            href="mailto:info@avs-renderings.com"
+            className="inline-flex items-center gap-2 mt-10 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full text-sm tracking-wide hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] active:scale-[0.97] transition-all duration-300"
           >
-            {/* Honeypot */}
-            <input type="text" name="website" value={honeypot} onChange={e => setHoneypot(e.target.value)}
-              className="absolute opacity-0 pointer-events-none h-0 w-0" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+            Start a Project
+            <ArrowRight className="w-4 h-4" />
+          </a>
 
-            {/* Name */}
-            <div>
-              <label className="label-mono text-muted-foreground mb-2.5 block">Full Name *</label>
-              <input type="text" required value={form.name} onChange={e => set("name", e.target.value)}
-                className={inputClass} placeholder="Your full name" />
-              {errors.name && <p className="text-destructive text-xs mt-1">{errors.name}</p>}
+          <div className="mt-12 flex flex-wrap justify-center gap-8">
+            <a href="mailto:info@avs-renderings.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors duration-300">
+              <Mail className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
+              <span className="text-[13px]">info@avs-renderings.com</span>
+            </a>
+            <a href="tel:+13028673810" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors duration-300">
+              <Phone className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
+              <span className="text-[13px]">+1 (302) 867-3810</span>
+            </a>
+            <div className="flex items-center gap-3 text-muted-foreground">
+              <MapPin className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
+              <span className="text-[13px]">Coral Gables, FL</span>
             </div>
-
-            {/* Email */}
-            <div>
-              <label className="label-mono text-muted-foreground mb-2.5 block">Work Email *</label>
-              <input type="email" required value={form.email} onChange={e => set("email", e.target.value)}
-                className={inputClass} placeholder="you@company.com" />
-              {errors.email && <p className="text-destructive text-xs mt-1">{errors.email}</p>}
-            </div>
-
-            {/* Company */}
-            <div>
-              <label className="label-mono text-muted-foreground mb-2.5 block">Company Name *</label>
-              <input type="text" required value={form.company} onChange={e => set("company", e.target.value)}
-                className={inputClass} placeholder="Company name" />
-              {errors.company && <p className="text-destructive text-xs mt-1">{errors.company}</p>}
-            </div>
-
-            {/* Role + Project Type */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div className="relative">
-                <label className="label-mono text-muted-foreground mb-2.5 block">What describes you?</label>
-                <select value={form.role} onChange={e => set("role", e.target.value)} className={selectClass}>
-                  <option value="" className="bg-card">Select...</option>
-                  {ROLE_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
-                </select>
-                <ChevronDown className="absolute right-0 bottom-4 w-4 h-4 text-muted-foreground pointer-events-none" />
-              </div>
-              <div className="relative">
-                <label className="label-mono text-muted-foreground mb-2.5 block">Project Type</label>
-                <select value={form.projectType} onChange={e => set("projectType", e.target.value)} className={selectClass}>
-                  <option value="" className="bg-card">Select...</option>
-                  {PROJECT_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
-                </select>
-                <ChevronDown className="absolute right-0 bottom-4 w-4 h-4 text-muted-foreground pointer-events-none" />
-              </div>
-            </div>
-
-            {/* Services multi-select */}
-            <div>
-              <label className="label-mono text-muted-foreground mb-3 block">Services Needed</label>
-              <div className="flex flex-wrap gap-2">
-                {SERVICE_OPTIONS.map(s => {
-                  const active = form.services.includes(s);
-                  return (
-                    <button key={s} type="button" onClick={() => toggleService(s)}
-                      className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-[13px] border transition-colors duration-200 ${
-                        active
-                          ? "bg-primary/15 border-primary text-primary"
-                          : "bg-transparent border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
-                      }`}>
-                      {active && <Check className="w-3 h-3" />}
-                      {s}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Timeline + Budget */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div className="relative">
-                <label className="label-mono text-muted-foreground mb-2.5 block">Timeline</label>
-                <select value={form.timeline} onChange={e => set("timeline", e.target.value)} className={selectClass}>
-                  <option value="" className="bg-card">Select...</option>
-                  {TIMELINE_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
-                </select>
-                <ChevronDown className="absolute right-0 bottom-4 w-4 h-4 text-muted-foreground pointer-events-none" />
-              </div>
-              <div className="relative">
-                <label className="label-mono text-muted-foreground mb-2.5 block">Budget Range</label>
-                <select value={form.budget} onChange={e => set("budget", e.target.value)} className={selectClass}>
-                  <option value="" className="bg-card">Select...</option>
-                  {BUDGET_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
-                </select>
-                <ChevronDown className="absolute right-0 bottom-4 w-4 h-4 text-muted-foreground pointer-events-none" />
-              </div>
-            </div>
-
-            {/* Message */}
-            <div>
-              <label className="label-mono text-muted-foreground mb-2.5 block">
-                Message <span className="normal-case tracking-normal">(optional)</span>
-              </label>
-              <textarea rows={3} value={form.message} onChange={e => set("message", e.target.value)}
-                className={`${inputClass} resize-none`} placeholder="Any additional details..." />
-            </div>
-
-            <p className="mt-4 text-center text-[13px] text-muted-foreground/60 font-light tracking-wide">
-              Let's start your next project
-            </p>
-            <button type="submit"
-              className="mt-1 w-full py-5 text-[15px] font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/80 hover:shadow-[0_0_50px_hsl(210_100%_52%/0.55)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 tracking-wide">
-              Start a Project
-            </button>
-            <p className="mt-3 text-[11px] text-muted-foreground/50 text-center tracking-wide">
-              Flexible payment options available — ACH, Wire and Credit Card
-            </p>
-          </motion.form>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -6,16 +6,6 @@ import FinalCTA from "@/components/FinalCTA";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-import imgIgnacio from "@/assets/team/ignacio.png";
-import imgNatacha from "@/assets/team/natacha.jpg";
-import imgGabriel from "@/assets/team/gabriel.jpg";
-import imgMike from "@/assets/team/mike.jpg";
-import imgMatias from "@/assets/team/matias.png";
-import imgFabian from "@/assets/team/fabian.png";
-import imgMilena from "@/assets/team/milena.png";
-import imgAgustina from "@/assets/team/agustina.png";
-import imgNati from "@/assets/team/nati.jpg";
-import imgAbril from "@/assets/team/abril.jpg";
 
 const differentiators = [
   "Built for production scale, not one-off projects",

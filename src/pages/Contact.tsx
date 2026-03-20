@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ChevronDown, Check } from "lucide-react";
+import { Mail, Phone, MapPin, ChevronDown, Check, Shield, Zap, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 

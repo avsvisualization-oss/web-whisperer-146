@@ -4,22 +4,6 @@ import { X, Play, ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-import portfolioExterior from "@/assets/portfolio-exterior.jpg";
-import portfolioExterior1 from "@/assets/portfolio-exterior-1.jpg";
-import portfolioExterior2 from "@/assets/portfolio-exterior-2.jpg";
-import portfolioExterior3 from "@/assets/portfolio-exterior-3.jpg";
-import portfolioExterior4 from "@/assets/portfolio-exterior-4.jpg";
-import portfolioTownhouse from "@/assets/portfolio-townhouse.jpg";
-import portfolioVilla from "@/assets/portfolio-villa.jpg";
-import portfolioCommercial from "@/assets/portfolio-commercial.jpg";
-import portfolioInterior from "@/assets/portfolio-interior.jpg";
-import portfolioInterior1 from "@/assets/portfolio-interior-1.jpg";
-import portfolioInterior2 from "@/assets/portfolio-interior-2.jpg";
-import portfolioInterior3 from "@/assets/portfolio-interior-3.jpg";
-import portfolioInterior4 from "@/assets/portfolio-interior-4.jpg";
-import portfolioKitchen from "@/assets/portfolio-kitchen.jpg";
-import portfolioBedroom from "@/assets/portfolio-bedroom.jpg";
-import portfolioStreet1 from "@/assets/portfolio-street-1.jpg";
 import portfolioStreetScene01 from "@/assets/portfolio-street-scene-01.jpg";
 import portfolioStreetScene02 from "@/assets/portfolio-street-scene-02.jpg";
 import portfolioStreetScene03 from "@/assets/portfolio-street-scene-03.jpg";
@@ -27,11 +11,6 @@ import portfolioStreetScene04 from "@/assets/portfolio-street-scene-04.jpg";
 import portfolioStreetScene05 from "@/assets/portfolio-street-scene-05.jpg";
 import portfolioStreetScene13 from "@/assets/portfolio-street-scene-13.jpg";
 import portfolioStreetScene14 from "@/assets/portfolio-street-scene-14.jpg";
-import portfolioAerial from "@/assets/portfolio-aerial.jpg";
-import portfolioAerial1 from "@/assets/portfolio-aerial-1.jpg";
-import portfolioAerial2 from "@/assets/portfolio-aerial-2.jpg";
-import portfolioAerial3 from "@/assets/portfolio-aerial-3.jpg";
-import portfolioAerial4 from "@/assets/portfolio-aerial-4.jpg";
 import portfolioAerial01 from "@/assets/portfolio-aerial-01.jpg";
 import portfolioAerial02 from "@/assets/portfolio-aerial-02.jpg";
 import portfolioAerial03 from "@/assets/portfolio-aerial-03.jpg";
@@ -71,12 +50,6 @@ import portfolioInterior21 from "@/assets/portfolio-interior-21.jpg";
 import portfolioInterior22 from "@/assets/portfolio-interior-22.jpg";
 import portfolioInterior23 from "@/assets/portfolio-interior-23.jpg";
 import portfolioInterior24 from "@/assets/portfolio-interior-24.jpg";
-import portfolioMasterplan from "@/assets/portfolio-masterplan.jpg";
-import portfolioClubhouse1 from "@/assets/portfolio-clubhouse-1.jpg";
-import portfolioAmenities1 from "@/assets/portfolio-amenities-1.jpg";
-import portfolioInteractiveTour from "@/assets/portfolio-interactive-tour.jpg";
-import portfolioVR from "@/assets/portfolio-vr.jpg";
-import portfolioSiteplan from "@/assets/portfolio-siteplan.jpg";
 import portfolioSingleFamily01 from "@/assets/portfolio-single-family-01.jpg";
 import portfolioSingleFamily02 from "@/assets/portfolio-single-family-02.jpg";
 import portfolioSingleFamily03 from "@/assets/portfolio-single-family-03.jpg";
@@ -101,7 +74,7 @@ import portfolioTownHome10 from "@/assets/portfolio-town-home-10.jpg";
 import portfolioTownHome11 from "@/assets/portfolio-town-home-11.jpg";
 import portfolioTownHome12 from "@/assets/portfolio-town-home-12.jpg";
 
-const categories = ["All", "Exteriors", "Interiors", "Animations", "360 Walkthroughs", "Street Scenes", "Aerials", "Clubhouse", "Amenities"] as const;
+const categories = ["All", "Exteriors", "Interiors", "Animations", "360 Walkthroughs", "Street Scenes", "Aerials"] as const;
 type Category = (typeof categories)[number];
 
 type ProjectType = "image" | "video" | "walkthrough" | "video-embed" | "360-embed";
@@ -117,24 +90,34 @@ interface Project {
 }
 
 const projects: Project[] = [
-  // Exteriors
-  { image: portfolioExterior, title: "Craftsman Series Residence", category: "Exteriors", type: "image" },
-  { image: portfolioExterior1, title: "Modern Elevation", category: "Exteriors", type: "image" },
-  { image: portfolioExterior2, title: "Contemporary Home", category: "Exteriors", type: "image" },
-  { image: portfolioExterior3, title: "Traditional Estate", category: "Exteriors", type: "image" },
-  { image: portfolioExterior4, title: "Luxury Façade", category: "Exteriors", type: "image" },
-  { image: portfolioTownhouse, title: "Modern Townhouse Collection", category: "Exteriors", type: "image" },
-  { image: portfolioVilla, title: "Mediterranean Villa Estate", category: "Exteriors", type: "image" },
-  { image: portfolioCommercial, title: "Urban Glass Office Tower", category: "Exteriors", type: "image" },
+  // Exteriors - Single Family
+  { image: portfolioSingleFamily01, title: "Single Family 01", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily02, title: "Single Family 02", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily03, title: "Single Family 03", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily04, title: "Single Family 04", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily05, title: "Single Family 05", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily06, title: "Single Family 06", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily07, title: "Single Family 07", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily08, title: "Single Family 08", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily09, title: "Single Family 09", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily10, title: "Single Family 10", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily13, title: "Single Family 13", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily14, title: "Single Family 14", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily15, title: "Single Family 15", category: "Exteriors", type: "image" },
+  { image: portfolioSingleFamily16, title: "Single Family 16", category: "Exteriors", type: "image" },
+
+  // Exteriors - Town Homes
+  { image: portfolioTownHome01, title: "Town Home 01", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome02, title: "Town Home 02", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome03, title: "Town Home 03", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome06, title: "Town Home 06", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome08, title: "Town Home 08", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome09, title: "Town Home 09", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome10, title: "Town Home 10", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome11, title: "Town Home 11", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome12, title: "Town Home 12", category: "Exteriors", type: "image" },
 
   // Interiors
-  { image: portfolioInterior, title: "Open Concept Living", category: "Interiors", type: "image" },
-  { image: portfolioInterior1, title: "Modern Living Room", category: "Interiors", type: "image" },
-  { image: portfolioInterior2, title: "Dining Experience", category: "Interiors", type: "image" },
-  { image: portfolioInterior3, title: "Family Room", category: "Interiors", type: "image" },
-  { image: portfolioInterior4, title: "Master Bathroom", category: "Interiors", type: "image" },
-  { image: portfolioKitchen, title: "Luxury Kitchen Design", category: "Interiors", type: "image" },
-  { image: portfolioBedroom, title: "Penthouse Master Suite", category: "Interiors", type: "image" },
   { image: portfolioInterior01, title: "Spa Bathroom Retreat", category: "Interiors", type: "image" },
   { image: portfolioInterior02, title: "Vaulted Ceiling Bedroom", category: "Interiors", type: "image" },
   { image: portfolioInterior03, title: "Contemporary Dining Room", category: "Interiors", type: "image" },
@@ -160,18 +143,7 @@ const projects: Project[] = [
   { image: portfolioInterior23, title: "Rustic Executive Office", category: "Interiors", type: "image" },
   { image: portfolioInterior24, title: "Navy Blue Study", category: "Interiors", type: "image" },
 
-  // Animations
-  { image: portfolioAerial1, title: "Community Flythrough", category: "Animations", type: "video", videoUrl: "https://player.vimeo.com/video/1168259589" },
-  { image: portfolioExterior2, title: "Exterior Walkthrough Animation", category: "Animations", type: "video", videoUrl: "https://player.vimeo.com/video/1168503087" },
-  { image: portfolioInterior1, title: "Interior Cinematic Tour", category: "Animations", type: "video", videoUrl: "https://player.vimeo.com/video/1168259589" },
-
-  // 360 Walkthroughs
-  { image: portfolioInteractiveTour, title: "Bay Pointe Community Tour", category: "360 Walkthroughs", type: "walkthrough", walkthroughUrl: "https://my.matterport.com/show/?m=SxQL3iGyvPs" },
-  { image: portfolioVR, title: "Model Home Virtual Tour", category: "360 Walkthroughs", type: "walkthrough", walkthroughUrl: "https://my.matterport.com/show/?m=SxQL3iGyvPs" },
-  { image: portfolioSiteplan, title: "Interactive Site Plan", category: "360 Walkthroughs", type: "walkthrough", walkthroughUrl: "https://avs-interactive.com/avs/Interactive-Apps/siteplan/baypointe/20" },
-
   // Street Scenes
-  { image: portfolioStreet1, title: "Community Streetscape", category: "Street Scenes", type: "image" },
   { image: portfolioStreetScene01, title: "Street Scene 01", category: "Street Scenes", type: "image" },
   { image: portfolioStreetScene02, title: "Street Scene 02", category: "Street Scenes", type: "image" },
   { image: portfolioStreetScene03, title: "Street Scene 03", category: "Street Scenes", type: "image" },
@@ -181,12 +153,6 @@ const projects: Project[] = [
   { image: portfolioStreetScene14, title: "Street Scene 14", category: "Street Scenes", type: "image" },
 
   // Aerials
-  { image: portfolioAerial, title: "Community Overview", category: "Aerials", type: "image" },
-  { image: portfolioAerial1, title: "Development Aerial View", category: "Aerials", type: "image" },
-  { image: portfolioAerial2, title: "Neighborhood Plan", category: "Aerials", type: "image" },
-  { image: portfolioAerial3, title: "Residential Community", category: "Aerials", type: "image" },
-  { image: portfolioAerial4, title: "Master-Planned Overview", category: "Aerials", type: "image" },
-  { image: portfolioMasterplan, title: "Residential Master Plan", category: "Aerials", type: "image" },
   { image: portfolioAerial01, title: "Lakefront Community Aerial", category: "Aerials", type: "image" },
   { image: portfolioAerial02, title: "Suburban Development Aerial", category: "Aerials", type: "image" },
   { image: portfolioAerial03, title: "Autumn Townhome Community", category: "Aerials", type: "image" },

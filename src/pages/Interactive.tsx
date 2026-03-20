@@ -121,7 +121,7 @@ const Interactive = () => {
               <div className="aspect-video w-full bg-secondary">
                 <AutoplayVideo
                   src="/videos/Interactive_Site_Plan_1.mp4"
-                  className="w-full h-full object-contain bg-black/5"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </motion.div>
@@ -142,7 +142,7 @@ const Interactive = () => {
               <div className="aspect-video w-full bg-secondary">
                 <AutoplayVideo
                   src="/videos/Interactive_Floor_plans.mp4"
-                  className="w-full h-full object-contain bg-black/5"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </motion.div>

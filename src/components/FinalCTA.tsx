@@ -15,13 +15,13 @@ const FinalCTA = () => {
             Tell us about your project and we'll help you present it in the most effective way.
           </p>
 
-          <a
-            href="mailto:info@avs-renderings.com"
+          <Link
+            to="/#contact-form"
             className="inline-flex items-center gap-2 mt-10 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full text-sm tracking-wide hover:bg-primary/80 hover:shadow-[0_0_30px_hsl(210_100%_52%/0.35)] active:scale-[0.97] transition-all duration-300"
           >
             Start a Project
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
 
           <div className="mt-12 flex flex-wrap justify-center gap-8">
             <a href="mailto:info@avs-renderings.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors duration-300">

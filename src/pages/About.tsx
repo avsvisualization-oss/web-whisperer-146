@@ -102,9 +102,9 @@ const TeamCarousel = () => {
       {items.map((member, i) => (
         <div
           key={`${member.name}-${i}`}
-          className="group flex flex-col items-center text-center shrink-0 w-[130px] py-4 transition-all duration-300"
+          className="group flex flex-col items-center text-center shrink-0 w-[110px] py-2 transition-all duration-300"
         >
-          <div className="w-[90px] h-[90px] rounded-full overflow-hidden bg-secondary mb-3 ring-1 ring-border/20">
+          <div className="w-[76px] h-[76px] rounded-full overflow-hidden bg-secondary mb-2 ring-1 ring-border/20">
             <img
               src={member.image}
               alt={member.name}

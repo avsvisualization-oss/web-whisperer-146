@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[90vh] md:h-screen flex items-end overflow-hidden">
+    <section className="relative h-[90vh] md:h-screen flex items-center overflow-hidden pt-20">
       {/* Background Video */}
       <div className="absolute inset-0">
         <iframe

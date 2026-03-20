@@ -37,6 +37,91 @@ const steps = [
   { number: "04", text: "Final assets ready for marketing and sales" },
 ];
 
+const teamMembers = [
+  { name: "Ignacio Abellán", role: "Founder & Director", image: imgIgnacio },
+  { name: "Natacha", role: "Operations Manager", image: imgNatacha },
+  { name: "Gabriel", role: "Accounting & Finance Manager", image: imgGabriel },
+  { name: "Head of Development", role: "Development Manager", image: imgMike },
+  { name: "Matias", role: "Interior Division Manager", image: imgMatias },
+  { name: "Fabian", role: "Animation Division Manager", image: imgFabian },
+  { name: "Milena", role: "Project Manager", image: imgMilena },
+  { name: "Agustina", role: "Project Manager", image: imgAgustina },
+  { name: "Anita", role: "Home Renderings Manager", image: imgNati },
+  { name: "Abril", role: "3D Modeling Manager", image: imgAbril },
+];
+
+const TeamCarousel = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const animationRef = useRef<number>();
+  const scrollPositionRef = useRef(0);
+
+  const items = [...teamMembers, ...teamMembers, ...teamMembers];
+
+  const animate = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el || isPaused) {
+      animationRef.current = requestAnimationFrame(animate);
+      return;
+    }
+
+    scrollPositionRef.current += 0.15;
+    const singleSetWidth = el.scrollWidth / 3;
+
+    if (scrollPositionRef.current >= singleSetWidth) {
+      scrollPositionRef.current -= singleSetWidth;
+    }
+
+    el.scrollLeft = scrollPositionRef.current;
+    animationRef.current = requestAnimationFrame(animate);
+  }, [isPaused]);
+
+  useEffect(() => {
+    animationRef.current = requestAnimationFrame(animate);
+    return () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    };
+  }, [animate]);
+
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (el && isPaused) {
+      scrollPositionRef.current = el.scrollLeft;
+    }
+  };
+
+  return (
+    <div
+      ref={scrollRef}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onScroll={handleScroll}
+      className="flex gap-4 overflow-x-auto cursor-grab active:cursor-grabbing"
+      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+    >
+      {items.map((member, i) => (
+        <div
+          key={`${member.name}-${i}`}
+          className="group flex flex-col items-center text-center shrink-0 w-[90px] sm:w-[110px] py-2 transition-all duration-300"
+        >
+          <div className="w-[64px] h-[64px] sm:w-[76px] sm:h-[76px] rounded-full overflow-hidden bg-secondary mb-2 ring-1 ring-border/20">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-full object-cover object-top grayscale-[40%] opacity-85 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.03] group-hover:brightness-110 transition-all duration-400"
+              draggable={false}
+            />
+          </div>
+          <h4 className="font-display text-[11px] sm:text-[12px] font-medium text-white tracking-[-0.01em] leading-tight">
+            {member.name}
+          </h4>
+          <p className="text-[10px] text-white/40 mt-0.5">{member.role}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const About = () => {
   return (
     <div className="min-h-screen bg-background">

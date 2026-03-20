@@ -176,7 +176,7 @@ const Services = () => {
                   allowFullScreen
                 />
               </div>
-              <div className="p-6 md:p-8 border-t border-border flex items-center justify-between">
+              <div className="p-4 sm:p-6 md:p-8 border-t border-border flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:justify-between">
                 <div>
                   <p className="label-mono text-primary mb-1">Live 360 Tour</p>
                   <p className="text-sm text-muted-foreground font-light">

@@ -287,7 +287,7 @@ const About = () => {
               Ready to get started?
             </h2>
             <Link
-              to="/contact"
+              to="/#contact-form"
               className="inline-flex items-center gap-2 px-8 py-3.5 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors tracking-wide"
             >
               Start a Project

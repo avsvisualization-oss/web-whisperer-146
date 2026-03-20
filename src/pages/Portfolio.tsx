@@ -111,6 +111,11 @@ const projects: Project[] = [
   { image: portfolioAerial07, title: "Lakeside Residential Community", category: "Aerials", type: "image" },
   { image: portfolioAerial08, title: "Community Pool & Recreation", category: "Aerials", type: "image" },
   { image: portfolioAerial09, title: "Amenity Center Overview", category: "Aerials", type: "image" },
+  { image: portfolioAerial10, title: "Waterfront Residential Aerial", category: "Aerials", type: "image" },
+  { image: portfolioAerial11, title: "Clubhouse & Sports Complex", category: "Aerials", type: "image" },
+  { image: portfolioAerial12, title: "Modern Urban Townhomes", category: "Aerials", type: "image" },
+  { image: portfolioAerial13, title: "Multi-Family Residential", category: "Aerials", type: "image" },
+  { image: portfolioAerial14, title: "Urban Mixed-Use Development", category: "Aerials", type: "image" },
 
   // Clubhouse
   { image: portfolioClubhouse1, title: "Community Clubhouse", category: "Clubhouse", type: "image" },

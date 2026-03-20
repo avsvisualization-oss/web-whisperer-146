@@ -118,7 +118,7 @@ const Interactive = () => {
               </div>
             </motion.div>
             <motion.div custom={1} variants={fade} className="rounded-xl overflow-hidden border border-border">
-              <div className="aspect-video w-full bg-secondary">
+              <div className="aspect-video w-full">
                 <AutoplayVideo
                   src="/videos/Interactive_Site_Plan_1.mp4"
                   className="w-full h-full object-cover"
@@ -139,7 +139,7 @@ const Interactive = () => {
             className="grid lg:grid-cols-2 gap-16 items-center"
           >
             <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden border border-border">
-              <div className="aspect-video w-full bg-secondary">
+              <div className="aspect-video w-full">
                 <AutoplayVideo
                   src="/videos/Interactive_Floor_plans.mp4"
                   className="w-full h-full object-cover"
@@ -169,7 +169,7 @@ const Interactive = () => {
             className="grid lg:grid-cols-2 gap-16 items-center"
           >
             <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden border border-border">
-              <div className="aspect-video w-full bg-secondary">
+              <div className="aspect-video w-full">
                 <AutoplayVideo
                   src="/videos/Exterior_Design_Tool.mp4"
                   className="w-full h-full object-cover"
@@ -208,7 +208,7 @@ const Interactive = () => {
               </p>
             </motion.div>
             <motion.div custom={1} variants={fade} className="rounded-xl overflow-hidden border border-border">
-              <div className="aspect-video w-full bg-secondary">
+              <div className="aspect-video w-full">
                 <AutoplayVideo
                   src="/videos/Overl_lap_Tool.mp4"
                   className="w-full h-full object-cover"
@@ -229,7 +229,7 @@ const Interactive = () => {
             className="grid lg:grid-cols-2 gap-16 items-center"
           >
             <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden border border-border">
-              <div className="aspect-video w-full bg-secondary">
+              <div className="aspect-video w-full">
                 <AutoplayVideo
                   src="/videos/Interior_Design_Tool.mp4"
                   className="w-full h-full object-cover"

@@ -136,7 +136,7 @@ const Services = () => {
       </section>
 
       {/* 3. Walkthrough */}
-      <section className="relative py-48 md:py-56 lg:py-72 border-t border-primary/10 overflow-hidden">
+      <section className="relative py-20 sm:py-32 md:py-48 lg:py-72 border-t border-primary/10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.04] via-primary/[0.08] to-primary/[0.04]" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
         <div className="container-wide relative z-10">

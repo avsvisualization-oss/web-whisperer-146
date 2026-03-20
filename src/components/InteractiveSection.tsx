@@ -73,7 +73,7 @@ const InteractiveSection = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="p-6 md:p-8 flex items-center justify-between border-t border-border">
+            <div className="p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:justify-between border-t border-border">
               <div>
                 <p className="label-mono text-primary mb-1">Live Interactive Experience</p>
                 <p className="text-sm text-muted-foreground font-light">

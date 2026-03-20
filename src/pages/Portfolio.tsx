@@ -40,6 +40,16 @@ import portfolioAerial11 from "@/assets/portfolio-aerial-11.jpg";
 import portfolioAerial12 from "@/assets/portfolio-aerial-12.jpg";
 import portfolioAerial13 from "@/assets/portfolio-aerial-13.jpg";
 import portfolioAerial14 from "@/assets/portfolio-aerial-14.jpg";
+import portfolioInterior01 from "@/assets/portfolio-interior-01.jpg";
+import portfolioInterior02 from "@/assets/portfolio-interior-02.jpg";
+import portfolioInterior03 from "@/assets/portfolio-interior-03.jpg";
+import portfolioInterior04 from "@/assets/portfolio-interior-04.jpg";
+import portfolioInterior05 from "@/assets/portfolio-interior-05.jpg";
+import portfolioInterior06 from "@/assets/portfolio-interior-06.jpg";
+import portfolioInterior07 from "@/assets/portfolio-interior-07.jpg";
+import portfolioInterior08 from "@/assets/portfolio-interior-08.jpg";
+import portfolioInterior09 from "@/assets/portfolio-interior-09.jpg";
+import portfolioInterior10 from "@/assets/portfolio-interior-10.jpg";
 import portfolioMasterplan from "@/assets/portfolio-masterplan.jpg";
 import portfolioClubhouse1 from "@/assets/portfolio-clubhouse-1.jpg";
 import portfolioAmenities1 from "@/assets/portfolio-amenities-1.jpg";
@@ -80,6 +90,16 @@ const projects: Project[] = [
   { image: portfolioInterior4, title: "Master Bathroom", category: "Interiors", type: "image" },
   { image: portfolioKitchen, title: "Luxury Kitchen Design", category: "Interiors", type: "image" },
   { image: portfolioBedroom, title: "Penthouse Master Suite", category: "Interiors", type: "image" },
+  { image: portfolioInterior01, title: "Spa Bathroom Retreat", category: "Interiors", type: "image" },
+  { image: portfolioInterior02, title: "Vaulted Ceiling Bedroom", category: "Interiors", type: "image" },
+  { image: portfolioInterior03, title: "Contemporary Dining Room", category: "Interiors", type: "image" },
+  { image: portfolioInterior04, title: "Marble Butler's Pantry", category: "Interiors", type: "image" },
+  { image: portfolioInterior05, title: "Fireplace Living Room", category: "Interiors", type: "image" },
+  { image: portfolioInterior06, title: "Sunlit Great Room", category: "Interiors", type: "image" },
+  { image: portfolioInterior07, title: "Designer Shower Suite", category: "Interiors", type: "image" },
+  { image: portfolioInterior08, title: "Elegant Dining & Kitchen", category: "Interiors", type: "image" },
+  { image: portfolioInterior09, title: "Double Vanity Bathroom", category: "Interiors", type: "image" },
+  { image: portfolioInterior10, title: "Master Bedroom Suite", category: "Interiors", type: "image" },
 
   // Animations
   { image: portfolioAerial1, title: "Community Flythrough", category: "Animations", type: "video", videoUrl: "https://player.vimeo.com/video/1168259589" },

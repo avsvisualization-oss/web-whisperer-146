@@ -161,6 +161,40 @@ const Interactive = () => {
         </div>
       </section>
 
+      {/* Interior Design Tool */}
+      <section className="section-padding border-t border-border">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="grid lg:grid-cols-2 gap-16 items-center"
+          >
+            <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden border border-border">
+              <div className="aspect-video w-full bg-secondary">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                  playsInline
+                >
+                  <source src="/videos/Interior_Design_Tool.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </motion.div>
+            <motion.div custom={1} variants={fade} className="order-1 lg:order-2">
+              <p className="label-mono text-primary mb-5">05 — Interior Design Tool</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
+                Explore interior finishes and layouts
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
+                Let buyers personalize interior spaces — from flooring and cabinetry to paint colors and fixtures — creating a home that feels uniquely theirs.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* 360 Walkthrough */}
       <section className="section-padding border-t border-border">
         <div className="container-wide">

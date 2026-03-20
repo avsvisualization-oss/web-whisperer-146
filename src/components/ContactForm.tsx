@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, Check } from "lucide-react";
+import { ChevronDown, Check, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const ROLE_OPTIONS = ["Home Builder", "Developer", "Architect", "Marketing Agency", "Other"];
 const PROJECT_OPTIONS = ["Single Family", "Townhomes", "Community / Masterplan", "Marketing Package", "Interactive Tools"];

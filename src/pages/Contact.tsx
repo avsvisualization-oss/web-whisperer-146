@@ -83,7 +83,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section id="contact-form" className="pt-32 pb-24 md:pt-40 md:pb-32 relative min-h-screen flex items-start justify-center">
+      <section id="contact-form" className="pt-28 pb-16 md:pt-32 md:pb-20 relative flex items-start justify-center">
         {/* Background */}
         <div className="absolute inset-0 bg-background" />
         <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/20" />

@@ -120,7 +120,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
             className="rounded-3xl p-6 md:p-10"
-            style={{ backgroundColor: 'hsl(220, 10%, 14%)', boxShadow: '0 8px 60px -12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.3)' }}
+            style={{ backgroundColor: 'hsl(220, 10%, 16%)', boxShadow: '0 8px 60px -12px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04)' }}
           >
             <p className="text-center text-[11px] text-muted-foreground/40 mb-5 tracking-wide">Takes less than 30 seconds</p>
 

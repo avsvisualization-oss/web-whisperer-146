@@ -131,8 +131,11 @@ const Services = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
                 Cinematic storytelling that increases engagement
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-lg mb-6">
                 Cinematic walkthroughs that bring projects to life and enhance buyer engagement.
+              </p>
+              <p className="text-[13px] text-muted-foreground/60 font-light">
+                Home Animations — Starting at $1,900
               </p>
             </motion.div>
           </motion.div>

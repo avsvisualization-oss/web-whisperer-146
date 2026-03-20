@@ -7,7 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
-import Team from "./pages/Team";
+
 
 import Services from "./pages/Services";
 import Interactive from "./pages/Interactive";

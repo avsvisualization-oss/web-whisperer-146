@@ -208,7 +208,7 @@ const Interactive = () => {
               </p>
             </motion.div>
             <motion.div custom={1} variants={fade} className="rounded-xl overflow-hidden border border-border">
-              <div className="aspect-video w-full bg-secondary">
+              <div className="aspect-video w-full">
                 <AutoplayVideo
                   src="/videos/Overl_lap_Tool.mp4"
                   className="w-full h-full object-cover"

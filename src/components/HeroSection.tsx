@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[85vh] md:min-h-screen flex items-end overflow-hidden">
+    <section className="relative h-[90vh] md:h-screen flex items-end overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0">
         <iframe
           src="https://player.vimeo.com/video/1168503087?background=1&autoplay=1&loop=1&muted=1&quality=720p"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full min-h-full"
-          style={{ border: 0 }}
+          className="absolute inset-0 w-full h-full"
+          style={{ border: 0, objectFit: 'cover', transform: 'scale(1.2)' }}
           allow="autoplay; fullscreen"
           title="Hero background"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20" />
       </div>
 
       {/* Content */}

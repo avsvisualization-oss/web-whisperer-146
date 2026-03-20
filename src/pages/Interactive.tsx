@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import siteplanImg from "@/assets/siteplan.jpg";
@@ -16,38 +16,47 @@ const fade = {
 };
 
 const AutoplayVideo = ({ src, className }: { src: string; className?: string }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
+    const el = containerRef.current;
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          video.play().catch(() => {});
+          if (!shouldLoad) setShouldLoad(true);
+          videoRef.current?.play().catch(() => {});
         } else {
-          video.pause();
+          videoRef.current?.pause();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2, rootMargin: "200px" }
     );
 
-    observer.observe(video);
+    observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [shouldLoad]);
 
   return (
-    <video
-      ref={videoRef}
-      className={className}
-      muted
-      loop
-      playsInline
-      preload="metadata"
-    >
-      <source src={src} type="video/mp4" />
-    </video>
+    <div ref={containerRef} className="w-full h-full">
+      {shouldLoad ? (
+        <video
+          ref={videoRef}
+          className={className}
+          muted
+          loop
+          playsInline
+          preload="none"
+        >
+          <source src={src} type="video/mp4" />
+        </video>
+      ) : (
+        <div className={`${className} bg-secondary/60`} />
+      )}
+    </div>
   );
 };
 

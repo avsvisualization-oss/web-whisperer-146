@@ -50,6 +50,16 @@ import portfolioInterior07 from "@/assets/portfolio-interior-07.jpg";
 import portfolioInterior08 from "@/assets/portfolio-interior-08.jpg";
 import portfolioInterior09 from "@/assets/portfolio-interior-09.jpg";
 import portfolioInterior10 from "@/assets/portfolio-interior-10.jpg";
+import portfolioInterior11 from "@/assets/portfolio-interior-11.jpg";
+import portfolioInterior12 from "@/assets/portfolio-interior-12.jpg";
+import portfolioInterior13 from "@/assets/portfolio-interior-13.jpg";
+import portfolioInterior14 from "@/assets/portfolio-interior-14.jpg";
+import portfolioInterior15 from "@/assets/portfolio-interior-15.jpg";
+import portfolioInterior16 from "@/assets/portfolio-interior-16.jpg";
+import portfolioInterior17 from "@/assets/portfolio-interior-17.jpg";
+import portfolioInterior18 from "@/assets/portfolio-interior-18.jpg";
+import portfolioInterior19 from "@/assets/portfolio-interior-19.jpg";
+import portfolioInterior20 from "@/assets/portfolio-interior-20.jpg";
 import portfolioMasterplan from "@/assets/portfolio-masterplan.jpg";
 import portfolioClubhouse1 from "@/assets/portfolio-clubhouse-1.jpg";
 import portfolioAmenities1 from "@/assets/portfolio-amenities-1.jpg";
@@ -100,6 +110,16 @@ const projects: Project[] = [
   { image: portfolioInterior08, title: "Elegant Dining & Kitchen", category: "Interiors", type: "image" },
   { image: portfolioInterior09, title: "Double Vanity Bathroom", category: "Interiors", type: "image" },
   { image: portfolioInterior10, title: "Master Bedroom Suite", category: "Interiors", type: "image" },
+  { image: portfolioInterior11, title: "Gourmet Kitchen Island", category: "Interiors", type: "image" },
+  { image: portfolioInterior12, title: "Open Concept Family Room", category: "Interiors", type: "image" },
+  { image: portfolioInterior13, title: "Gold Accent Master Bath", category: "Interiors", type: "image" },
+  { image: portfolioInterior14, title: "Walnut Kitchen Design", category: "Interiors", type: "image" },
+  { image: portfolioInterior15, title: "Foyer Sitting Area", category: "Interiors", type: "image" },
+  { image: portfolioInterior16, title: "Vaulted Living & Kitchen", category: "Interiors", type: "image" },
+  { image: portfolioInterior17, title: "Farmhouse Dining Room", category: "Interiors", type: "image" },
+  { image: portfolioInterior18, title: "Guest Bedroom Suite", category: "Interiors", type: "image" },
+  { image: portfolioInterior19, title: "Rustic Master Retreat", category: "Interiors", type: "image" },
+  { image: portfolioInterior20, title: "Coastal Kitchen Design", category: "Interiors", type: "image" },
 
   // Animations
   { image: portfolioAerial1, title: "Community Flythrough", category: "Animations", type: "video", videoUrl: "https://player.vimeo.com/video/1168259589" },

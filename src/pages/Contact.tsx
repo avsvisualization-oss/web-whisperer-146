@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ChevronDown, Check, Shield, Zap, Sparkles } from "lucide-react";
+import { ChevronDown, Check, Shield, Zap, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -88,9 +88,9 @@ const Contact = () => {
         <div className="absolute inset-0 bg-background" />
         <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/20" />
 
-        <div className="relative z-10 w-full max-w-[680px] mx-auto px-5">
+        <div className="relative z-10 w-full max-w-[880px] mx-auto px-5">
           {/* Header above card */}
-          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
             <div className="label-mono text-primary mb-4">Contact</div>
             <h1 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-tight tracking-[-0.04em]">
               Get a Quote for Your Next Project
@@ -119,42 +119,44 @@ const Contact = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="rounded-3xl p-8 md:p-12"
+            className="rounded-3xl p-6 md:p-10"
             style={{ backgroundColor: 'hsl(220, 10%, 14%)', boxShadow: '0 8px 60px -12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.3)' }}
           >
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <p className="text-center text-[11px] text-muted-foreground/40 mb-5 tracking-wide">Takes less than 30 seconds</p>
+
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               {/* Honeypot */}
               <input type="text" name="website" value={honeypot} onChange={e => setHoneypot(e.target.value)}
                 className="absolute opacity-0 pointer-events-none h-0 w-0" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
-              {/* Name + Email */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {/* Row 1: Name + Email */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="label-mono text-muted-foreground mb-1.5 block">Full Name *</label>
+                  <label className="label-mono text-muted-foreground mb-1 block">Full Name *</label>
                   <input type="text" required value={form.name} onChange={e => set("name", e.target.value)}
                     className={inputClass} placeholder="Your full name" />
                   {errors.name && <p className="text-destructive text-xs mt-1">{errors.name}</p>}
                 </div>
                 <div>
-                  <label className="label-mono text-muted-foreground mb-1.5 block">Work Email *</label>
+                  <label className="label-mono text-muted-foreground mb-1 block">Work Email *</label>
                   <input type="email" required value={form.email} onChange={e => set("email", e.target.value)}
                     className={inputClass} placeholder="you@company.com" />
                   {errors.email && <p className="text-destructive text-xs mt-1">{errors.email}</p>}
                 </div>
               </div>
 
-              {/* Company */}
+              {/* Row 2: Company */}
               <div>
-                <label className="label-mono text-muted-foreground mb-1.5 block">Company Name *</label>
+                <label className="label-mono text-muted-foreground mb-1 block">Company Name *</label>
                 <input type="text" required value={form.company} onChange={e => set("company", e.target.value)}
                   className={inputClass} placeholder="Company name" />
                 {errors.company && <p className="text-destructive text-xs mt-1">{errors.company}</p>}
               </div>
 
-              {/* Role + Project Type */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {/* Row 3: Role + Project Type */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="relative">
-                  <label className="label-mono text-muted-foreground mb-1.5 block">What describes you?</label>
+                  <label className="label-mono text-muted-foreground mb-1 block">What describes you?</label>
                   <select value={form.role} onChange={e => set("role", e.target.value)} className={selectClass}>
                     <option value="">Select...</option>
                     {ROLE_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
@@ -162,7 +164,7 @@ const Contact = () => {
                   <ChevronDown className="absolute right-0 bottom-3.5 w-4 h-4 text-muted-foreground pointer-events-none" />
                 </div>
                 <div className="relative">
-                  <label className="label-mono text-muted-foreground mb-1.5 block">Project Type</label>
+                  <label className="label-mono text-muted-foreground mb-1 block">Project Type</label>
                   <select value={form.projectType} onChange={e => set("projectType", e.target.value)} className={selectClass}>
                     <option value="">Select...</option>
                     {PROJECT_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
@@ -171,10 +173,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Timeline + Budget */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {/* Row 4: Timeline + Budget */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="relative">
-                  <label className="label-mono text-muted-foreground mb-1.5 block">Timeline</label>
+                  <label className="label-mono text-muted-foreground mb-1 block">Timeline</label>
                   <select value={form.timeline} onChange={e => set("timeline", e.target.value)} className={selectClass}>
                     <option value="">Select...</option>
                     {TIMELINE_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
@@ -182,7 +184,7 @@ const Contact = () => {
                   <ChevronDown className="absolute right-0 bottom-3.5 w-4 h-4 text-muted-foreground pointer-events-none" />
                 </div>
                 <div className="relative">
-                  <label className="label-mono text-muted-foreground mb-1.5 block">Budget Range</label>
+                  <label className="label-mono text-muted-foreground mb-1 block">Budget Range</label>
                   <select value={form.budget} onChange={e => set("budget", e.target.value)} className={selectClass}>
                     <option value="">Select...</option>
                     {BUDGET_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
@@ -191,9 +193,9 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Services chips */}
+              {/* Row 5: Services chips */}
               <div>
-                <label className="label-mono text-muted-foreground mb-2.5 block">Services Needed</label>
+                <label className="label-mono text-muted-foreground mb-2 block">Services Needed</label>
                 <div className="flex flex-wrap gap-2">
                   {SERVICE_OPTIONS.map(s => {
                     const active = form.services.includes(s);
@@ -212,41 +214,24 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Message */}
+              {/* Row 6: Message */}
               <div>
-                <label className="label-mono text-muted-foreground mb-1.5 block text-xs">
+                <label className="label-mono text-muted-foreground mb-1 block text-xs">
                   Message <span className="normal-case tracking-normal">(optional)</span>
                 </label>
-                <textarea rows={3} value={form.message} onChange={e => set("message", e.target.value)}
+                <textarea rows={2} value={form.message} onChange={e => set("message", e.target.value)}
                   className={`${inputClass} resize-none text-[13px]`} placeholder="Any additional details..." />
               </div>
 
               <button type="submit"
-                className="w-full py-6 text-base font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/90 active:scale-[0.97] transition-all mt-3 tracking-wide">
+                className="w-full py-5 text-base font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/90 active:scale-[0.97] transition-all mt-2 tracking-wide">
                 Get My Quote
               </button>
-            </form>
-          </motion.div>
 
-          {/* Contact info */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="mt-8 flex flex-wrap justify-center gap-6 text-muted-foreground"
-          >
-            <a href="mailto:info@avs-renderings.com" className="flex items-center gap-2.5 hover:text-primary transition-colors">
-              <Mail className="w-3.5 h-3.5" strokeWidth={1.5} />
-              <span className="text-[12px]">info@avs-renderings.com</span>
-            </a>
-            <a href="tel:+13028673810" className="flex items-center gap-2.5 hover:text-primary transition-colors">
-              <Phone className="w-3.5 h-3.5" strokeWidth={1.5} />
-              <span className="text-[12px]">+1 (302) 867-3810</span>
-            </a>
-            <div className="flex items-center gap-2.5">
-              <MapPin className="w-3.5 h-3.5" strokeWidth={1.5} />
-              <span className="text-[12px]">Coral Gables, FL</span>
-            </div>
+              <p className="text-[11px] text-muted-foreground/40 text-center tracking-wide">
+                Flexible payment options available — ACH, Wire and Credit Card
+              </p>
+            </form>
           </motion.div>
         </div>
       </section>

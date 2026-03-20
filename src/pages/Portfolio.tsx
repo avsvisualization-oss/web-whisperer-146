@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Play, ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -205,14 +205,57 @@ const projects: Project[] = [
   { image: "", title: "360 Tour 10", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7K5pq?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
 ];
 
+const INITIAL_LIMIT = 16;
+
+const LazyEmbed = ({ src, allow, title }: { src: string; allow: string; title: string }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className="w-full h-full">
+      {visible ? (
+        <iframe
+          src={src}
+          className="w-full h-full"
+          style={{ border: 0 }}
+          allow={allow}
+          allowFullScreen
+          title={title}
+          loading="lazy"
+        />
+      ) : (
+        <div className="w-full h-full bg-secondary/50 flex items-center justify-center">
+          <Play className="w-8 h-8 text-muted-foreground/40" />
+        </div>
+      )}
+    </div>
+  );
+};
+
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [videoModal, setVideoModal] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_LIMIT);
 
   const filtered = activeCategory === "All"
     ? (() => {
-        // Curated interleaved order for visual variety across all categories
         const categoryOrder: Exclude<Category, "All">[] = [
           "Exteriors", "Interiors", "Aerials", "Animations", "Street Scenes", "360 Walkthroughs"
         ];
@@ -231,12 +274,19 @@ const Portfolio = () => {
             remaining--;
           }
           catIdx++;
-          // Skip empty buckets
           if (categoryOrder.every(c => indices[c] >= buckets[c].length)) break;
         }
         return result;
       })()
     : projects.filter((p) => p.category === activeCategory);
+
+  const displayed = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
+
+  const handleCategoryChange = useCallback((cat: Category) => {
+    setActiveCategory(cat);
+    setVisibleCount(INITIAL_LIMIT);
+  }, []);
 
   const handleCardClick = (project: Project, index: number) => {
     if (project.type === "video" && project.videoUrl) {
@@ -285,7 +335,7 @@ const Portfolio = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => handleCategoryChange(cat)}
               className={`px-3.5 sm:px-5 py-1.5 sm:py-2 text-[12px] sm:text-[13px] font-medium rounded-full transition-colors ${
                 activeCategory === cat
                   ? "bg-primary text-primary-foreground"
@@ -307,7 +357,7 @@ const Portfolio = () => {
       <div className="container-wide pb-24">
         <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <AnimatePresence mode="popLayout">
-            {filtered.map((project, i) => (
+            {displayed.map((project, i) => (
               <motion.div
                 key={project.title}
                 layout
@@ -322,24 +372,16 @@ const Portfolio = () => {
               >
                 {/* Inline video embed */}
                 {project.type === "video-embed" && project.embedUrl ? (
-                  <iframe
+                  <LazyEmbed
                     src={project.embedUrl}
-                    className="w-full h-full"
-                    style={{ border: 0 }}
                     allow="fullscreen; picture-in-picture"
-                    allowFullScreen
                     title={project.title}
-                    loading="lazy"
                   />
                 ) : project.type === "360-embed" && project.embedUrl ? (
-                  <iframe
+                  <LazyEmbed
                     src={project.embedUrl}
-                    className="w-full h-full"
-                    style={{ border: 0 }}
                     allow="fullscreen; vr"
-                    allowFullScreen
                     title={project.title}
-                    loading="lazy"
                   />
                 ) : (
                   <>
@@ -348,6 +390,7 @@ const Portfolio = () => {
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                       loading="lazy"
+                      decoding="async"
                     />
 
                     {/* Video play overlay */}
@@ -381,8 +424,23 @@ const Portfolio = () => {
           </AnimatePresence>
         </motion.div>
 
+        {/* Load More */}
+        {hasMore && (
+          <div className="mt-12 flex justify-center">
+            <button
+              onClick={() => setVisibleCount((prev) => prev + 16)}
+              className="px-8 py-3 text-[13px] font-medium rounded-full bg-secondary text-foreground hover:bg-secondary/80 transition-colors active:scale-[0.97]"
+            >
+              Load More
+              <span className="ml-2 font-mono-data text-[11px] text-muted-foreground">
+                {filtered.length - visibleCount} remaining
+              </span>
+            </button>
+          </div>
+        )}
+
         <p className="mt-8 text-[13px] text-muted-foreground font-mono-data">
-          Showing {filtered.length} of {projects.length} projects
+          Showing {displayed.length} of {filtered.length} projects
         </p>
       </div>
 
@@ -410,14 +468,14 @@ const Portfolio = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={filtered[lightbox]?.image}
-                alt={filtered[lightbox]?.title}
+                src={displayed[lightbox]?.image}
+                alt={displayed[lightbox]?.title}
                 className="w-full h-full object-contain rounded-md"
               />
               <div className="mt-4 text-center">
-                <span className="label-mono text-primary">{filtered[lightbox]?.category}</span>
+                <span className="label-mono text-primary">{displayed[lightbox]?.category}</span>
                 <h3 className="font-display text-lg font-semibold text-foreground mt-2">
-                  {filtered[lightbox]?.title}
+                  {displayed[lightbox]?.title}
                 </h3>
               </div>
             </motion.div>

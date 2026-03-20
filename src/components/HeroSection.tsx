@@ -31,7 +31,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-[clamp(3.5rem,9vw,8.5rem)] font-semibold text-foreground max-w-[14ch] leading-[0.95] tracking-[-0.05em]"
+          className="font-display text-[clamp(2.2rem,7vw,8.5rem)] font-semibold text-foreground max-w-[14ch] leading-[0.95] tracking-[-0.05em]"
         >
           Visuals and Interactive Tools Built to Help You Sell Homes Faster
         </motion.h1>

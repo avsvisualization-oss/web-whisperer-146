@@ -12,18 +12,21 @@ const solutions = [
     description: "Photo-realistic visuals that drive buyer interest and accelerate pre-sales before ground breaks.",
     image: exteriorImg,
     featured: false,
+    pricing: "Starting at $270",
   },
   {
     title: "Interior Renderings",
     description: "Lifestyle scenes that help buyers see themselves in the home — reducing hesitation and closing deals faster.",
     image: interiorImg,
     featured: false,
+    pricing: "Starting at $290",
   },
   {
     title: "Animations & Motion",
     description: "Cinematic walkthroughs that boost engagement across every marketing channel and improve conversion rates.",
     image: aerialImg,
     featured: false,
+    pricing: "Starting at $1,900",
   },
   {
     title: "360 Walkthrough",

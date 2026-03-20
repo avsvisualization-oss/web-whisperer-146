@@ -104,7 +104,7 @@ import portfolioTownHome12 from "@/assets/portfolio-town-home-12.jpg";
 const categories = ["All", "Exteriors", "Interiors", "Animations", "360 Walkthroughs", "Street Scenes", "Aerials", "Clubhouse", "Amenities"] as const;
 type Category = (typeof categories)[number];
 
-type ProjectType = "image" | "video" | "walkthrough";
+type ProjectType = "image" | "video" | "walkthrough" | "video-embed" | "360-embed";
 
 interface Project {
   image: string;
@@ -113,6 +113,7 @@ interface Project {
   type: ProjectType;
   videoUrl?: string;
   walkthroughUrl?: string;
+  embedUrl?: string;
 }
 
 const projects: Project[] = [
@@ -234,6 +235,41 @@ const projects: Project[] = [
   { image: portfolioTownHome10, title: "Town Home 10", category: "Exteriors", type: "image" },
   { image: portfolioTownHome11, title: "Town Home 11", category: "Exteriors", type: "image" },
   { image: portfolioTownHome12, title: "Town Home 12", category: "Exteriors", type: "image" },
+
+  // Animation Embeds
+  { image: "", title: "Animation 01", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1098628348" },
+  { image: "", title: "Animation 02", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1175277607" },
+  { image: "", title: "Animation 03", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1132137539" },
+  { image: "", title: "Animation 04", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1141523635" },
+  { image: "", title: "Animation 05", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1175247875" },
+  { image: "", title: "Animation 06", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1175293460" },
+  { image: "", title: "Animation 07", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1169622799" },
+  { image: "", title: "Animation 08", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1168503087" },
+  { image: "", title: "Animation 09", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1168250391" },
+  { image: "", title: "Animation 10", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1148133455" },
+  { image: "", title: "Animation 11", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1168259589" },
+  { image: "", title: "Animation 12", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1098895117" },
+  { image: "", title: "Animation 13", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1092880102" },
+  { image: "", title: "Animation 14", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1092597367" },
+  { image: "", title: "Animation 15", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1092597424" },
+  { image: "", title: "Animation 16", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1085815238" },
+  { image: "", title: "Animation 17", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1067401088" },
+  { image: "", title: "Animation 18", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1047970627" },
+  { image: "", title: "Animation 19", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1047260833" },
+  { image: "", title: "Animation 20", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1017702646" },
+  { image: "", title: "Animation 21", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/996374199" },
+
+  // 360 Walkthrough Embeds
+  { image: "", title: "360 Tour 01", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7XF1M?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 02", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7F4yg?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 03", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7KXpP?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 04", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7FvDf?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 05", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7cV5m?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 06", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7csrm?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 07", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7XFQf?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 08", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7X1yY?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 09", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7c4vL?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
+  { image: "", title: "360 Tour 10", category: "360 Walkthroughs", type: "360-embed", embedUrl: "https://avsrenderings.viewin360.co/share/collection/7K5pq?logo=-1&info=0&fs=1&vr=1&sd=1&initload=0&thumbs=1" },
 ];
 
 const Portfolio = () => {
@@ -323,39 +359,66 @@ const Portfolio = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => handleCardClick(project, i)}
-                className="group relative overflow-hidden rounded-lg aspect-[4/3] cursor-pointer"
+                className={`group relative overflow-hidden rounded-lg aspect-[4/3] ${
+                  project.type === "video-embed" || project.type === "360-embed" ? "" : "cursor-pointer"
+                }`}
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                  loading="lazy"
-                />
+                {/* Inline video embed */}
+                {project.type === "video-embed" && project.embedUrl ? (
+                  <iframe
+                    src={project.embedUrl}
+                    className="w-full h-full"
+                    style={{ border: 0 }}
+                    allow="fullscreen; picture-in-picture"
+                    allowFullScreen
+                    title={project.title}
+                    loading="lazy"
+                  />
+                ) : project.type === "360-embed" && project.embedUrl ? (
+                  <iframe
+                    src={project.embedUrl}
+                    className="w-full h-full"
+                    style={{ border: 0 }}
+                    allow="fullscreen; vr"
+                    allowFullScreen
+                    title={project.title}
+                    loading="lazy"
+                  />
+                ) : (
+                  <>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                      loading="lazy"
+                    />
 
-                {/* Video play overlay */}
-                {project.type === "video" && (
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-16 h-16 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center border border-border/50 group-hover:scale-110 transition-transform duration-300">
-                      <Play className="w-6 h-6 text-primary ml-0.5" fill="currentColor" />
+                    {/* Video play overlay */}
+                    {project.type === "video" && (
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div className="w-16 h-16 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center border border-border/50 group-hover:scale-110 transition-transform duration-300">
+                          <Play className="w-6 h-6 text-primary ml-0.5" fill="currentColor" />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Walkthrough overlay */}
+                    {project.type === "walkthrough" && (
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div className="px-5 py-2.5 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 flex items-center gap-2 group-hover:scale-105 transition-transform duration-300">
+                          <span className="text-[13px] font-medium text-foreground">Open Walkthrough</span>
+                          <ArrowUpRight className="w-4 h-4 text-primary" />
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                      <span className="font-mono-data text-[11px] text-primary">{project.category}</span>
+                      <h3 className="text-base font-semibold text-foreground mt-1">{project.title}</h3>
                     </div>
-                  </div>
+                  </>
                 )}
-
-                {/* Walkthrough overlay */}
-                {project.type === "walkthrough" && (
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="px-5 py-2.5 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 flex items-center gap-2 group-hover:scale-105 transition-transform duration-300">
-                      <span className="text-[13px] font-medium text-foreground">Open Walkthrough</span>
-                      <ArrowUpRight className="w-4 h-4 text-primary" />
-                    </div>
-                  </div>
-                )}
-
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <span className="font-mono-data text-[11px] text-primary">{project.category}</span>
-                  <h3 className="text-base font-semibold text-foreground mt-1">{project.title}</h3>
-                </div>
               </motion.div>
             ))}
           </AnimatePresence>

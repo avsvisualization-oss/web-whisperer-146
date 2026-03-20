@@ -229,7 +229,7 @@ const Interactive = () => {
             className="grid lg:grid-cols-2 gap-16 items-center"
           >
             <motion.div custom={0} variants={fade} className="order-2 lg:order-1 rounded-xl overflow-hidden border border-border">
-              <div className="aspect-video w-full bg-secondary">
+              <div className="aspect-video w-full">
                 <AutoplayVideo
                   src="/videos/Interior_Design_Tool.mp4"
                   className="w-full h-full object-cover"

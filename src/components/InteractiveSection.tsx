@@ -38,7 +38,7 @@ const InteractiveSection = () => {
             className="mb-10 md:mb-20"
           >
             <div className="label-mono text-primary mb-8">Interactive Solutions</div>
-            <h2 className="font-display text-[clamp(3.75rem,9vw,7rem)] font-semibold text-foreground max-w-5xl leading-[1.02] tracking-[-0.045em]">
+            <h2 className="font-display text-[clamp(2rem,7vw,7rem)] font-semibold text-foreground max-w-5xl leading-[1.02] tracking-[-0.045em]">
               Interactive Tools<br />
               <span className="text-primary">That Help You Sell</span>
             </h2>

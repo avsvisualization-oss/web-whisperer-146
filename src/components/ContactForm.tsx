@@ -237,10 +237,11 @@ const ContactForm = () => {
             </div>
 
             {/* CTA */}
-            <button type="submit"
-              className="w-full py-4.5 mt-2 text-[15px] font-semibold bg-primary text-primary-foreground rounded-xl hover:bg-primary/85 active:scale-[0.98] transition-all duration-200 tracking-wide"
+            <button type="submit" disabled={submitting}
+              className="w-full py-4.5 mt-2 text-[15px] font-semibold bg-primary text-primary-foreground rounded-xl hover:bg-primary/85 active:scale-[0.98] transition-all duration-200 tracking-wide disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               style={{ paddingTop: '18px', paddingBottom: '18px' }}>
-              Get My Quote
+              {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
+              {submitting ? "Sending..." : "Get My Quote"}
             </button>
 
             <p className="text-[11px] text-muted-foreground/35 text-center tracking-wide mt-1">

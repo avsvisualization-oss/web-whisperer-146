@@ -272,7 +272,7 @@ const Services = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-40 md:py-52 border-t border-border">
+      <section className="py-20 sm:py-28 md:py-40 lg:py-52 border-t border-border">
         <div className="container-tight text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

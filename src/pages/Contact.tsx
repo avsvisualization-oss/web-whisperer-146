@@ -83,21 +83,22 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section id="contact-form" className="pt-32 pb-24 md:pt-40 md:pb-32 relative">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 bg-secondary/30" />
+      <section id="contact-form" className="pt-32 pb-24 md:pt-40 md:pb-32 relative min-h-screen flex items-start justify-center">
+        {/* Background */}
+        <div className="absolute inset-0 bg-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/20" />
 
-        <div className="relative z-10 max-w-2xl mx-auto px-5">
-          {/* Centered header */}
-          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+        <div className="relative z-10 w-full max-w-[680px] mx-auto px-5">
+          {/* Header above card */}
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
             <div className="label-mono text-primary mb-4">Contact</div>
-            <h1 className="font-display text-3xl md:text-4xl font-semibold text-foreground leading-tight tracking-[-0.04em]">
+            <h1 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-tight tracking-[-0.04em]">
               Get a Quote for Your Next Project
             </h1>
-            <p className="mt-3 text-[15px] text-muted-foreground leading-[1.7] max-w-lg mx-auto">
+            <p className="mt-4 text-[15px] text-muted-foreground leading-[1.7] max-w-md mx-auto">
               Tell us about your project and we'll send you a clear proposal within 24 hours.
             </p>
-            <div className="mt-5 flex flex-wrap justify-center gap-5">
+            <div className="mt-6 flex flex-wrap justify-center gap-6">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Shield className="w-3.5 h-3.5 text-primary" strokeWidth={1.5} />
                 <span className="text-[12px]">Trusted by 50+ builders</span>
@@ -113,20 +114,21 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Form card */}
+          {/* Form Card */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.12 }}
-            className="bg-[hsl(220_10%_14%)] rounded-[20px] shadow-[0_4px_40px_-8px_hsl(0_0%_0%/0.5)] border border-border/30 p-8 md:p-12"
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="rounded-3xl p-8 md:p-12"
+            style={{ backgroundColor: 'hsl(220, 10%, 14%)', boxShadow: '0 8px 60px -12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.3)' }}
           >
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               {/* Honeypot */}
               <input type="text" name="website" value={honeypot} onChange={e => setHoneypot(e.target.value)}
                 className="absolute opacity-0 pointer-events-none h-0 w-0" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
-              {/* Row 1: Name + Email */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Name + Email */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                   <label className="label-mono text-muted-foreground mb-1.5 block">Full Name *</label>
                   <input type="text" required value={form.name} onChange={e => set("name", e.target.value)}
@@ -141,7 +143,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Row 2: Company */}
+              {/* Company */}
               <div>
                 <label className="label-mono text-muted-foreground mb-1.5 block">Company Name *</label>
                 <input type="text" required value={form.company} onChange={e => set("company", e.target.value)}
@@ -149,41 +151,41 @@ const Contact = () => {
                 {errors.company && <p className="text-destructive text-xs mt-1">{errors.company}</p>}
               </div>
 
-              {/* Row 3: Role + Project Type */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Role + Project Type */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="relative">
                   <label className="label-mono text-muted-foreground mb-1.5 block">What describes you?</label>
                   <select value={form.role} onChange={e => set("role", e.target.value)} className={selectClass}>
-                    <option value="" className="bg-card">Select...</option>
-                    {ROLE_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
+                    <option value="">Select...</option>
+                    {ROLE_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
                   </select>
                   <ChevronDown className="absolute right-0 bottom-3.5 w-4 h-4 text-muted-foreground pointer-events-none" />
                 </div>
                 <div className="relative">
                   <label className="label-mono text-muted-foreground mb-1.5 block">Project Type</label>
                   <select value={form.projectType} onChange={e => set("projectType", e.target.value)} className={selectClass}>
-                    <option value="" className="bg-card">Select...</option>
-                    {PROJECT_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
+                    <option value="">Select...</option>
+                    {PROJECT_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
                   </select>
                   <ChevronDown className="absolute right-0 bottom-3.5 w-4 h-4 text-muted-foreground pointer-events-none" />
                 </div>
               </div>
 
-              {/* Row 4: Timeline + Budget */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Timeline + Budget */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="relative">
                   <label className="label-mono text-muted-foreground mb-1.5 block">Timeline</label>
                   <select value={form.timeline} onChange={e => set("timeline", e.target.value)} className={selectClass}>
-                    <option value="" className="bg-card">Select...</option>
-                    {TIMELINE_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
+                    <option value="">Select...</option>
+                    {TIMELINE_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
                   </select>
                   <ChevronDown className="absolute right-0 bottom-3.5 w-4 h-4 text-muted-foreground pointer-events-none" />
                 </div>
                 <div className="relative">
                   <label className="label-mono text-muted-foreground mb-1.5 block">Budget Range</label>
                   <select value={form.budget} onChange={e => set("budget", e.target.value)} className={selectClass}>
-                    <option value="" className="bg-card">Select...</option>
-                    {BUDGET_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
+                    <option value="">Select...</option>
+                    {BUDGET_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
                   </select>
                   <ChevronDown className="absolute right-0 bottom-3.5 w-4 h-4 text-muted-foreground pointer-events-none" />
                 </div>
@@ -220,13 +222,13 @@ const Contact = () => {
               </div>
 
               <button type="submit"
-                className="w-full py-5 text-[15px] font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/90 active:scale-[0.97] transition-all mt-2 tracking-wide">
+                className="w-full py-6 text-base font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/90 active:scale-[0.97] transition-all mt-3 tracking-wide">
                 Get My Quote
               </button>
             </form>
           </motion.div>
 
-          {/* Contact info below */}
+          {/* Contact info */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -223,6 +223,17 @@ const projects: Project[] = [
   { image: portfolioSingleFamily14, title: "Single Family 14", category: "Exteriors", type: "image" },
   { image: portfolioSingleFamily15, title: "Single Family 15", category: "Exteriors", type: "image" },
   { image: portfolioSingleFamily16, title: "Single Family 16", category: "Exteriors", type: "image" },
+
+  // Town Homes
+  { image: portfolioTownHome01, title: "Town Home 01", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome02, title: "Town Home 02", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome03, title: "Town Home 03", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome06, title: "Town Home 06", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome08, title: "Town Home 08", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome09, title: "Town Home 09", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome10, title: "Town Home 10", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome11, title: "Town Home 11", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome12, title: "Town Home 12", category: "Exteriors", type: "image" },
 ];
 
 const Portfolio = () => {

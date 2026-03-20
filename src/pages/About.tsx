@@ -65,7 +65,7 @@ const TeamCarousel = () => {
       return;
     }
 
-    scrollPositionRef.current += 0.5;
+    scrollPositionRef.current += 0.15;
     const singleSetWidth = el.scrollWidth / 3;
 
     if (scrollPositionRef.current >= singleSetWidth) {

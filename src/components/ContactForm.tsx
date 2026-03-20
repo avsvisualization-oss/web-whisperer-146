@@ -28,6 +28,7 @@ const ContactForm = () => {
   });
   const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitting, setSubmitting] = useState(false);
 
   const toggleService = (s: string) => {
     setForm(f => ({
@@ -46,22 +47,54 @@ const ContactForm = () => {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (ev: React.FormEvent) => {
+  const handleSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
     if (honeypot) return;
     if (!validate()) return;
+    setSubmitting(true);
 
-    const lines = [
-      `Name: ${form.name}`, `Email: ${form.email}`, `Company: ${form.company}`,
-      form.role && `Role: ${form.role}`, form.projectType && `Project Type: ${form.projectType}`,
-      form.services.length && `Services: ${form.services.join(", ")}`,
-      form.timeline && `Timeline: ${form.timeline}`, form.budget && `Budget: ${form.budget}`,
-      form.message && `\nMessage:\n${form.message}`,
-    ].filter(Boolean).join("\n");
+    const templateData = {
+      name: form.name,
+      email: form.email,
+      company: form.company,
+      role: form.role,
+      projectType: form.projectType,
+      services: form.services.join(", "),
+      timeline: form.timeline,
+      budget: form.budget,
+      message: form.message,
+    };
 
-    const subject = encodeURIComponent(`Project inquiry from ${form.name} – ${form.company}`);
-    const body = encodeURIComponent(lines);
-    window.location.href = `mailto:info@avs-renderings.com?subject=${subject}&body=${body}`;
+    const id = crypto.randomUUID();
+
+    try {
+      // Send notification to team
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-notification",
+          recipientEmail: "avsvisualization@gmail.com",
+          idempotencyKey: `contact-notify-${id}`,
+          templateData,
+        },
+      });
+
+      // Send auto-reply to user
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-confirmation",
+          recipientEmail: form.email,
+          idempotencyKey: `contact-confirm-${id}`,
+          templateData: { name: form.name },
+        },
+      });
+
+      toast.success("Your inquiry has been sent! Check your email for confirmation.");
+      setForm({ name: "", email: "", company: "", role: "", projectType: "", services: [], timeline: "", budget: "", message: "" });
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const set = (key: string, val: string) => {

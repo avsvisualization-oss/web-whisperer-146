@@ -91,6 +91,15 @@ import portfolioSingleFamily13 from "@/assets/portfolio-single-family-13.jpg";
 import portfolioSingleFamily14 from "@/assets/portfolio-single-family-14.jpg";
 import portfolioSingleFamily15 from "@/assets/portfolio-single-family-15.jpg";
 import portfolioSingleFamily16 from "@/assets/portfolio-single-family-16.jpg";
+import portfolioTownHome01 from "@/assets/portfolio-town-home-01.jpg";
+import portfolioTownHome02 from "@/assets/portfolio-town-home-02.jpg";
+import portfolioTownHome03 from "@/assets/portfolio-town-home-03.jpg";
+import portfolioTownHome06 from "@/assets/portfolio-town-home-06.jpg";
+import portfolioTownHome08 from "@/assets/portfolio-town-home-08.jpg";
+import portfolioTownHome09 from "@/assets/portfolio-town-home-09.jpg";
+import portfolioTownHome10 from "@/assets/portfolio-town-home-10.jpg";
+import portfolioTownHome11 from "@/assets/portfolio-town-home-11.jpg";
+import portfolioTownHome12 from "@/assets/portfolio-town-home-12.jpg";
 
 const categories = ["All", "Exteriors", "Interiors", "Animations", "360 Walkthroughs", "Street Scenes", "Aerials", "Clubhouse", "Amenities"] as const;
 type Category = (typeof categories)[number];
@@ -214,6 +223,17 @@ const projects: Project[] = [
   { image: portfolioSingleFamily14, title: "Single Family 14", category: "Exteriors", type: "image" },
   { image: portfolioSingleFamily15, title: "Single Family 15", category: "Exteriors", type: "image" },
   { image: portfolioSingleFamily16, title: "Single Family 16", category: "Exteriors", type: "image" },
+
+  // Town Homes
+  { image: portfolioTownHome01, title: "Town Home 01", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome02, title: "Town Home 02", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome03, title: "Town Home 03", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome06, title: "Town Home 06", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome08, title: "Town Home 08", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome09, title: "Town Home 09", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome10, title: "Town Home 10", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome11, title: "Town Home 11", category: "Exteriors", type: "image" },
+  { image: portfolioTownHome12, title: "Town Home 12", category: "Exteriors", type: "image" },
 ];
 
 const Portfolio = () => {

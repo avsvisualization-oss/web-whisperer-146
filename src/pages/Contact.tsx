@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ChevronDown, Check } from "lucide-react";
+import { Mail, Phone, MapPin, ChevronDown, Check, Shield, Zap, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -86,16 +86,31 @@ const Contact = () => {
       <section id="contact-form" className="pt-32 pb-24 md:pt-40 md:pb-32">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 lg:gap-24">
-            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }}>
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col justify-center">
               <div className="label-mono text-primary mb-5">Contact</div>
               <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-tight tracking-[-0.04em]">
-                Start a project
+                Get a Quote for Your Next Project
               </h1>
               <p className="mt-4 text-[15px] text-muted-foreground max-w-md leading-[1.7]">
-                Tell us about your project and we'll get back to you within 24 hours with a tailored plan.
+                Tell us about your project and we'll send you a clear proposal within 24 hours.
               </p>
 
-              <div className="mt-12 flex flex-col gap-5">
+              <div className="mt-8 flex flex-wrap gap-5">
+                <div className="flex items-center gap-2.5 text-muted-foreground">
+                  <Shield className="w-4 h-4 text-primary" strokeWidth={1.5} />
+                  <span className="text-[13px]">Trusted by 50+ builders</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-muted-foreground">
+                  <Zap className="w-4 h-4 text-primary" strokeWidth={1.5} />
+                  <span className="text-[13px]">Fast turnaround</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-muted-foreground">
+                  <Sparkles className="w-4 h-4 text-primary" strokeWidth={1.5} />
+                  <span className="text-[13px]">High-end visuals</span>
+                </div>
+              </div>
+
+              <div className="mt-10 flex flex-col gap-5">
                 <a href="mailto:info@avs-renderings.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
                   <Mail className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
                   <span className="text-[13px]">info@avs-renderings.com</span>
@@ -116,40 +131,40 @@ const Contact = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
               onSubmit={handleSubmit}
-              className="flex flex-col gap-5"
+              className="flex flex-col gap-4"
             >
               {/* Honeypot */}
               <input type="text" name="website" value={honeypot} onChange={e => setHoneypot(e.target.value)}
                 className="absolute opacity-0 pointer-events-none h-0 w-0" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
-              {/* Name */}
-              <div>
-                <label className="label-mono text-muted-foreground mb-2 block">Full Name *</label>
-                <input type="text" required value={form.name} onChange={e => set("name", e.target.value)}
-                  className={inputClass} placeholder="Your full name" />
-                {errors.name && <p className="text-destructive text-xs mt-1">{errors.name}</p>}
+              {/* Row 1: Name + Email */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="label-mono text-muted-foreground mb-1.5 block">Full Name *</label>
+                  <input type="text" required value={form.name} onChange={e => set("name", e.target.value)}
+                    className={inputClass} placeholder="Your full name" />
+                  {errors.name && <p className="text-destructive text-xs mt-1">{errors.name}</p>}
+                </div>
+                <div>
+                  <label className="label-mono text-muted-foreground mb-1.5 block">Work Email *</label>
+                  <input type="email" required value={form.email} onChange={e => set("email", e.target.value)}
+                    className={inputClass} placeholder="you@company.com" />
+                  {errors.email && <p className="text-destructive text-xs mt-1">{errors.email}</p>}
+                </div>
               </div>
 
-              {/* Email */}
+              {/* Row 2: Company */}
               <div>
-                <label className="label-mono text-muted-foreground mb-2 block">Work Email *</label>
-                <input type="email" required value={form.email} onChange={e => set("email", e.target.value)}
-                  className={inputClass} placeholder="you@company.com" />
-                {errors.email && <p className="text-destructive text-xs mt-1">{errors.email}</p>}
-              </div>
-
-              {/* Company */}
-              <div>
-                <label className="label-mono text-muted-foreground mb-2 block">Company Name *</label>
+                <label className="label-mono text-muted-foreground mb-1.5 block">Company Name *</label>
                 <input type="text" required value={form.company} onChange={e => set("company", e.target.value)}
                   className={inputClass} placeholder="Company name" />
                 {errors.company && <p className="text-destructive text-xs mt-1">{errors.company}</p>}
               </div>
 
-              {/* Role + Project Type — side by side on md+ */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {/* Row 3: Role + Project Type */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="relative">
-                  <label className="label-mono text-muted-foreground mb-2 block">What describes you?</label>
+                  <label className="label-mono text-muted-foreground mb-1.5 block">What describes you?</label>
                   <select value={form.role} onChange={e => set("role", e.target.value)} className={selectClass}>
                     <option value="" className="bg-card">Select...</option>
                     {ROLE_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
@@ -157,7 +172,7 @@ const Contact = () => {
                   <ChevronDown className="absolute right-0 bottom-3.5 w-4 h-4 text-muted-foreground pointer-events-none" />
                 </div>
                 <div className="relative">
-                  <label className="label-mono text-muted-foreground mb-2 block">Project Type</label>
+                  <label className="label-mono text-muted-foreground mb-1.5 block">Project Type</label>
                   <select value={form.projectType} onChange={e => set("projectType", e.target.value)} className={selectClass}>
                     <option value="" className="bg-card">Select...</option>
                     {PROJECT_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
@@ -166,9 +181,29 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Services multi-select */}
+              {/* Row 4: Timeline + Budget */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="relative">
+                  <label className="label-mono text-muted-foreground mb-1.5 block">Timeline</label>
+                  <select value={form.timeline} onChange={e => set("timeline", e.target.value)} className={selectClass}>
+                    <option value="" className="bg-card">Select...</option>
+                    {TIMELINE_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
+                  </select>
+                  <ChevronDown className="absolute right-0 bottom-3.5 w-4 h-4 text-muted-foreground pointer-events-none" />
+                </div>
+                <div className="relative">
+                  <label className="label-mono text-muted-foreground mb-1.5 block">Budget Range</label>
+                  <select value={form.budget} onChange={e => set("budget", e.target.value)} className={selectClass}>
+                    <option value="" className="bg-card">Select...</option>
+                    {BUDGET_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
+                  </select>
+                  <ChevronDown className="absolute right-0 bottom-3.5 w-4 h-4 text-muted-foreground pointer-events-none" />
+                </div>
+              </div>
+
+              {/* Services chips */}
               <div>
-                <label className="label-mono text-muted-foreground mb-3 block">Services Needed</label>
+                <label className="label-mono text-muted-foreground mb-2.5 block">Services Needed</label>
                 <div className="flex flex-wrap gap-2">
                   {SERVICE_OPTIONS.map(s => {
                     const active = form.services.includes(s);
@@ -187,38 +222,18 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Timeline + Budget — side by side */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="relative">
-                  <label className="label-mono text-muted-foreground mb-2 block">Timeline</label>
-                  <select value={form.timeline} onChange={e => set("timeline", e.target.value)} className={selectClass}>
-                    <option value="" className="bg-card">Select...</option>
-                    {TIMELINE_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
-                  </select>
-                  <ChevronDown className="absolute right-0 bottom-3.5 w-4 h-4 text-muted-foreground pointer-events-none" />
-                </div>
-                <div className="relative">
-                  <label className="label-mono text-muted-foreground mb-2 block">Budget Range</label>
-                  <select value={form.budget} onChange={e => set("budget", e.target.value)} className={selectClass}>
-                    <option value="" className="bg-card">Select...</option>
-                    {BUDGET_OPTIONS.map(o => <option key={o} value={o} className="bg-card">{o}</option>)}
-                  </select>
-                  <ChevronDown className="absolute right-0 bottom-3.5 w-4 h-4 text-muted-foreground pointer-events-none" />
-                </div>
-              </div>
-
               {/* Message */}
               <div>
-                <label className="label-mono text-muted-foreground mb-2 block">
+                <label className="label-mono text-muted-foreground mb-1.5 block text-xs">
                   Message <span className="normal-case tracking-normal">(optional)</span>
                 </label>
-                <textarea rows={4} value={form.message} onChange={e => set("message", e.target.value)}
-                  className={`${inputClass} resize-none`} placeholder="Any additional details..." />
+                <textarea rows={3} value={form.message} onChange={e => set("message", e.target.value)}
+                  className={`${inputClass} resize-none text-[13px]`} placeholder="Any additional details..." />
               </div>
 
               <button type="submit"
-                className="w-full py-4 text-[13px] font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 active:scale-[0.98] transition-all mt-2 tracking-wide">
-                Send Message
+                className="w-full py-5 text-[15px] font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/90 active:scale-[0.97] transition-all mt-1 tracking-wide">
+                Get My Quote
               </button>
             </motion.form>
           </div>

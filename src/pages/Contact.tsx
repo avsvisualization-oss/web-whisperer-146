@@ -83,56 +83,44 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section id="contact-form" className="pt-32 pb-24 md:pt-40 md:pb-32">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 lg:gap-24">
-            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col justify-center">
-              <div className="label-mono text-primary mb-5">Contact</div>
-              <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-tight tracking-[-0.04em]">
-                Get a Quote for Your Next Project
-              </h1>
-              <p className="mt-4 text-[15px] text-muted-foreground max-w-md leading-[1.7]">
-                Tell us about your project and we'll send you a clear proposal within 24 hours.
-              </p>
+      <section id="contact-form" className="pt-32 pb-24 md:pt-40 md:pb-32 relative">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 bg-secondary/30" />
 
-              <div className="mt-8 flex flex-wrap gap-5">
-                <div className="flex items-center gap-2.5 text-muted-foreground">
-                  <Shield className="w-4 h-4 text-primary" strokeWidth={1.5} />
-                  <span className="text-[13px]">Trusted by 50+ builders</span>
-                </div>
-                <div className="flex items-center gap-2.5 text-muted-foreground">
-                  <Zap className="w-4 h-4 text-primary" strokeWidth={1.5} />
-                  <span className="text-[13px]">Fast turnaround</span>
-                </div>
-                <div className="flex items-center gap-2.5 text-muted-foreground">
-                  <Sparkles className="w-4 h-4 text-primary" strokeWidth={1.5} />
-                  <span className="text-[13px]">High-end visuals</span>
-                </div>
+        <div className="relative z-10 max-w-2xl mx-auto px-5">
+          {/* Centered header */}
+          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+            <div className="label-mono text-primary mb-4">Contact</div>
+            <h1 className="font-display text-3xl md:text-4xl font-semibold text-foreground leading-tight tracking-[-0.04em]">
+              Get a Quote for Your Next Project
+            </h1>
+            <p className="mt-3 text-[15px] text-muted-foreground leading-[1.7] max-w-lg mx-auto">
+              Tell us about your project and we'll send you a clear proposal within 24 hours.
+            </p>
+            <div className="mt-5 flex flex-wrap justify-center gap-5">
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Shield className="w-3.5 h-3.5 text-primary" strokeWidth={1.5} />
+                <span className="text-[12px]">Trusted by 50+ builders</span>
               </div>
-
-              <div className="mt-10 flex flex-col gap-5">
-                <a href="mailto:info@avs-renderings.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
-                  <Mail className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
-                  <span className="text-[13px]">info@avs-renderings.com</span>
-                </a>
-                <a href="tel:+13028673810" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
-                  <Phone className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
-                  <span className="text-[13px]">+1 (302) 867-3810</span>
-                </a>
-                <div className="flex items-center gap-4 text-muted-foreground">
-                  <MapPin className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
-                  <span className="text-[13px]">1200 Ponce de Leon, St 703, Coral Gables FL 33134</span>
-                </div>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Zap className="w-3.5 h-3.5 text-primary" strokeWidth={1.5} />
+                <span className="text-[12px]">Fast turnaround</span>
               </div>
-            </motion.div>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Sparkles className="w-3.5 h-3.5 text-primary" strokeWidth={1.5} />
+                <span className="text-[12px]">High-end visuals</span>
+              </div>
+            </div>
+          </motion.div>
 
-            <motion.form
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15 }}
-              onSubmit={handleSubmit}
-              className="flex flex-col gap-4"
-            >
+          {/* Form card */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.12 }}
+            className="bg-card rounded-2xl shadow-[0_2px_24px_-4px_hsl(var(--foreground)/0.08)] border border-border/50 p-6 md:p-10"
+          >
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               {/* Honeypot */}
               <input type="text" name="website" value={honeypot} onChange={e => setHoneypot(e.target.value)}
                 className="absolute opacity-0 pointer-events-none h-0 w-0" tabIndex={-1} autoComplete="off" aria-hidden="true" />
@@ -232,11 +220,32 @@ const Contact = () => {
               </div>
 
               <button type="submit"
-                className="w-full py-5 text-[15px] font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/90 active:scale-[0.97] transition-all mt-1 tracking-wide">
+                className="w-full py-5 text-[15px] font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/90 active:scale-[0.97] transition-all mt-2 tracking-wide">
                 Get My Quote
               </button>
-            </motion.form>
-          </div>
+            </form>
+          </motion.div>
+
+          {/* Contact info below */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="mt-8 flex flex-wrap justify-center gap-6 text-muted-foreground"
+          >
+            <a href="mailto:info@avs-renderings.com" className="flex items-center gap-2.5 hover:text-primary transition-colors">
+              <Mail className="w-3.5 h-3.5" strokeWidth={1.5} />
+              <span className="text-[12px]">info@avs-renderings.com</span>
+            </a>
+            <a href="tel:+13028673810" className="flex items-center gap-2.5 hover:text-primary transition-colors">
+              <Phone className="w-3.5 h-3.5" strokeWidth={1.5} />
+              <span className="text-[12px]">+1 (302) 867-3810</span>
+            </a>
+            <div className="flex items-center gap-2.5">
+              <MapPin className="w-3.5 h-3.5" strokeWidth={1.5} />
+              <span className="text-[12px]">Coral Gables, FL</span>
+            </div>
+          </motion.div>
         </div>
       </section>
 

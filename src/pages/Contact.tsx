@@ -90,7 +90,7 @@ const Contact = () => {
 
         <div className="relative z-10 w-full max-w-[880px] mx-auto px-5">
           {/* Header above card */}
-          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-6">
             <div className="label-mono text-primary mb-4">Contact</div>
             <h1 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-tight tracking-[-0.04em]">
               Get a Quote for Your Next Project

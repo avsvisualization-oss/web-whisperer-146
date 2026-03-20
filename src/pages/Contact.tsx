@@ -83,14 +83,14 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section id="contact-form" className="pt-32 pb-24 md:pt-40 md:pb-32 relative min-h-screen flex items-start justify-center">
+      <section id="contact-form" className="pt-28 pb-16 md:pt-32 md:pb-20 relative flex items-start justify-center">
         {/* Background */}
         <div className="absolute inset-0 bg-background" />
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-transparent to-secondary/10" />
 
         <div className="relative z-10 w-full max-w-[880px] mx-auto px-5">
           {/* Header above card */}
-          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-6">
             <div className="label-mono text-primary mb-4">Contact</div>
             <h1 className="font-display text-3xl md:text-5xl font-semibold text-foreground leading-tight tracking-[-0.04em]">
               Get a Quote for Your Next Project
@@ -98,7 +98,7 @@ const Contact = () => {
             <p className="mt-4 text-[15px] text-muted-foreground leading-[1.7] max-w-md mx-auto">
               Tell us about your project and we'll send you a clear proposal within 24 hours.
             </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-6">
+            <div className="mt-4 flex flex-wrap justify-center gap-5">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Shield className="w-3.5 h-3.5 text-primary" strokeWidth={1.5} />
                 <span className="text-[12px]">Trusted by 50+ builders</span>
@@ -120,7 +120,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
             className="rounded-3xl p-6 md:p-10"
-            style={{ backgroundColor: 'hsl(220, 10%, 14%)', boxShadow: '0 8px 60px -12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.3)' }}
+            style={{ backgroundColor: 'hsl(220, 10%, 16%)', boxShadow: '0 8px 60px -12px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04)' }}
           >
             <p className="text-center text-[11px] text-muted-foreground/40 mb-5 tracking-wide">Takes less than 30 seconds</p>
 

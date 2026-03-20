@@ -21,7 +21,7 @@ const TrustSection = () => {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-24 md:gap-36 mb-20"
+          className="flex flex-wrap justify-center gap-10 sm:gap-16 md:gap-36 mb-12 md:mb-20"
         >
           {[
             { value: "10,000+", label: "Projects Completed" },

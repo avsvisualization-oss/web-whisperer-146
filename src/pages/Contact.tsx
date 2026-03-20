@@ -98,7 +98,7 @@ const Contact = () => {
             <p className="mt-4 text-[15px] text-muted-foreground leading-[1.7] max-w-md mx-auto">
               Tell us about your project and we'll send you a clear proposal within 24 hours.
             </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-6">
+            <div className="mt-4 flex flex-wrap justify-center gap-5">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Shield className="w-3.5 h-3.5 text-primary" strokeWidth={1.5} />
                 <span className="text-[12px]">Trusted by 50+ builders</span>

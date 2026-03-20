@@ -81,12 +81,15 @@ const Interactive = () => {
               </div>
             </motion.div>
             <motion.div custom={1} variants={fade} className="rounded-xl overflow-hidden border border-border">
-              <div className="aspect-[4/3] w-full bg-secondary">
-                <img
-                  src={siteplanImg}
-                  alt="Interactive Site Plan"
-                  className="w-full h-full object-contain"
-                />
+              <div className="aspect-video w-full bg-secondary">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                  playsInline
+                >
+                  <source src="/videos/Interactive_Site_Plan_1.mp4" type="video/mp4" />
+                </video>
               </div>
             </motion.div>
           </motion.div>

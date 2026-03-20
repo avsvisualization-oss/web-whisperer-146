@@ -80,6 +80,10 @@ import portfolioSingleFamily07 from "@/assets/portfolio-single-family-07.jpg";
 import portfolioSingleFamily08 from "@/assets/portfolio-single-family-08.jpg";
 import portfolioSingleFamily09 from "@/assets/portfolio-single-family-09.jpg";
 import portfolioSingleFamily10 from "@/assets/portfolio-single-family-10b.jpg";
+import portfolioSingleFamily13 from "@/assets/portfolio-single-family-13.jpg";
+import portfolioSingleFamily14 from "@/assets/portfolio-single-family-14.jpg";
+import portfolioSingleFamily15 from "@/assets/portfolio-single-family-15.jpg";
+import portfolioSingleFamily16 from "@/assets/portfolio-single-family-16.jpg";
 
 const categories = ["All", "Exteriors", "Interiors", "Animations", "360 Walkthroughs", "Street Scenes", "Aerials", "Clubhouse", "Amenities"] as const;
 type Category = (typeof categories)[number];

@@ -169,39 +169,6 @@ const projects: Project[] = [
   { image: portfolioAerial13, title: "Multi-Family Residential", category: "Aerials", type: "image" },
   { image: portfolioAerial14, title: "Urban Mixed-Use Development", category: "Aerials", type: "image" },
 
-  // Clubhouse
-  { image: portfolioClubhouse1, title: "Community Clubhouse", category: "Clubhouse", type: "image" },
-
-  // Amenities
-  { image: portfolioAmenities1, title: "Community Amenities", category: "Amenities", type: "image" },
-
-  // Single Family
-  { image: portfolioSingleFamily01, title: "Single Family 01", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily02, title: "Single Family 02", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily03, title: "Single Family 03", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily04, title: "Single Family 04", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily05, title: "Single Family 05", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily06, title: "Single Family 06", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily07, title: "Single Family 07", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily08, title: "Single Family 08", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily09, title: "Single Family 09", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily10, title: "Single Family 10", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily13, title: "Single Family 13", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily14, title: "Single Family 14", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily15, title: "Single Family 15", category: "Exteriors", type: "image" },
-  { image: portfolioSingleFamily16, title: "Single Family 16", category: "Exteriors", type: "image" },
-
-  // Town Homes
-  { image: portfolioTownHome01, title: "Town Home 01", category: "Exteriors", type: "image" },
-  { image: portfolioTownHome02, title: "Town Home 02", category: "Exteriors", type: "image" },
-  { image: portfolioTownHome03, title: "Town Home 03", category: "Exteriors", type: "image" },
-  { image: portfolioTownHome06, title: "Town Home 06", category: "Exteriors", type: "image" },
-  { image: portfolioTownHome08, title: "Town Home 08", category: "Exteriors", type: "image" },
-  { image: portfolioTownHome09, title: "Town Home 09", category: "Exteriors", type: "image" },
-  { image: portfolioTownHome10, title: "Town Home 10", category: "Exteriors", type: "image" },
-  { image: portfolioTownHome11, title: "Town Home 11", category: "Exteriors", type: "image" },
-  { image: portfolioTownHome12, title: "Town Home 12", category: "Exteriors", type: "image" },
-
   // Animation Embeds
   { image: "", title: "Animation 01", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1098628348" },
   { image: "", title: "Animation 02", category: "Animations", type: "video-embed", embedUrl: "https://player.vimeo.com/video/1175277607" },

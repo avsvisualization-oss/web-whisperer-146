@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 import exteriorImg from "@/assets/portfolio-exterior-2.jpg";
 import interiorImg from "@/assets/portfolio-interior-1.jpg";
 import aerialImg from "@/assets/portfolio-aerial-1.jpg";

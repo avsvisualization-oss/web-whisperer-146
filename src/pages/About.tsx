@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 
 import imgIgnacio from "@/assets/team/ignacio.png";
 import imgNatacha from "@/assets/team/natacha.jpg";

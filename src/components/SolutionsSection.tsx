@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 import exteriorImg from "@/assets/portfolio-exterior-2.jpg";
 import interiorImg from "@/assets/portfolio-interior-1.jpg";
 import aerialImg from "@/assets/portfolio-aerial-1.jpg";
@@ -71,7 +72,7 @@ const SolutionsSection = () => {
                 sol.featured ? "ring-2 ring-primary/40 shadow-[0_0_40px_hsl(var(--primary)/0.15)]" : ""
               }`}
             >
-              <img
+              <OptimizedImage
                 src={sol.image}
                 alt={sol.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"

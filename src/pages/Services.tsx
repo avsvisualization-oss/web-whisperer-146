@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 
 import exteriorImg from "@/assets/portfolio-exterior-1.jpg";
 import interiorImg from "@/assets/portfolio-interior-1.jpg";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const fade = {
   hidden: { opacity: 0, y: 30 },
@@ -92,10 +93,10 @@ const Services = () => {
             </motion.div>
             <motion.div custom={1} variants={fade} className="grid grid-cols-2 gap-4">
               <div className="aspect-[3/4] rounded-lg overflow-hidden">
-                <img src={exteriorImg} alt="Exterior rendering" className="w-full h-full object-cover" />
+                <OptimizedImage src={exteriorImg} alt="Exterior rendering" className="w-full h-full object-cover" />
               </div>
               <div className="aspect-[3/4] rounded-lg overflow-hidden mt-8">
-                <img src={interiorImg} alt="Interior rendering" className="w-full h-full object-cover" />
+                <OptimizedImage src={interiorImg} alt="Interior rendering" className="w-full h-full object-cover" />
               </div>
             </motion.div>
           </motion.div>

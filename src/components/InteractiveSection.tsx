@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, MousePointerClick, Eye, Users } from "lucide-react";
 import siteplanImg from "@/assets/siteplan.jpg";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const benefits = [
   {
@@ -66,10 +67,9 @@ const InteractiveSection = () => {
           >
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             <div className="aspect-[16/9] w-full bg-[hsl(var(--secondary))]">
-              <img
+              <OptimizedImage
                 src={siteplanImg}
                 alt="Interactive Site Plan — Bay Pointe"
-                loading="lazy"
                 className="w-full h-full object-contain"
               />
             </div>

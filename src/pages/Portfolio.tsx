@@ -385,12 +385,10 @@ const Portfolio = () => {
                   />
                 ) : (
                   <>
-                    <img
+                    <OptimizedImage
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                      loading="lazy"
-                      decoding="async"
                     />
 
                     {/* Video play overlay */}

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 import ext1 from "@/assets/exterior-1.png";
 import ext2 from "@/assets/exterior-2.png";
 import ext3 from "@/assets/exterior-3.jpg";

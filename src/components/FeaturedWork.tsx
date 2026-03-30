@@ -72,10 +72,9 @@ const FeaturedWork = () => {
                 transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="group relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer"
               >
-                <img
+                <OptimizedImage
                   src={project.image}
                   alt={project.title}
-                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

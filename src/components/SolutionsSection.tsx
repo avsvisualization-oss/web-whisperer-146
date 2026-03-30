@@ -72,7 +72,7 @@ const SolutionsSection = () => {
                 sol.featured ? "ring-2 ring-primary/40 shadow-[0_0_40px_hsl(var(--primary)/0.15)]" : ""
               }`}
             >
-              <img
+              <OptimizedImage
                 src={sol.image}
                 alt={sol.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"

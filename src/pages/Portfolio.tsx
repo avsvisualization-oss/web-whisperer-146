@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Play, ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import OptimizedImage from "@/components/OptimizedImage";
 
 import portfolioStreetScene01 from "@/assets/portfolio-street-scene-01.jpg";
 import portfolioStreetScene02 from "@/assets/portfolio-street-scene-02.jpg";

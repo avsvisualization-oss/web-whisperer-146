@@ -93,10 +93,10 @@ const Services = () => {
             </motion.div>
             <motion.div custom={1} variants={fade} className="grid grid-cols-2 gap-4">
               <div className="aspect-[3/4] rounded-lg overflow-hidden">
-                <img src={exteriorImg} alt="Exterior rendering" className="w-full h-full object-cover" />
+                <OptimizedImage src={exteriorImg} alt="Exterior rendering" className="w-full h-full object-cover" />
               </div>
               <div className="aspect-[3/4] rounded-lg overflow-hidden mt-8">
-                <img src={interiorImg} alt="Interior rendering" className="w-full h-full object-cover" />
+                <OptimizedImage src={interiorImg} alt="Interior rendering" className="w-full h-full object-cover" />
               </div>
             </motion.div>
           </motion.div>

@@ -67,10 +67,9 @@ const InteractiveSection = () => {
           >
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
             <div className="aspect-[16/9] w-full bg-[hsl(var(--secondary))]">
-              <img
+              <OptimizedImage
                 src={siteplanImg}
                 alt="Interactive Site Plan — Bay Pointe"
-                loading="lazy"
                 className="w-full h-full object-contain"
               />
             </div>

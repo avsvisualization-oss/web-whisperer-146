@@ -106,7 +106,7 @@ const TeamCarousel = () => {
           className="group flex flex-col items-center text-center shrink-0 w-[90px] sm:w-[110px] py-2 transition-all duration-300"
         >
           <div className="w-[64px] h-[64px] sm:w-[76px] sm:h-[76px] rounded-full overflow-hidden bg-secondary mb-2 ring-1 ring-border/20">
-            <img
+            <OptimizedImage
               src={member.image}
               alt={member.name}
               className="w-full h-full object-cover object-top grayscale-[40%] opacity-85 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.03] group-hover:brightness-110 transition-all duration-400"

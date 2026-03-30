@@ -465,10 +465,11 @@ const Portfolio = () => {
               className="max-w-5xl max-h-[85vh] w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <OptimizedImage
                 src={displayed[lightbox]?.image}
-                alt={displayed[lightbox]?.title}
+                alt={displayed[lightbox]?.title || ""}
                 className="w-full h-full object-contain rounded-md"
+                loading="eager"
               />
               <div className="mt-4 text-center">
                 <span className="label-mono text-primary">{displayed[lightbox]?.category}</span>

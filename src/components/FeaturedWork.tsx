@@ -58,7 +58,7 @@ const FeaturedWork = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="label-mono text-muted-foreground mb-8"
+            className="label-mono text-muted-foreground mb-8 text-sm"
           >
             Exteriors — High-end exterior renderings designed to support marketing, approvals, and pre-sales.
           </motion.p>

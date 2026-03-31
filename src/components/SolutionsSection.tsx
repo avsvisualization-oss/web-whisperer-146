@@ -82,7 +82,7 @@ const SolutionsSection = () => {
               }`} />
               {sol.label && (
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full bg-primary/15 text-primary text-[10px] font-medium tracking-wider uppercase backdrop-blur-sm">
+                  <span className="px-3 py-1 rounded-full text-[10px] font-medium tracking-wider uppercase backdrop-blur-sm text-popover-foreground bg-primary">
                     {sol.label}
                   </span>
                 </div>

@@ -57,7 +57,7 @@ const ValueSection = () => {
                 transition={{ delay: i * 0.08, duration: 0.5 }}
                 className="group"
               >
-                <div className="font-mono-data text-sm text-primary/40 mb-5 group-hover:text-primary/70 transition-colors duration-300">
+                <div className="font-mono-data mb-5 transition-colors duration-300 text-2xl text-primary">
                   {v.number}
                 </div>
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3 tracking-[-0.02em]">

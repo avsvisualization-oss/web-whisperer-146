@@ -22,7 +22,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.1 }}
-          className="label-mono text-primary mb-8"
+          className="label-mono mb-8 bg-primary-foreground text-lg text-primary"
         >
           Visual Solutions for Home Builders
         </motion.div>
@@ -31,7 +31,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-[clamp(2.2rem,7vw,8.5rem)] font-semibold text-foreground max-w-[14ch] leading-[0.95] tracking-[-0.05em]"
+          className="font-display font-semibold text-foreground max-w-[14ch] leading-[0.95] tracking-[-0.05em] text-8xl"
         >
           Visuals and Interactive Tools Built to Help You Sell Homes Faster
         </motion.h1>
@@ -40,7 +40,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-7 text-[15px] text-muted-foreground max-w-md leading-relaxed font-light"
+          className="mt-7 text-[15px] max-w-md leading-relaxed font-light text-secondary-foreground"
         >
           We help home builders and developers present projects with clarity, speed, and impact — from photorealistic renderings to interactive sales experiences.
         </motion.p>
@@ -49,7 +49,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.55 }}
-          className="mt-6 text-[13px] text-muted-foreground/70 font-light tracking-wide"
+          className="mt-6 text-[13px] font-light tracking-wide text-secondary-foreground bg-primary-foreground"
         >
           Trusted by builders, developers, and marketing teams across the United States.
         </motion.p>

@@ -39,7 +39,7 @@ const FeaturedWork = () => {
           className="flex items-end justify-between mb-10 md:mb-16 lg:mb-20"
         >
           <div>
-            <div className="label-mono text-primary mb-6">Featured Work</div>
+            <div className="label-mono text-primary mb-6 text-lg">Featured Work</div>
             <h2 className="font-display text-[clamp(2.5rem,5.5vw,4.5rem)] font-semibold text-foreground tracking-[-0.04em]">
               Selected projects
             </h2>
@@ -58,7 +58,7 @@ const FeaturedWork = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="label-mono text-muted-foreground mb-8"
+            className="label-mono text-muted-foreground mb-8 text-sm"
           >
             Exteriors — High-end exterior renderings designed to support marketing, approvals, and pre-sales.
           </motion.p>
@@ -95,7 +95,7 @@ const FeaturedWork = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="label-mono text-muted-foreground mb-8"
+            className="label-mono text-muted-foreground mb-8 text-sm"
           >
             Interiors — Spaces that feel real before they are built — helping buyers connect with the home before it exists.
           </motion.p>

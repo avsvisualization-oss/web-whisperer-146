@@ -32,7 +32,7 @@ const TrustSection = () => {
               <div className="font-mono-data text-5xl md:text-7xl font-medium text-primary tracking-tight">
                 {stat.value}
               </div>
-              <div className="label-mono text-muted-foreground mt-5">{stat.label}</div>
+              <div className="label-mono text-muted-foreground mt-5 text-sm">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -47,7 +47,7 @@ const TrustSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          <p className="label-mono text-muted-foreground text-center mb-8 md:mb-16">
+          <p className="label-mono text-muted-foreground text-center mb-8 md:mb-16 text-sm">
             Trusted by builders and developers across the United States
           </p>
 
@@ -59,7 +59,7 @@ const TrustSection = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="font-display text-lg font-medium text-muted-foreground/50 hover:text-primary transition-colors duration-300 cursor-default"
+                className="font-display text-lg font-medium transition-colors duration-300 cursor-default text-secondary-foreground"
               >
                 {name}
               </motion.span>

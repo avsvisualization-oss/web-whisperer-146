@@ -51,11 +51,11 @@ const SolutionsSection = () => {
           viewport={{ once: true }}
           className="mb-10 md:mb-20"
         >
-          <div className="label-mono text-primary mb-6">What We Do</div>
+          <div className="label-mono text-primary mb-6 text-lg">What We Do</div>
           <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-semibold text-foreground max-w-3xl leading-[1.05] tracking-[-0.04em]">
             Visual solutions designed for how homes are sold today.
           </h2>
-          <p className="mt-7 text-[14px] text-muted-foreground max-w-xl leading-[1.8] font-light">
+          <p className="mt-7 max-w-xl leading-[1.8] font-light text-base text-popover-foreground">
             Every visual we create is built to support sales teams, improve conversion, and drive buyer engagement — not just to look good.
           </p>
         </motion.div>
@@ -82,7 +82,7 @@ const SolutionsSection = () => {
               }`} />
               {sol.label && (
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full bg-primary/15 text-primary text-[10px] font-medium tracking-wider uppercase backdrop-blur-sm">
+                  <span className="px-3 py-1 rounded-full text-[10px] font-medium tracking-wider uppercase backdrop-blur-sm text-popover-foreground bg-primary">
                     {sol.label}
                   </span>
                 </div>
@@ -95,11 +95,11 @@ const SolutionsSection = () => {
                     }`}>
                       {sol.title}
                     </h3>
-                    <p className="mt-2 md:mt-3 text-[11px] sm:text-[13px] text-muted-foreground max-w-sm leading-relaxed font-light hidden sm:block">
+                    <p className="mt-2 md:mt-3 text-[11px] sm:text-[13px] text-muted-foreground max-w-sm leading-relaxed hidden sm:block font-light">
                       {sol.description}
                     </p>
                     {sol.pricing && (
-                      <p className="mt-2 text-[10px] sm:text-[11px] text-muted-foreground/60 font-light tracking-wide">
+                      <p className="mt-2 text-[10px] sm:text-[11px] font-light tracking-wide text-secondary">
                         {sol.pricing}
                       </p>
                     )}
@@ -121,7 +121,7 @@ const SolutionsSection = () => {
         >
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-2 text-[13px] font-medium text-primary hover:text-primary/80 transition-colors duration-300 tracking-wide"
+            className="inline-flex items-center gap-2 font-medium text-primary hover:text-primary/80 transition-colors duration-300 tracking-wide text-lg"
           >
             View All Work
             <ArrowUpRight className="w-3.5 h-3.5" />

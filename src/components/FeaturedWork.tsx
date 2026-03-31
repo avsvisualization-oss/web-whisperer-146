@@ -95,7 +95,7 @@ const FeaturedWork = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="label-mono text-muted-foreground mb-8"
+            className="label-mono text-muted-foreground mb-8 text-sm"
           >
             Interiors — Spaces that feel real before they are built — helping buyers connect with the home before it exists.
           </motion.p>

@@ -38,7 +38,7 @@ const ProcessSection = () => {
               <h3 className="font-display text-lg font-semibold text-foreground mb-3 tracking-[-0.02em]">
                 {step.title}
               </h3>
-              <p className="text-[13px] text-muted-foreground leading-[1.8] font-light">
+              <p className="text-[13px] leading-[1.8] font-light text-muted">
                 {step.description}
               </p>
             </motion.div>

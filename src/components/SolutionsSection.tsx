@@ -121,7 +121,7 @@ const SolutionsSection = () => {
         >
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-2 text-[13px] font-medium text-primary hover:text-primary/80 transition-colors duration-300 tracking-wide"
+            className="inline-flex items-center gap-2 font-medium text-primary hover:text-primary/80 transition-colors duration-300 tracking-wide text-lg"
           >
             View All Work
             <ArrowUpRight className="w-3.5 h-3.5" />

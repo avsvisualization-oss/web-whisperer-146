@@ -119,7 +119,7 @@ const ContactForm = () => {
           <h2 className="font-display text-3xl md:text-[2.75rem] font-semibold text-foreground leading-[1.1] tracking-[-0.03em]">
             Get a Quote for Your Next Project
           </h2>
-          <p className="mt-4 text-[15px] text-muted-foreground leading-[1.7] max-w-lg mx-auto">
+          <p className="mt-4 text-[15px] leading-[1.7] max-w-lg mx-auto text-secondary">
             Tell us about your project and we'll send you a clear proposal within 24 hours.
           </p>
         </motion.div>

@@ -59,7 +59,7 @@ const TrustSection = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="font-display text-lg font-medium text-muted-foreground/50 hover:text-primary transition-colors duration-300 cursor-default"
+                className="font-display text-lg font-medium transition-colors duration-300 cursor-default text-secondary-foreground"
               >
                 {name}
               </motion.span>

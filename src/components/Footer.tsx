@@ -7,10 +7,10 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-14">
           <div className="md:col-span-2">
             <Link to="/" className="font-display text-xl text-foreground">
-              <span className="font-semibold">AVS</span>
-              <span className="font-light text-primary">Renderings</span>
+              <span className="font-semibold text-2xl">AVS</span>
+              <span className="font-light text-primary text-2xl">Renderings</span>
             </Link>
-            <p className="mt-5 text-[13px] max-w-sm leading-[1.7] text-secondary">
+            <p className="mt-5 text-[13px] max-w-sm leading-[1.7] text-secondary-foreground">
               High-impact visual solutions for home builders, developers and
               marketing teams across the United States.
             </p>
@@ -28,7 +28,7 @@ const Footer = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-[13px] transition-colors duration-300 text-secondary"
+                  className="text-[13px] transition-colors duration-300 text-secondary-foreground"
                 >
                   {link.label}
                 </Link>
@@ -39,13 +39,13 @@ const Footer = () => {
           <div>
             <h4 className="label-mono text-foreground mb-5 text-base">Contact</h4>
             <div className="flex flex-col gap-3 text-[13px] text-muted-foreground">
-              <a href="mailto:info@avs-renderings.com" className="transition-colors duration-300 text-secondary">
+              <a href="mailto:info@avs-renderings.com" className="transition-colors duration-300 text-secondary-foreground">
                 info@avs-renderings.com
               </a>
-              <a href="tel:+13028673810" className="hover:text-primary transition-colors duration-300">
+              <a href="tel:+13028673810" className="transition-colors duration-300 text-secondary-foreground">
                 +1 (302) 867-3810
               </a>
-              <p className="text-secondary">Coral Gables, FL 33134</p>
+              <p className="text-secondary-foreground">Coral Gables, FL 33134</p>
             </div>
           </div>
         </div>

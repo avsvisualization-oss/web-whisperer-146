@@ -32,7 +32,7 @@ const ProcessSection = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              <div className="font-mono-data text-4xl font-medium text-primary/25 mb-6">
+              <div className="font-mono-data text-4xl font-medium mb-6 text-primary">
                 {step.number}
               </div>
               <h3 className="font-display text-lg font-semibold text-foreground mb-3 tracking-[-0.02em]">

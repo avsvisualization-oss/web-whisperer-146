@@ -22,7 +22,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.1 }}
-          className="label-mono mb-8 bg-primary-foreground text-lg text-primary"
+          className="label-mono mb-8 text-lg text-primary bg-black/0"
         >
           Visual Solutions for Home Builders
         </motion.div>

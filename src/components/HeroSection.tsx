@@ -49,7 +49,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.55 }}
-          className="mt-6 text-[13px] font-light tracking-wide text-secondary-foreground bg-primary-foreground"
+          className="mt-6 text-[13px] font-light tracking-wide text-secondary-foreground bg-secondary"
         >
           Trusted by builders, developers, and marketing teams across the United States.
         </motion.p>

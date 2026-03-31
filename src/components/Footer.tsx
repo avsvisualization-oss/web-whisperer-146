@@ -39,13 +39,13 @@ const Footer = () => {
           <div>
             <h4 className="label-mono text-foreground mb-5 text-base">Contact</h4>
             <div className="flex flex-col gap-3 text-[13px] text-muted-foreground">
-              <a href="mailto:info@avs-renderings.com" className="transition-colors duration-300 text-secondary">
+              <a href="mailto:info@avs-renderings.com" className="transition-colors duration-300 text-secondary-foreground">
                 info@avs-renderings.com
               </a>
-              <a href="tel:+13028673810" className="hover:text-primary transition-colors duration-300">
+              <a href="tel:+13028673810" className="transition-colors duration-300 text-secondary-foreground">
                 +1 (302) 867-3810
               </a>
-              <p className="text-secondary">Coral Gables, FL 33134</p>
+              <p className="text-secondary-foreground">Coral Gables, FL 33134</p>
             </div>
           </div>
         </div>

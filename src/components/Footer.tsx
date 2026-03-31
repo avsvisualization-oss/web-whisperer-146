@@ -7,10 +7,10 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-14">
           <div className="md:col-span-2">
             <Link to="/" className="font-display text-xl text-foreground">
-              <span className="font-semibold">AVS</span>
-              <span className="font-light text-primary">Renderings</span>
+              <span className="font-semibold text-2xl">AVS</span>
+              <span className="font-light text-primary text-2xl">Renderings</span>
             </Link>
-            <p className="mt-5 text-[13px] max-w-sm leading-[1.7] text-secondary">
+            <p className="mt-5 text-[13px] max-w-sm leading-[1.7] text-secondary-foreground">
               High-impact visual solutions for home builders, developers and
               marketing teams across the United States.
             </p>

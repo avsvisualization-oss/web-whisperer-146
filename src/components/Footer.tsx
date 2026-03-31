@@ -37,9 +37,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="label-mono text-foreground mb-5">Contact</h4>
+            <h4 className="label-mono text-foreground mb-5 text-base">Contact</h4>
             <div className="flex flex-col gap-3 text-[13px] text-muted-foreground">
-              <a href="mailto:info@avs-renderings.com" className="hover:text-primary transition-colors duration-300">
+              <a href="mailto:info@avs-renderings.com" className="transition-colors duration-300 text-secondary">
                 info@avs-renderings.com
               </a>
               <a href="tel:+13028673810" className="hover:text-primary transition-colors duration-300">

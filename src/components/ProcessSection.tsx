@@ -17,7 +17,7 @@ const ProcessSection = () => {
           viewport={{ once: true }}
           className="mb-10 md:mb-20"
         >
-          <div className="label-mono text-primary mb-6">How We Work</div>
+          <div className="label-mono text-primary mb-6 text-lg">How We Work</div>
           <h2 className="font-display text-[clamp(2.5rem,5.5vw,4rem)] font-semibold text-foreground tracking-[-0.04em]">
             Simple, efficient process
           </h2>

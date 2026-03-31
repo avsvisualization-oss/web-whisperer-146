@@ -37,7 +37,7 @@ const ValueSection = () => {
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <div className="label-mono text-primary mb-6">Why AVS</div>
+            <div className="label-mono text-primary mb-6 text-lg">Why AVS</div>
             <h2 className="font-display text-[clamp(2.5rem,5.5vw,4rem)] font-semibold text-foreground leading-[1.05] tracking-[-0.04em]">
               Designed for marketing and sales teams.
             </h2>

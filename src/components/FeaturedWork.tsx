@@ -39,7 +39,7 @@ const FeaturedWork = () => {
           className="flex items-end justify-between mb-10 md:mb-16 lg:mb-20"
         >
           <div>
-            <div className="label-mono text-primary mb-6">Featured Work</div>
+            <div className="label-mono text-primary mb-6 text-lg">Featured Work</div>
             <h2 className="font-display text-[clamp(2.5rem,5.5vw,4.5rem)] font-semibold text-foreground tracking-[-0.04em]">
               Selected projects
             </h2>

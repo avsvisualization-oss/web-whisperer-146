@@ -10,7 +10,7 @@ const Footer = () => {
               <span className="font-semibold">AVS</span>
               <span className="font-light text-primary">Renderings</span>
             </Link>
-            <p className="mt-5 text-[13px] text-muted-foreground max-w-sm leading-[1.7]">
+            <p className="mt-5 text-[13px] max-w-sm leading-[1.7] text-secondary">
               High-impact visual solutions for home builders, developers and
               marketing teams across the United States.
             </p>

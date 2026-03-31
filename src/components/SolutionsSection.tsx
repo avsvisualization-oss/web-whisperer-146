@@ -51,7 +51,7 @@ const SolutionsSection = () => {
           viewport={{ once: true }}
           className="mb-10 md:mb-20"
         >
-          <div className="label-mono text-primary mb-6">What We Do</div>
+          <div className="label-mono text-primary mb-6 text-lg">What We Do</div>
           <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-semibold text-foreground max-w-3xl leading-[1.05] tracking-[-0.04em]">
             Visual solutions designed for how homes are sold today.
           </h2>

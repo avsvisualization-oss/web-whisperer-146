@@ -22,7 +22,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.1 }}
-          className="label-mono text-primary mb-8"
+          className="label-mono mb-8 bg-primary-foreground text-lg text-primary"
         >
           Visual Solutions for Home Builders
         </motion.div>
@@ -31,7 +31,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-[clamp(2.2rem,7vw,8.5rem)] font-semibold text-foreground max-w-[14ch] leading-[0.95] tracking-[-0.05em]"
+          className="font-display font-semibold text-foreground max-w-[14ch] leading-[0.95] tracking-[-0.05em] text-8xl"
         >
           Visuals and Interactive Tools Built to Help You Sell Homes Faster
         </motion.h1>

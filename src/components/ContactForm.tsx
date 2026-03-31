@@ -115,7 +115,7 @@ const ContactForm = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-8"
         >
-          <div className="label-mono text-primary mb-4">Get in Touch</div>
+          <div className="label-mono text-primary mb-4 text-lg">Get in Touch</div>
           <h2 className="font-display text-3xl md:text-[2.75rem] font-semibold text-foreground leading-[1.1] tracking-[-0.03em]">
             Get a Quote for Your Next Project
           </h2>

@@ -32,7 +32,7 @@ const TrustSection = () => {
               <div className="font-mono-data text-5xl md:text-7xl font-medium text-primary tracking-tight">
                 {stat.value}
               </div>
-              <div className="label-mono text-muted-foreground mt-5">{stat.label}</div>
+              <div className="label-mono text-muted-foreground mt-5 text-sm">{stat.label}</div>
             </div>
           ))}
         </motion.div>

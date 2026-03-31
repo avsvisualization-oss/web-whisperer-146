@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="label-mono text-foreground mb-5">Company</h4>
+            <h4 className="label-mono text-foreground mb-5 text-base">Company</h4>
             <div className="flex flex-col gap-3">
               {[
                 { label: "Portfolio", href: "/portfolio" },

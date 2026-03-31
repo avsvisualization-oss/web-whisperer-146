@@ -55,7 +55,7 @@ const SolutionsSection = () => {
           <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-semibold text-foreground max-w-3xl leading-[1.05] tracking-[-0.04em]">
             Visual solutions designed for how homes are sold today.
           </h2>
-          <p className="mt-7 text-[14px] text-muted-foreground max-w-xl leading-[1.8] font-light">
+          <p className="mt-7 max-w-xl leading-[1.8] font-light text-base text-popover-foreground">
             Every visual we create is built to support sales teams, improve conversion, and drive buyer engagement — not just to look good.
           </p>
         </motion.div>

@@ -47,7 +47,7 @@ const TrustSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          <p className="label-mono text-muted-foreground text-center mb-8 md:mb-16">
+          <p className="label-mono text-muted-foreground text-center mb-8 md:mb-16 text-sm">
             Trusted by builders and developers across the United States
           </p>
 

@@ -28,7 +28,7 @@ const Footer = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-[13px] transition-colors duration-300 text-secondary"
+                  className="text-[13px] transition-colors duration-300 text-secondary-foreground"
                 >
                   {link.label}
                 </Link>

@@ -95,11 +95,11 @@ const SolutionsSection = () => {
                     }`}>
                       {sol.title}
                     </h3>
-                    <p className="mt-2 md:mt-3 text-[11px] sm:text-[13px] text-muted-foreground max-w-sm leading-relaxed font-light hidden sm:block">
+                    <p className="mt-2 md:mt-3 text-[11px] sm:text-[13px] text-muted-foreground max-w-sm leading-relaxed hidden sm:block font-light">
                       {sol.description}
                     </p>
                     {sol.pricing && (
-                      <p className="mt-2 text-[10px] sm:text-[11px] text-muted-foreground/60 font-light tracking-wide">
+                      <p className="mt-2 text-[10px] sm:text-[11px] font-light tracking-wide text-secondary">
                         {sol.pricing}
                       </p>
                     )}

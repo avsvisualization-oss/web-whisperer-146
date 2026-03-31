@@ -101,6 +101,12 @@
     text-transform: uppercase;
     font-weight: 500;
   }
+
+  @media (min-width: 1024px) {
+    .label-mono {
+      font-size: 0.894rem;
+    }
+  }
 }
 
 @keyframes marquee {

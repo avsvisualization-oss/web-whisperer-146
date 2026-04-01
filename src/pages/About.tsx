@@ -39,7 +39,7 @@ const steps = [
 ];
 
 const teamMembers = [
-  { name: "Ignacio Abellán", role: "Founder & Director", image: imgIgnacio },
+  { name: "Ignacio Abellán", role: "CEO & Business Development Manager", image: imgIgnacio },
   { name: "Natacha", role: "Operations Manager", image: imgNatacha },
   { name: "Gabriel", role: "Accounting & Finance Manager", image: imgGabriel },
   { name: "Head of Development", role: "Development Manager", image: imgMike },

@@ -9,8 +9,45 @@
     --font-display: 'IBM Plex Sans', system-ui, sans-serif;
     --font-body: 'IBM Plex Sans', system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
+    --radius: 0.375rem;
+  }
 
-    /* Dark premium palette */
+  /* Light mode */
+  :root,
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 220 16% 10%;
+
+    --card: 220 14% 97%;
+    --card-foreground: 220 16% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 16% 10%;
+
+    --primary: 210 100% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 94%;
+    --secondary-foreground: 220 10% 35%;
+
+    --muted: 220 14% 95%;
+    --muted-foreground: 220 8% 46%;
+
+    --accent: 210 100% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 210 100% 48%;
+
+    --surface-elevated: 220 14% 96%;
+  }
+
+  /* Dark mode (default) */
+  .dark {
     --background: 220 16% 6%;
     --foreground: 0 0% 96%;
 
@@ -20,7 +57,6 @@
     --popover: 220 14% 9%;
     --popover-foreground: 0 0% 96%;
 
-    /* Brand blue accent */
     --primary: 210 100% 52%;
     --primary-foreground: 0 0% 100%;
 
@@ -40,9 +76,6 @@
     --input: 220 10% 14%;
     --ring: 210 100% 52%;
 
-    --radius: 0.375rem;
-
-    /* Elevated surface for cards */
     --surface-elevated: 220 14% 11%;
   }
 }
@@ -55,6 +88,12 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    color-scheme: light dark;
+  }
+
+  html,
+  html * {
+    transition: background-color 0.3s ease, color 0.15s ease, border-color 0.3s ease;
   }
 
   body {

@@ -22,7 +22,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.1 }}
-          className="label-mono mb-8 text-lg text-primary bg-black/0 font-bold"
+          className="label-mono mb-8 text-lg text-primary font-bold"
         >
           Visual Solutions for Home Builders
         </motion.div>
@@ -49,7 +49,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.55 }}
-          className="mt-6 text-[13px] font-light tracking-wide text-secondary-foreground bg-secondary"
+          className="mt-6 text-[13px] font-light tracking-wide text-muted-foreground"
         >
           Trusted by builders, developers, and marketing teams across the United States.
         </motion.p>

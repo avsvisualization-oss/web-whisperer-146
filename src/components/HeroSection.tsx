@@ -40,7 +40,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-7 text-[15px] max-w-md leading-relaxed font-light text-secondary-foreground"
+          className="mt-10 text-lg md:text-xl max-w-lg leading-relaxed font-light text-foreground/80"
         >
           We help home builders and developers present projects with clarity, speed, and impact — from photorealistic renderings to interactive sales experiences.
         </motion.p>
@@ -49,7 +49,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.55 }}
-          className="mt-6 text-[13px] font-light tracking-wide text-muted-foreground"
+          className="mt-8 text-sm md:text-base font-light tracking-wide text-foreground/55"
         >
           Trusted by builders, developers, and marketing teams across the United States.
         </motion.p>
@@ -58,7 +58,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 md:mt-14 flex flex-wrap gap-3 md:gap-5"
+          className="mt-10 md:mt-16 flex flex-wrap gap-3 md:gap-5"
         >
           <Link
             to="/#contact-form"
@@ -73,15 +73,6 @@ const HeroSection = () => {
             View Portfolio
           </Link>
         </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.75 }}
-          className="mt-8 text-[13px] text-muted-foreground/60 font-light tracking-wide"
-        >
-          Built for home builders, developers, and marketing teams.
-        </motion.p>
       </div>
     </section>
   );

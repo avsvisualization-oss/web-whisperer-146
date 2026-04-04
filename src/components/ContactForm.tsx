@@ -104,6 +104,22 @@ const ContactForm = () => {
         },
       });
 
+      // Send to Make webhook
+      await fetch("https://hook.us2.make.com/k1tc0sifkrr3gehpq2qzj4qoxg4kbjx0", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          date: new Date().toISOString(),
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          project_type: form.projectType,
+          message: form.message,
+          file: fileUrl || "",
+          status: "New Lead",
+        }),
+      });
+
       toast.success("Your inquiry has been sent! Check your email for confirmation.");
       setForm({ name: "", email: "", company: "", projectType: "", message: "" });
       setFile(null);

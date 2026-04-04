@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, Loader2 } from "lucide-react";
+import { ChevronDown, Loader2, Upload, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
@@ -12,18 +12,9 @@ const PROJECT_TYPE_OPTIONS = [
   "Interactive Tool",
   "Multiple Services",
 ];
-const SCOPE_OPTIONS = [
-  "1–3 images",
-  "4–10 images",
-  "10+ images",
-  "Full community / development",
-];
-const BUDGET_OPTIONS = [
-  "Under $1,000",
-  "$1,000 – $3,000",
-  "$3,000 – $7,000",
-  "$7,000+",
-];
+
+const ACCEPTED_FILE_TYPES = ".pdf,.jpg,.jpeg,.png,.dwg";
+const MAX_FILE_SIZE = 20 * 1024 * 1024; // 20 MB
 
 const inputBase =
   "w-full px-4 py-3 bg-background/60 border border-border/60 rounded-lg text-[14px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30 transition-all duration-200";
@@ -44,10 +35,10 @@ const ContactForm = () => {
     email: "",
     company: "",
     projectType: "",
-    scope: "",
-    budget: "",
     message: "",
   });
+  const [file, setFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
@@ -57,6 +48,7 @@ const ContactForm = () => {
     if (!form.name.trim()) e.name = "Required";
     if (!form.email.trim()) e.email = "Required";
     else if (!isValidEmail(form.email)) e.email = "Enter a valid email";
+    if (file && file.size > MAX_FILE_SIZE) e.file = "File must be under 20 MB";
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -67,19 +59,33 @@ const ContactForm = () => {
     if (!validate()) return;
     setSubmitting(true);
 
-    const templateData = {
-      name: form.name,
-      email: form.email,
-      company: form.company,
-      projectType: form.projectType,
-      services: form.scope,
-      budget: form.budget,
-      message: form.message,
-    };
-
     const id = crypto.randomUUID();
+    let fileUrl: string | undefined;
 
     try {
+      // Upload file if present
+      if (file) {
+        const ext = file.name.split(".").pop() || "bin";
+        const path = `${id}.${ext}`;
+        const { error: uploadError } = await supabase.storage
+          .from("contact-uploads")
+          .upload(path, file);
+        if (uploadError) throw uploadError;
+        const { data: urlData } = supabase.storage
+          .from("contact-uploads")
+          .getPublicUrl(path);
+        fileUrl = urlData.publicUrl;
+      }
+
+      const templateData: Record<string, string> = {
+        name: form.name,
+        email: form.email,
+        company: form.company,
+        projectType: form.projectType,
+        message: form.message,
+      };
+      if (fileUrl) templateData.fileUrl = fileUrl;
+
       await supabase.functions.invoke("send-transactional-email", {
         body: {
           templateName: "contact-notification",
@@ -99,7 +105,9 @@ const ContactForm = () => {
       });
 
       toast.success("Your inquiry has been sent! Check your email for confirmation.");
-      setForm({ name: "", email: "", company: "", projectType: "", scope: "", budget: "", message: "" });
+      setForm({ name: "", email: "", company: "", projectType: "", message: "" });
+      setFile(null);
+      if (fileInputRef.current) fileInputRef.current.value = "";
     } catch {
       toast.error("Something went wrong. Please try again.");
     } finally {
@@ -112,18 +120,16 @@ const ContactForm = () => {
     if (errors[key]) setErrors((e) => { const n = { ...e }; delete n[key]; return n; });
   };
 
-  const SelectField = ({ label, value, onChange, options }: { label: string; value: string; onChange: (v: string) => void; options: string[] }) => (
-    <div className="relative">
-      <label className="text-[12px] font-medium text-muted-foreground mb-1.5 block tracking-wide uppercase">{label}</label>
-      <select value={value} onChange={(e) => onChange(e.target.value)} className={selectBase}>
-        <option value="">Select...</option>
-        {options.map((o) => (
-          <option key={o} value={o}>{o}</option>
-        ))}
-      </select>
-      <ChevronDown className="absolute right-3 bottom-3.5 w-4 h-4 text-muted-foreground/60 pointer-events-none" />
-    </div>
-  );
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selected = e.target.files?.[0] ?? null;
+    setFile(selected);
+    if (errors.file) setErrors((prev) => { const n = { ...prev }; delete n.file; return n; });
+  };
+
+  const clearFile = () => {
+    setFile(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
 
   return (
     <section id="contact-form" className="py-20 md:py-28 bg-background relative">
@@ -188,10 +194,53 @@ const ContactForm = () => {
             {/* Section 2 – Project Details */}
             <div className="flex flex-col gap-4">
               <p className="text-[11px] text-muted-foreground/50 tracking-widest uppercase">Project Details</p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <SelectField label="Project Type" value={form.projectType} onChange={(v) => set("projectType", v)} options={PROJECT_TYPE_OPTIONS} />
-                <SelectField label="Project Scope" value={form.scope} onChange={(v) => set("scope", v)} options={SCOPE_OPTIONS} />
-                <SelectField label="Budget Range" value={form.budget} onChange={(v) => set("budget", v)} options={BUDGET_OPTIONS} />
+
+              {/* Project Type */}
+              <div className="relative">
+                <label className="text-[12px] font-medium text-muted-foreground mb-1.5 block tracking-wide uppercase">Project Type</label>
+                <select value={form.projectType} onChange={(e) => set("projectType", e.target.value)} className={selectBase}>
+                  <option value="">Select...</option>
+                  {PROJECT_TYPE_OPTIONS.map((o) => (
+                    <option key={o} value={o}>{o}</option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 bottom-3.5 w-4 h-4 text-muted-foreground/60 pointer-events-none" />
+              </div>
+
+              {/* File Upload */}
+              <div>
+                <label className="text-[12px] font-medium text-muted-foreground mb-1.5 block tracking-wide uppercase">
+                  Upload your plans or references (optional)
+                </label>
+                <div
+                  className={`relative flex items-center gap-3 px-4 py-3 bg-background/60 border border-border/60 rounded-lg cursor-pointer transition-all duration-200 hover:border-primary/50 ${file ? "border-primary/40" : ""}`}
+                  onClick={() => fileInputRef.current?.click()}
+                >
+                  <Upload className="w-4 h-4 text-muted-foreground/60 shrink-0" />
+                  <span className="text-[14px] text-muted-foreground/40 truncate">
+                    {file ? file.name : "Choose a file..."}
+                  </span>
+                  {file && (
+                    <button
+                      type="button"
+                      onClick={(e) => { e.stopPropagation(); clearFile(); }}
+                      className="ml-auto shrink-0 p-0.5 rounded hover:bg-muted/40 transition-colors"
+                    >
+                      <X className="w-3.5 h-3.5 text-muted-foreground" />
+                    </button>
+                  )}
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept={ACCEPTED_FILE_TYPES}
+                    onChange={handleFileChange}
+                    className="hidden"
+                  />
+                </div>
+                <p className="text-[11px] text-muted-foreground/40 mt-1.5">
+                  You can upload floor plans, elevations, or inspiration images.
+                </p>
+                {errors.file && <p className="text-destructive text-[11px] mt-1">{errors.file}</p>}
               </div>
             </div>
 

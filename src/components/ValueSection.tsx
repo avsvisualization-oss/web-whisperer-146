@@ -41,7 +41,7 @@ const ValueSection = () => {
             <h2 className="font-display text-[clamp(2.5rem,5.5vw,4rem)] font-semibold text-foreground leading-[1.05] tracking-[-0.04em]">
               Designed for marketing and sales teams.
             </h2>
-            <p className="mt-8 text-[14px] leading-[1.8] max-w-md font-light text-secondary">
+            <p className="mt-8 text-[14px] leading-[1.8] max-w-md font-light text-muted-foreground">
               We don't just create beautiful images. We build visual tools that
               integrate into your sales process and improve marketing performance.
             </p>

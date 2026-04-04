@@ -63,7 +63,7 @@ const ValueSection = () => {
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3 tracking-[-0.02em]">
                   {v.title}
                 </h3>
-                <p className="text-[13px] leading-[1.8] font-light text-secondary">
+                <p className="text-[13px] leading-[1.8] font-light text-muted-foreground">
                   {v.description}
                 </p>
               </motion.div>

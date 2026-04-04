@@ -99,7 +99,7 @@ const SolutionsSection = () => {
                       {sol.description}
                     </p>
                     {sol.pricing && (
-                      <p className="mt-2 text-[10px] sm:text-[11px] font-light tracking-wide text-secondary">
+                      <p className="mt-2 text-[10px] sm:text-[11px] font-light tracking-wide text-muted-foreground">
                         {sol.pricing}
                       </p>
                     )}

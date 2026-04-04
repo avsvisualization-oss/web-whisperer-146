@@ -147,7 +147,7 @@ const ContactForm = () => {
           <h2 className="font-display text-3xl md:text-[2.75rem] font-semibold text-foreground leading-[1.1] tracking-[-0.03em]">
             Start Your Project
           </h2>
-          <p className="mt-4 text-[15px] leading-[1.7] max-w-lg mx-auto text-secondary">
+          <p className="mt-4 text-[15px] leading-[1.7] max-w-lg mx-auto text-muted-foreground">
             Tell us what you need and we'll get back to you within 24 hours.
           </p>
         </motion.div>

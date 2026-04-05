@@ -116,7 +116,7 @@ const ContactForm = () => {
       if (form.message) webhookPayload.message = form.message;
       if (fileUrl) webhookPayload.file = fileUrl;
 
-      await fetch("https://hook.us2.make.com/95ianyqplk8yad2ocrhqt5tesgmgdqst", {
+      await fetch("https://hook.us2.make.com/k6szyvr5ll5ufnuw9lky0lc1dm2p3s6g", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(webhookPayload),

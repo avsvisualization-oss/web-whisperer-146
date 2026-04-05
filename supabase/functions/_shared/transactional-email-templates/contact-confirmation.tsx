@@ -11,7 +11,7 @@ interface ContactConfirmationProps {
 const ContactConfirmationEmail = ({ name }: ContactConfirmationProps) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>We received your project details – AVS</Preview>
+    <Preview>We received your request – AVS</Preview>
     <Body style={main}>
       <Container style={container}>
         <Heading style={h1}>
@@ -42,7 +42,7 @@ const ContactConfirmationEmail = ({ name }: ContactConfirmationProps) => (
 
 export const template = {
   component: ContactConfirmationEmail,
-  subject: 'We received your project – AVS',
+  subject: 'We received your request',
   displayName: 'Contact confirmation (to user)',
   previewData: { name: 'Sarah' },
 } satisfies TemplateEntry

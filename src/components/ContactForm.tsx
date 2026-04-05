@@ -105,19 +105,21 @@ const ContactForm = () => {
       });
 
       // Send to Make webhook
+      const webhookPayload: Record<string, string> = {
+        name: form.name,
+        email: form.email,
+        date: new Date().toISOString(),
+        status: "New Lead",
+      };
+      if (form.company) webhookPayload.company = form.company;
+      if (form.projectType) webhookPayload.project_type = form.projectType;
+      if (form.message) webhookPayload.message = form.message;
+      if (fileUrl) webhookPayload.file = fileUrl;
+
       await fetch("https://hook.us2.make.com/95ianyqplk8yad2ocrhqt5tesgmgdqst", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          date: new Date().toISOString(),
-          name: form.name,
-          email: form.email,
-          company: form.company,
-          project_type: form.projectType,
-          message: form.message,
-          file: fileUrl || "",
-          status: "New Lead",
-        }),
+        body: JSON.stringify(webhookPayload),
       });
 
       toast.success("Your inquiry has been sent! Check your email for confirmation.");

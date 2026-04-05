@@ -105,7 +105,7 @@ const ContactForm = () => {
       });
 
       // Send to Make webhook
-      await fetch("https://hook.us2.make.com/k1tc0sifkrr3gehpq2qzj4qoxg4kbjx0", {
+      await fetch("https://hook.us2.make.com/95ianyqplk8yad2ocrhqt5tesgmgdqst", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

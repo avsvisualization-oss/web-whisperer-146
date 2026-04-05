@@ -62,10 +62,7 @@ const ContactNotificationEmail = ({
 
 export const template = {
   component: ContactNotificationEmail,
-  subject: (data: Record<string, any>) =>
-    data.company
-      ? `New Inquiry – ${data.company} – AVS`
-      : 'New Project Inquiry – AVS',
+  subject: 'New Lead - AVS Renderings',
   to: 'avsvisualization@gmail.com',
   displayName: 'Contact form notification (to team)',
   previewData: {
